@@ -1,0 +1,16 @@
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\bin\Debug\net5.0\Assignment.exe
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\bin\Debug\net5.0\Assignment.deps.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\bin\Debug\net5.0\Assignment.runtimeconfig.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\bin\Debug\net5.0\Assignment.runtimeconfig.dev.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\bin\Debug\net5.0\Assignment.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\bin\Debug\net5.0\ref\Assignment.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\bin\Debug\net5.0\Assignment.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.csprojAssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.AssemblyInfoInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.AssemblyInfo.cs
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.csproj.CoreCompileInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\ref\Assignment.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 C# Basic\Assignment\Assignment\obj\Debug\net5.0\Assignment.genruntimeconfig.cache
