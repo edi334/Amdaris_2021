@@ -1,6 +1,8 @@
-const DCandidates = () => {
+import React from "react";
+
+const DCandidates = (props) => {
     return (
-        <div>form DCandidates</div>
+        <div>from DCandidates</div>
     );
 }
 
