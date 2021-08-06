@@ -1,0 +1,16 @@
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/bin/Debug/net5.0/Assignment
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/bin/Debug/net5.0/Assignment.deps.json
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/bin/Debug/net5.0/Assignment.runtimeconfig.json
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/bin/Debug/net5.0/Assignment.runtimeconfig.dev.json
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/bin/Debug/net5.0/Assignment.dll
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/bin/Debug/net5.0/ref/Assignment.dll
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/bin/Debug/net5.0/Assignment.pdb
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.csproj.AssemblyReference.cache
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.GeneratedMSBuildEditorConfig.editorconfig
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.AssemblyInfoInputs.cache
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.AssemblyInfo.cs
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.csproj.CoreCompileInputs.cache
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.dll
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/ref/Assignment.dll
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.pdb
+/home/edi/Documents/Amdaris_2021/Module 1/Module 1 FIles and Streams/Assignment/Assignment/obj/Debug/net5.0/Assignment.genruntimeconfig.cache
