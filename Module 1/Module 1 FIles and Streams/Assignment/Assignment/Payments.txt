@@ -1,0 +1,6 @@
+Bills 280
+Groceries 100.2
+Clothes 50
+Gas 60
+FastFood 40
+OnlineShopping 200.6

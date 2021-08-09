@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/edi/.dotnet/store/|arch|/|tfm|",
+      "/home/edi/.nuget/packages"
+    ]
+  }
+}
