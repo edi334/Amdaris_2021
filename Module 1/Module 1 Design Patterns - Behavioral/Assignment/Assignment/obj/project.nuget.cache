@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "i2LPFpTVqb2BlDu5vN9njgV+lEhlOmD+0XAAo1KRh4/TTbW0stXFBfP7zgUD1P/vQZeK7bL9ZuY359Fk8246/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Design Patterns - Behavioral\\Assignment\\Assignment\\Assignment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eduard.cziszter\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
