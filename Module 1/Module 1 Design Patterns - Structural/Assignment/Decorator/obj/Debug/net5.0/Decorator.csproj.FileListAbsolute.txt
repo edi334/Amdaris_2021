@@ -1,0 +1,16 @@
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\bin\Debug\net5.0\Decorator.exe
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\bin\Debug\net5.0\Decorator.deps.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\bin\Debug\net5.0\Decorator.runtimeconfig.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\bin\Debug\net5.0\Decorator.runtimeconfig.dev.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\bin\Debug\net5.0\Decorator.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\bin\Debug\net5.0\ref\Decorator.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\bin\Debug\net5.0\Decorator.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.csprojAssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.AssemblyInfoInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.AssemblyInfo.cs
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.csproj.CoreCompileInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\ref\Decorator.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Design Patterns - Structural\Assignment\Decorator\obj\Debug\net5.0\Decorator.genruntimeconfig.cache
