@@ -198,7 +198,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

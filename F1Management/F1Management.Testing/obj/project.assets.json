@@ -100,6 +100,9 @@
       "F1Management.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "F1Management.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/F1Management.Services.dll": {}
         },
