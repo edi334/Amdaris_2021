@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Abstractions
 {
-    class IMemberService
+    public interface IMemberService
     {
+        public void AssignRoleToMember(string roleId);
+        public List<TeamMember> GetAllDrivers();
+        public List<TeamMember> GettAllMechanics();
+        public List<TeamMember> GetAllAdmins();
     }
 }

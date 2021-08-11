@@ -33,5 +33,32 @@ namespace F1Management.Core.Models.Roles.Mechanics
                 car.Gearbox.Wear = 0;
             }
         }
+        public void FixCar(RaceCar car, Part part)
+        {
+            if (car == null)
+            {
+                throw new NullReferenceException("Car is null");
+            }
+            if (part.Wear != 0)
+            {
+                throw new InvalidOperationException("Part is new!");
+            }
+            if (part is Chassis)
+            {
+                car.Chassis.Wear = 0;
+            }
+            else if (part is Engine)
+            {
+                car.Engine.Wear = 0;
+            }
+            else if (part is Gearbox)
+            {
+                car.Gearbox.Wear = 0;
+            }
+            else
+            {
+                throw new InvalidOperationException("Invalid part!");
+            }
+        }
     }
 }
