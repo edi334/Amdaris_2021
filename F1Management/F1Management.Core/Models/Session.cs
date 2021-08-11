@@ -8,13 +8,13 @@ namespace F1Management.Core.Models
 {
     public class Session
     {
-        public Session(string carId)
+        public Session(string teamId)
         {
-            CarId = carId;
+            TeamId = teamId;
         }
         public string Id { get; set; }
         public string Name { get; set; }
-        public string CarId { get; set; }
+        public string TeamId { get; }
         public int Position { get; set; }
     }
 }

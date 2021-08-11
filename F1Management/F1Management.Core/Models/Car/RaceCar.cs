@@ -37,6 +37,13 @@ namespace F1Management.Core.Models.Car
             }
             tires.ForEach(t =>
             {
+                if (t.Type != tires[0].Type)
+                {
+                    throw new Exception("A car must have all tires of the same type");
+                }
+            });
+            tires.ForEach(t =>
+            {
                 if (t == null)
                 {
                     throw new NullReferenceException("One of the tires is null");
