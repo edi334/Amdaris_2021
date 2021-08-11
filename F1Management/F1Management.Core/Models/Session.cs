@@ -8,6 +8,10 @@ namespace F1Management.Core.Models
 {
     class Session
     {
+        public Session(string carId)
+        {
+            CarId = carId;
+        }
         public string Id { get; set; }
         public string Name { get; set; }
         public string CarId { get; set; }

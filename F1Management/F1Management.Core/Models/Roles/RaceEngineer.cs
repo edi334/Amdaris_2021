@@ -8,6 +8,10 @@ namespace F1Management.Core.Models.Roles
 {
     class RaceEngineer : Admin
     {
+        public RaceEngineer(string driverId)
+        {
+            DriverId = driverId;
+        }
         public string DriverId { get; set; }
     }
 }
