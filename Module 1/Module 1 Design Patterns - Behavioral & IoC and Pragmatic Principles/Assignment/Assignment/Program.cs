@@ -22,15 +22,23 @@ namespace Assignment
     public class Pinger
     {
         private readonly IMediator _mediator;
+        private readonly IPingerService _pingerService;
 
-        public Pinger(IMediator mediator)
+        public Pinger(IPingerService pingerService, IMediator mediator)
         {
             _mediator = mediator;
+            _pingerService = pingerService;
         }
-
         public string SendPing()
         {
-            return _mediator.Send(new Ping()).Result;
+            if (_pingerService.CheckPingerStatus())
+            {
+                return _mediator.Send(new Ping()).Result;
+            }
+            else
+            {
+                return "Pinger service is down!";
+            }
         }
     }
 
@@ -41,8 +49,9 @@ namespace Assignment
             ServiceLocator serviceLocator = new ServiceLocator();
 
             var mediator = serviceLocator.BuildMediator();
+            IPingerService pingerService = new PingerService(true);
 
-            Pinger pinger = new Pinger(mediator);
+            Pinger pinger = new Pinger(pingerService, mediator);
 
             Console.WriteLine(pinger.SendPing());
         }

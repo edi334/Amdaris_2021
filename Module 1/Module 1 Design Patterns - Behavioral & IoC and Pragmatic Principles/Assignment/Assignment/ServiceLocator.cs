@@ -17,6 +17,7 @@ namespace Assignment
         {
             services.AddMediatR(typeof(Ping));
             services.AddScoped(typeof(IRequestHandler<Ping,string>), typeof(Pong));
+            services.AddScoped(typeof(IPingerService), typeof(ServiceLocator));
 
             var provider = services.BuildServiceProvider();
 
