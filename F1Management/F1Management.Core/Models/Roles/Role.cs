@@ -8,6 +8,6 @@ namespace F1Management.Core.Models.Roles
 {
     public abstract class Role
     {
-        string Id { get; set; }
+        public string Id { get; set; }
     }
 }

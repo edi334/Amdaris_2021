@@ -1,4 +1,4 @@
-﻿enum TireType
+﻿public enum TireType
 {
     Soft,
     Medium,
