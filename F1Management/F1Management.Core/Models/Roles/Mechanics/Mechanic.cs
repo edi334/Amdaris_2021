@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles.Mechanics
 {
-    abstract class Mechanic : Role
+    public abstract class Mechanic : Role
     {
         public abstract void FixCar(RaceCar Car);
     }

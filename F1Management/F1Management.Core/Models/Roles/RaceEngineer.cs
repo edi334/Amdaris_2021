@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    class RaceEngineer : Admin
+    public class RaceEngineer : Admin
     {
         public RaceEngineer(string driverId)
         {

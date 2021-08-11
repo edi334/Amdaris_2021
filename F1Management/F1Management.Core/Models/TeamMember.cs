@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core
 {
-    class TeamMember
+    public class TeamMember
     {
         public string Id { get; set; }
         public string TeamId { get; set; }

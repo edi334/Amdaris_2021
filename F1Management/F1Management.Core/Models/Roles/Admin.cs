@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    class Admin : Role
+    public class Admin : Role
     {
         public void SendInvitationLink() { }
         public void EditTeamMemberRole() { }

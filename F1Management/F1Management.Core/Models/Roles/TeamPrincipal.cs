@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    class TeamPrincipal : Admin
+    public class TeamPrincipal : Admin
     {
         public void RemoveMember() { }
     }

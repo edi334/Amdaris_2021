@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    abstract class Role
+    public abstract class Role
     {
         string Id { get; set; }
     }

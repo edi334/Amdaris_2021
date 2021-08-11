@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Car
 {
-    class RaceCar
+    public class RaceCar
     {
         public RaceCar(string id, string teamId, Chassis chassis, Engine engine, Gearbox gearbox, List<Tire> tires)
         {
@@ -30,6 +30,10 @@ namespace F1Management.Core.Models.Car
             if (gearbox == null)
             {
                 throw new NullReferenceException("Gearbox is null");
+            }
+            if (tires.Count > 4)
+            {
+                throw new Exception("Car cannot have more than 4 tires.");
             }
             tires.ForEach(t =>
             {

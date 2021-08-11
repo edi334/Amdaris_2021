@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Management.App", "F1Management.App\F1Management.App.csproj", "{AFDBC432-24E1-4247-8F77-7EBFA1315395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1Management.App", "F1Management.App\F1Management.App.csproj", "{AFDBC432-24E1-4247-8F77-7EBFA1315395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Management.Core", "F1Management.Core\F1Management.Core.csproj", "{2FADA805-E2F1-4CFA-B113-9B0551C84D4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1Management.Core", "F1Management.Core\F1Management.Core.csproj", "{2FADA805-E2F1-4CFA-B113-9B0551C84D4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Management.Services", "F1Management.Services\F1Management.Services.csproj", "{7800C44C-FA43-4538-8316-879082D35473}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1Management.Services", "F1Management.Services\F1Management.Services.csproj", "{7800C44C-FA43-4538-8316-879082D35473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Management.Infrastructure", "F1Management.Infrastructure\F1Management.Infrastructure.csproj", "{712F3D1A-9304-4961-ABEB-FF3A7B305C0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1Management.Infrastructure", "F1Management.Infrastructure\F1Management.Infrastructure.csproj", "{712F3D1A-9304-4961-ABEB-FF3A7B305C0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1Management.Testing", "F1Management.Testing\F1Management.Testing.csproj", "{7F6FBC66-E706-4583-BBD0-2A4CC65B7DDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{712F3D1A-9304-4961-ABEB-FF3A7B305C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{712F3D1A-9304-4961-ABEB-FF3A7B305C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{712F3D1A-9304-4961-ABEB-FF3A7B305C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6FBC66-E706-4583-BBD0-2A4CC65B7DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6FBC66-E706-4583-BBD0-2A4CC65B7DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6FBC66-E706-4583-BBD0-2A4CC65B7DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6FBC66-E706-4583-BBD0-2A4CC65B7DDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

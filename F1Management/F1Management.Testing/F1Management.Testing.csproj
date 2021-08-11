@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\F1Management.App\F1Management.App.csproj" />
+    <ProjectReference Include="..\F1Management.Core\F1Management.Core.csproj" />
+    <ProjectReference Include="..\F1Management.Infrastructure\F1Management.Infrastructure.csproj" />
+    <ProjectReference Include="..\F1Management.Services\F1Management.Services.csproj" />
+  </ItemGroup>
+
+</Project>

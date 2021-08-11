@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models
 {
-    class Session
+    public class Session
     {
         public Session(string carId)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    class Driver : Role
+    public class Driver : Role
     {
         public int Number { get; set; }
         public int Points { get; set; }

@@ -1,0 +1,300 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Testing\\F1Management.Testing.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.App\\F1Management.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.App\\F1Management.App.csproj",
+        "projectName": "F1Management.App",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.App\\F1Management.App.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj",
+        "projectName": "F1Management.Core",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj",
+        "projectName": "F1Management.Infrastructure",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj",
+        "projectName": "F1Management.Services",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Testing\\F1Management.Testing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Testing\\F1Management.Testing.csproj",
+        "projectName": "F1Management.Testing",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Testing\\F1Management.Testing.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Testing\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.App\\F1Management.App.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.App\\F1Management.App.csproj"
+              },
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
+              },
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj"
+              },
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

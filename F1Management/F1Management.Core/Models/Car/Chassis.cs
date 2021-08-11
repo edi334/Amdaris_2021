@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Car
 {
-    class Chassis : Part
+    public class Chassis : Part
     {
         public string FrontWing { get; set; }
         public string RearWing { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Car
 {
-    class Part
+    public class Part
     {
         public double Wear { get; set; }
     }

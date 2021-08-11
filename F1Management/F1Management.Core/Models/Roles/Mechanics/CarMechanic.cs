@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles.Mechanics
 {
-    class CarMechanic : Mechanic
+    public class CarMechanic : Mechanic
     {
         public override void FixCar(RaceCar car)
         {
