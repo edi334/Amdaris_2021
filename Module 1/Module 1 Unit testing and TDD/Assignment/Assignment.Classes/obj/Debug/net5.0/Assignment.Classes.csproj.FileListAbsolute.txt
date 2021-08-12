@@ -1,0 +1,12 @@
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\Assignment.Classes.deps.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\Assignment.Classes.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\ref\Assignment.Classes.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\Assignment.Classes.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.csprojAssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.AssemblyInfoInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.AssemblyInfo.cs
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.csproj.CoreCompileInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\ref\Assignment.Classes.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.pdb
