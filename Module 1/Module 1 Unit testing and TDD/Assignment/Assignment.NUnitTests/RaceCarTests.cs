@@ -12,32 +12,23 @@ namespace Assignment.NUnitTests
         [SetUp]
         public void MockRaceCar()
         {
-            var mockInfo = new Mock<RaceCar>();
-            mockInfo.Object.Chassis = new Chassis { Wear = 20, FrontWing = "high downforce" };
-            mockInfo.Object.Engine = new Engine { Wear = 25, HorsePower = 1000 };
-            mockInfo.Object.GearBox = new GearBox { Wear = 15 };
+            var mockCar = new Mock<RaceCar>();
 
-            mockInfo.Object.SetTotalWear();
+            mockCar.SetupAllProperties();
+            mockCar.Object.Chassis = new Chassis { Wear = 20, FrontWing = "high downforce" };
+            mockCar.Object.Engine = new Engine { Wear = 15, HorsePower = 1000 };
+            mockCar.Object.GearBox = new GearBox { Wear = 25, Gears = 8 };
 
-            _car = mockInfo.Object;
+            _car = mockCar.Object;
         }
-
         [SetUp]
         public void MockCarMechanic()
         {
-            var mockInfo = new Mock<CarMechanic>();
-            mockInfo.Object.Name = "Jeff";
+            var mockMechanic = new Mock<CarMechanic>();
+            mockMechanic.SetupAllProperties();
+            mockMechanic.Object.Name = "Jeff";
 
-            _mechanic = mockInfo.Object;
-        }
-        [TestCase]
-        public void TestSetTotalWear()
-        {
-            MockRaceCar();
-
-            _car.SetTotalWear();
-
-            Assert.AreEqual(20, _car.TotalWear);
+            _mechanic = mockMechanic.Object;
         }
         [TestCase]
         public void TestChassisFix()
@@ -47,7 +38,7 @@ namespace Assignment.NUnitTests
             MockCarMechanic();
 
             //Act
-            _mechanic.Fix(_car, _car.Chassis);
+            _mechanic.Fix(_car.Chassis);
 
             //Assert
             Assert.AreEqual(0, _car.Chassis.Wear);
@@ -60,7 +51,7 @@ namespace Assignment.NUnitTests
             MockCarMechanic();
 
             //Act
-            _mechanic.Fix(_car, _car.Engine);
+            _mechanic.Fix(_car.Engine);
 
             //Assert
             Assert.AreEqual(0, _car.Engine.Wear);
@@ -73,7 +64,7 @@ namespace Assignment.NUnitTests
             MockCarMechanic();
 
             //Act
-            _mechanic.Fix(_car, _car.GearBox);
+            _mechanic.Fix(_car.GearBox);
 
             //Assert
             Assert.AreEqual(0, _car.GearBox.Wear);

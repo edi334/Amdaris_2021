@@ -22,3 +22,15 @@ C:/Users/eduard.cziszter/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Ass
 /home/edi/Documents/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.dll
 /home/edi/Documents/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/obj/Debug/net5.0/ref/Assignment.Classes.dll
 /home/edi/Documents/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.pdb
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\Assignment.Classes.deps.json
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\Assignment.Classes.dll
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\ref\Assignment.Classes.dll
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\bin\Debug\net5.0\Assignment.Classes.pdb
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.csproj.AssemblyReference.cache
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.GeneratedMSBuildEditorConfig.editorconfig
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.AssemblyInfoInputs.cache
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.AssemblyInfo.cs
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.csproj.CoreCompileInputs.cache
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.dll
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\ref\Assignment.Classes.dll
+E:\Amdaris_2021\Module 1\Module 1 Unit testing and TDD\Assignment\Assignment.Classes\obj\Debug\net5.0\Assignment.Classes.pdb
