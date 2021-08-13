@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.NUnitTests", "Assignment.NUnitTests\Assignment.NUnitTests.csproj", "{8EA2D636-9697-48CA-9F97-DFDCC0666894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTests", "XUnitTests\XUnitTests.csproj", "{947FAF4B-30BB-4431-A33A-D088CB3CB91E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.XUnitTests", "Assignment.XUnitTests\Assignment.XUnitTests.csproj", "{947FAF4B-30BB-4431-A33A-D088CB3CB91E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.Classes", "Assignment.Classes\Assignment.Classes.csproj", "{239201FE-3A7F-4619-B7C1-466F2004375E}"
 EndProject

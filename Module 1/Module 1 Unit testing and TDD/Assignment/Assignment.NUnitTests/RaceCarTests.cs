@@ -7,8 +7,8 @@ namespace Assignment.NUnitTests
     [TestFixture]
     public class RaceCarTests
     {
-        RaceCar car;
-        CarMechanic mechanic;
+        private RaceCar _car;
+        private CarMechanic _mechanic;
         [SetUp]
         public void MockRaceCar()
         {
@@ -19,7 +19,7 @@ namespace Assignment.NUnitTests
 
             mockInfo.Object.SetTotalWear();
 
-            car = mockInfo.Object;
+            _car = mockInfo.Object;
         }
 
         [SetUp]
@@ -28,16 +28,16 @@ namespace Assignment.NUnitTests
             var mockInfo = new Mock<CarMechanic>();
             mockInfo.Object.Name = "Jeff";
 
-            mechanic = mockInfo.Object;
+            _mechanic = mockInfo.Object;
         }
         [TestCase]
         public void TestSetTotalWear()
         {
             MockRaceCar();
 
-            car.SetTotalWear();
+            _car.SetTotalWear();
 
-            Assert.AreEqual(20, car.TotalWear);
+            Assert.AreEqual(20, _car.TotalWear);
         }
         [TestCase]
         public void TestChassisFix()
@@ -47,10 +47,10 @@ namespace Assignment.NUnitTests
             MockCarMechanic();
 
             //Act
-            mechanic.Fix(car, car.Chassis);
+            _mechanic.Fix(_car, _car.Chassis);
 
             //Assert
-            Assert.AreEqual(0, car.Chassis.Wear);
+            Assert.AreEqual(0, _car.Chassis.Wear);
         }
         [TestCase]
         public void TestEngineFix()
@@ -60,10 +60,10 @@ namespace Assignment.NUnitTests
             MockCarMechanic();
 
             //Act
-            mechanic.Fix(car, car.Engine);
+            _mechanic.Fix(_car, _car.Engine);
 
             //Assert
-            Assert.AreEqual(0, car.Engine.Wear);
+            Assert.AreEqual(0, _car.Engine.Wear);
         }
         [TestCase]
         public void TestGearBoxFix()
@@ -73,10 +73,10 @@ namespace Assignment.NUnitTests
             MockCarMechanic();
 
             //Act
-            mechanic.Fix(car, car.GearBox);
+            _mechanic.Fix(_car, _car.GearBox);
 
             //Assert
-            Assert.AreEqual(0, car.GearBox.Wear);
+            Assert.AreEqual(0, _car.GearBox.Wear);
         }
         [TestCase]
         public void TestCarFix()
@@ -86,10 +86,10 @@ namespace Assignment.NUnitTests
             MockCarMechanic();
 
             //Act
-            mechanic.Fix(car);
+            _mechanic.Fix(_car);
 
             //Assert
-            Assert.AreEqual(0, car.TotalWear);
+            Assert.AreEqual(0, _car.TotalWear);
         }
     }
 }
