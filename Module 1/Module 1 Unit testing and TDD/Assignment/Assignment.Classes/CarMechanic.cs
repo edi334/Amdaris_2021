@@ -14,29 +14,11 @@ namespace Assignment.Classes
             car.Engine.Wear = 0;
             car.GearBox.Wear = 0;
 
-            car.SetTotalWear();
         }
 
-        public void Fix(RaceCar car, Part part)
+        public void Fix(Part part)
         {
-            if (part is Chassis)
-            {
-                car.Chassis.Wear = 0;
-            }
-            else if (part is Engine)
-            {
-                car.Engine.Wear = 0;
-            }
-            else if (part is GearBox)
-            {
-                car.GearBox.Wear = 0;
-            }
-            else
-            {
-                throw new Exception("Invalid Part!");
-            }
-
-            car.SetTotalWear();
+            part.Wear = 0;
         }
     }
 }

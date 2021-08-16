@@ -9,5 +9,9 @@ namespace Assignment.Classes
     public class Chassis : Part
     {
         public string FrontWing { get; set; }
+        public override string ToString()
+        {
+            return $"{base.ToString()} {FrontWing}";
+        }
     }
 }

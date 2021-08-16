@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="27cab029-c57c-4a93-acb1-a07011b04e34" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/CarMechanic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/CarMechanic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/Chassis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/Chassis.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/Part.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/Part.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/RaceCar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/RaceCar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/bin/Debug/net5.0/Assignment.Classes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/bin/Debug/net5.0/Assignment.Classes.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/bin/Debug/net5.0/Assignment.Classes.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/bin/Debug/net5.0/Assignment.Classes.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/bin/Debug/net5.0/ref/Assignment.Classes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/bin/Debug/net5.0/ref/Assignment.Classes.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Assignment.Classes.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Assignment.Classes.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Assignment.Classes.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Assignment.Classes.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/Assignment.Classes.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/ref/Assignment.Classes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/Debug/net5.0/ref/Assignment.Classes.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.Classes/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.Classes/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/RaceCarTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/RaceCarTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.Classes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.Classes.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.Classes.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.Classes.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.NUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.NUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.NUnitTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.NUnitTests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.NUnitTests.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/Assignment.NUnitTests.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/ref/Assignment.NUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/bin/Debug/net5.0/ref/Assignment.NUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Assignment.NUnitTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Assignment.NUnitTests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Assignment.NUnitTests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Assignment.NUnitTests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Assignment.NUnitTests.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Assignment.NUnitTests.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/Assignment.NUnitTests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/ref/Assignment.NUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/Debug/net5.0/ref/Assignment.NUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.NUnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.NUnitTests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/RaceCarTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/RaceCarTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.Classes.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.Classes.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.Classes.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.Classes.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/Assignment.XUnitTests.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/ref/Assignment.XUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/bin/Debug/net5.0/ref/Assignment.XUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Assignment.XUnitTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Assignment.XUnitTests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Assignment.XUnitTests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Assignment.XUnitTests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Assignment.XUnitTests.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Assignment.XUnitTests.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/Assignment.XUnitTests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/ref/Assignment.XUnitTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/Debug/net5.0/ref/Assignment.XUnitTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.XUnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.XUnitTests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment.sln.DotSettings.user" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assignment.XUnitTests/RaceCarTests.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1wfHVa655VaJa1tKUSuDcEFObHw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27cab029-c57c-4a93-acb1-a07011b04e34" name="Changes" comment="" />
+      <created>1628842756035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628842756035</updated>
+      <workItem from="1628842768615" duration="607000" />
+      <workItem from="1628855582125" duration="5241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

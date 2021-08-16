@@ -9,5 +9,9 @@ namespace Assignment.Classes
     public class Part
     {
         public int Wear { get; set; }
+        public override string ToString()
+        {
+            return $"{Wear}";
+        }
     }
 }
