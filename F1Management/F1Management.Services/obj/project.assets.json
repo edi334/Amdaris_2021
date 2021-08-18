@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/F1Management.Core.dll": {}
         }
+      },
+      "F1Management.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "F1Management.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/F1Management.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/F1Management.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../F1Management.Core/F1Management.Core.csproj",
       "msbuildProject": "../F1Management.Core/F1Management.Core.csproj"
+    },
+    "F1Management.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../F1Management.Infrastructure/F1Management.Infrastructure.csproj",
+      "msbuildProject": "../F1Management.Infrastructure/F1Management.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "F1Management.Core >= 1.0.0"
+      "F1Management.Core >= 1.0.0",
+      "F1Management.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -55,6 +74,9 @@
           "projectReferences": {
             "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
               "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
+            },
+            "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj"
             }
           }
         }

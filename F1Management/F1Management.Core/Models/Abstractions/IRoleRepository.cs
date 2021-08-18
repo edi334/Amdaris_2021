@@ -1,4 +1,5 @@
-﻿using System;
+﻿using F1Management.Core.Models.Roles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Abstractions
 {
-    public interface IMemberService
+    public interface IRoleRepository
     {
-        public void AssignRoleToMember(string roleId);
+        public Role GetByName(string name); 
     }
 }

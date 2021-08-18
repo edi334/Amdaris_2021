@@ -9,8 +9,8 @@ namespace F1Management.Core.Models.Abstractions
 {
     public interface IRaceCarService
     {
-        public void Fix(string carId);
-        public void FixPart(string carId, Part part);
-        public void PitStop(string cardId, TireType tireType);
+        public void Fix(RaceCar car);
+        public void FixPart(RaceCar car, Part part);
+        public void PitStop(RaceCar car, TireType tireType);
     } 
 }

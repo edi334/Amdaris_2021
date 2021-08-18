@@ -9,5 +9,6 @@ namespace F1Management.Core.Models.Roles
     public abstract class Role
     {
         public string Id { get; set; }
+        public string RoleName { get; set; }
     }
 }

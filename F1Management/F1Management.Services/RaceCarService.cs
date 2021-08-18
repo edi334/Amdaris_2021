@@ -11,24 +11,23 @@ namespace F1Management.Services
 {
     class RaceCarService : IRaceCarService
     {
-        private List<RaceCar> _raceCars;
         private List<TeamMember> _teamMembers;
-        public RaceCarService(List<RaceCar> raceCars, List<TeamMember> teamMembers)
+        private InMemoryTeamMemberRepository teamMemberRepository;
+        public RaceCarService(List<TeamMember> teamMembers)
         {
-            _raceCars = raceCars;
             _teamMembers = teamMembers;
         }
-        public void Fix(string carId)
+        public void Fix(RaceCar car)
         {
-            var car = _raceCars.Find(c => c.Id == carId);
+            
         }
 
-        public void FixPart(string carId, Part part)
+        public void FixPart(RaceCar car, Part part)
         {
             throw new NotImplementedException();
         }
 
-        public void PitStop(string cardId, TireType tireType)
+        public void PitStop(RaceCar car, TireType tireType)
         {
             throw new NotImplementedException();
         }

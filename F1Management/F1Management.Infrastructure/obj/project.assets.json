@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "F1Management.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/F1Management.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/F1Management.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "F1Management.Core/1.0.0": {
+      "type": "project",
+      "path": "../F1Management.Core/F1Management.Core.csproj",
+      "msbuildProject": "../F1Management.Core/F1Management.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "F1Management.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\eduard.cziszter\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
+              "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

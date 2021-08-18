@@ -55,7 +55,6 @@ namespace F1Management.Core.Models.Car
             Engine = engine;
             Gearbox = gearbox;
             Tires = tires;
-            UpdateWear();
         }
         public string Id { get; set; }
         public string TeamId { get; set; }
@@ -63,11 +62,6 @@ namespace F1Management.Core.Models.Car
         public Engine Engine { get; set; }
         public Gearbox Gearbox { get; set; }
         public List<Tire> Tires { get; set; }
-        public double TotalWear { get; set; }
-        public void UpdateWear()
-        {
-            TotalWear = (Chassis.Wear + Engine.Wear + Gearbox.Wear) / 10000;
-
-        }
+        public double TotalWear => (Chassis.Wear + Engine.Wear + Gearbox.Wear) / 3;
     }
 }
