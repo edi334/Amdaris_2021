@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure
 {
-    class InMemoryTeamMemberRepository : ITeamMemberRepository
+    public class InMemoryTeamMemberRepository : ITeamMemberRepository
     {
         private List<TeamMember> _teamMembers;
         private InMemoryRoleRepository _roleRepository;

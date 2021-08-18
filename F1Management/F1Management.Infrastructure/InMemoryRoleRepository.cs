@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure
 {
-    class InMemoryRoleRepository : IRoleRepository
+    public class InMemoryRoleRepository : IRoleRepository
     {
         private List<Role> _roles;
         public InMemoryRoleRepository(List<Role> roles)
