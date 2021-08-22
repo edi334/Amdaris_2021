@@ -9,36 +9,41 @@ namespace XUnitTests
 {
     public class RaceCarTests
     {
-        private readonly ITestOutputHelper _outputHelper;
-
-        public RaceCarTests(ITestOutputHelper outputHelper)
-        {
-            _outputHelper = outputHelper;
-        }
-
         private RaceCar _car;
         private CarMechanic _mechanic;
 
         private void MockRaceCar()
         {
-            var mockCar = new Mock<RaceCar>();
-
-            mockCar.SetupAllProperties();
-            mockCar.Object.Chassis = new Chassis { Wear = 20, FrontWing = "high downforce" };
-            mockCar.Object.Engine = new Engine { Wear = 15, HorsePower = 1000 };
-            mockCar.Object.GearBox = new GearBox { Wear = 25, Gears = 8 };
-            
-            _car = mockCar.Object;
+            _car = new RaceCar
+            {
+                Chassis = new Chassis { Wear = 20, FrontWing = "high downforce" },
+                Engine = new Engine { Wear = 15, HorsePower = 1000 },
+                GearBox = new GearBox { Wear = 25, Gears = 8 }
+            };
         }
-
         private void MockCarMechanic()
         {
-            var mockMechanic = new Mock<CarMechanic>();
-            mockMechanic.SetupAllProperties();
-            mockMechanic.Object.Name = "Jeff";
-
-            _mechanic = mockMechanic.Object;
+            _mechanic = new CarMechanic
+            {
+                Name = "Jeff"
+            };
         }
+        
+        [Fact]
+        public void TestChassisBuilder()
+        {
+            //Arrange
+            var chassisBuilder = new Mock<IChassisBuilder>();
+            chassisBuilder.Setup(c => c.BuildChassis(It.IsAny<Chassis>())).Returns(true);
+            var chassis = new Chassis(chassisBuilder.Object);
+            
+            //Act
+            chassis.BuildChassis(new Chassis());
+            
+            //Assert
+            chassisBuilder.Verify(c => c.BuildChassis(It.IsAny<Chassis>()), Times.Once());
+        }
+        
         [Fact]
         public void TestChassisFix()
         {
@@ -89,9 +94,7 @@ namespace XUnitTests
             MockCarMechanic();
 
             //Act
-            _outputHelper.WriteLine(_car.TotalWear.ToString());
             _mechanic.Fix(_car);
-            _outputHelper.WriteLine(_car.TotalWear.ToString());
 
             //Assert
             Assert.True(0 == _car.TotalWear);
