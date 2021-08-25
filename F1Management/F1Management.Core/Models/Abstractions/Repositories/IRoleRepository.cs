@@ -9,6 +9,10 @@ namespace F1Management.Core.Models.Abstractions
 {
     public interface IRoleRepository
     {
-        public Role GetByName(string name); 
+        public List<Role> GetAll();
+        public Role GetByName(string name);
+        public Role GeById(Guid id);
+        public void Add(Role role);
+        public void Delete(Role role);
     }
 }
