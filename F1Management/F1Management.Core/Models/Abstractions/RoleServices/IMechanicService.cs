@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F1Management.Core.Models.Roles.Mechanics
+namespace F1Management.Core.Models.Abstractions
 {
-    public abstract class Mechanic : Role
+    public interface IMechanicService
     {
-        public abstract void FixCar(RaceCar Car);
+        public void FixCar(RaceCar raceCar);
     }
 }

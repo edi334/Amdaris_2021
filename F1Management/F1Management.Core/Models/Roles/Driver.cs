@@ -1,4 +1,5 @@
-﻿using System;
+﻿using F1Management.Core.Models.Car;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace F1Management.Core.Models.Roles
     {
         public int Number { get; set; }
         public int Points { get; set; }
-        public string CarId { get; set; }
+        public RaceCar RaceCar { get; set; }
+        public Guid CarId { get; set; }
     }
 }

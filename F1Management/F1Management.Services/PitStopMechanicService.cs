@@ -1,15 +1,16 @@
-﻿using F1Management.Core.Models.Car;
+﻿using F1Management.Core.Models.Abstractions;
+using F1Management.Core.Models.Car;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F1Management.Core.Models.Roles.Mechanics
+namespace F1Management.Services
 {
-    public class PitStopMechanic : Mechanic
+    class PitStopMechanicService : IMechanicService
     {
-        public override void FixCar(RaceCar car)
+        public void FixCar(RaceCar car)
         {
             if (car == null)
             {

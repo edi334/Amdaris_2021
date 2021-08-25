@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    public abstract class Role
+    public class Role
     {
-        public string Id { get; set; }
-        public string RoleName { get; set; }
+        public Guid Id { get; set; }
+        public TeamMember TeamMember { get; set; }
+        public string Name { get; set; }
     }
 }

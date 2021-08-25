@@ -8,7 +8,7 @@ namespace F1Management.Core
 {
     public class Team
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public int Points { get; set; }
         public int Ranking { get; set; }

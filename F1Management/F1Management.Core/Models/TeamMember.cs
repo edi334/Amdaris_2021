@@ -1,4 +1,5 @@
-﻿using System;
+﻿using F1Management.Core.Models.Roles;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,9 +10,11 @@ namespace F1Management.Core
 {
     public class TeamMember
     {
-        public string Id { get; set; }
-        public string TeamId { get; set; }
-        public string RoleId { get; set; }
+        public Guid Id { get; set; }
+        public Guid TeamId { get; set; }
+        public Team Team { get; set; }
+        public Guid RoleId { get; set; }
+        public Role Role { get; set; }
         public string Name { get; set; }
         public void JoinTeam() { }
         public void LeaveTeam() { }

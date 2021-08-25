@@ -1,22 +1,22 @@
-﻿using F1Management.Core.Models.Car;
+﻿using F1Management.Core.Models.Abstractions;
+using F1Management.Core.Models.Car;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F1Management.Core.Models.Roles.Mechanics
+namespace F1Management.Services
 {
-    public class CarMechanic : Mechanic
+    class CarMechanicService : IMechanicService
     {
-        public override void FixCar(RaceCar car)
+        public void FixCar(RaceCar car)
         {
             if (car == null)
             {
                 throw new NullReferenceException("Car is null");
             }
             _updateParts(car);
-            car.UpdateWear();
         }
         private void _updateParts(RaceCar car)
         {
