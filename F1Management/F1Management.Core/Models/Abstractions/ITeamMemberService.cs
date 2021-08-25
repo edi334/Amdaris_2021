@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Abstractions
 {
-    public interface IMemberService
+    public interface ITeamMemberService
     {
-        public void AssignRoleToMember(string roleId);
+        public void JoinTeam(Team team);
+        public void LeaveTeam(Team team);
     }
 }

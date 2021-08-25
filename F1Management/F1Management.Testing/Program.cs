@@ -2,7 +2,7 @@
 using F1Management.Core.Models;
 using F1Management.Core.Models.Car;
 using F1Management.Core.Models.Roles;
-using F1Management.Core.Models.Roles.Mechanics;
+using F1Management.Infrastructure;
 using System.Collections.Generic;
 
 namespace F1Management.Testing
@@ -11,7 +11,11 @@ namespace F1Management.Testing
     {
         static void Main(string[] args)
         {
+            var connString = @"Server=.;Database=F1Db;Trusted_Connection=True;";
+            using (var dbContext = new AppDbContext(connString))
+            {
 
+            }
         }
     }
-     
+}

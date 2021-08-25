@@ -12,7 +12,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories.PartRepositories
         public List<Gearbox> GetAll();
         public List<Gearbox> GetByCar(RaceCar raceCar);
         public Gearbox GetCurrentGearboxOnCar(RaceCar raceCar);
-        public void Add();
-        public void Delete();
+        public void Add(Gearbox gearbox);
+        public void Delete(Gearbox gearbox);
     }
 }

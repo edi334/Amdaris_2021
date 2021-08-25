@@ -1,0 +1,5 @@
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\F1Management.Core.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.csprojAssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.AssemblyInfo.cs

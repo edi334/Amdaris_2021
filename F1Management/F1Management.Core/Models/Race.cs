@@ -1,4 +1,5 @@
-﻿using System;
+﻿using F1Management.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace F1Management.Core
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string CircuitName { get; set; }
+        public List<Session> Sessions { get; set; }
     }
 }

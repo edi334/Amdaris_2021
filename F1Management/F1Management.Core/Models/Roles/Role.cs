@@ -9,7 +9,7 @@ namespace F1Management.Core.Models.Roles
     public class Role
     {
         public Guid Id { get; set; }
-        public TeamMember TeamMember { get; set; }
         public string Name { get; set; }
+        public TeamMember TeamMember { get; set; }
     }
 }
