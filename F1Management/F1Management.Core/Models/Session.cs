@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models
 {
-    public class Session
+    public class Session : BaseEntity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public Guid RaceId { get; set; }
         public Race Race { get; set; }

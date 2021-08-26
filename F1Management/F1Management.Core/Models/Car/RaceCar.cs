@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Car
 {
-    public class RaceCar
+    public class RaceCar : BaseEntity
     {
-        public Guid Id { get; set; }
         public Chassis Chassis { get; set; }
         public Engine Engine { get; set; }
         public Gearbox Gearbox { get; set; }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    public class Role
+    public class Role : BaseEntity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public TeamMember TeamMember { get; set; }
     }

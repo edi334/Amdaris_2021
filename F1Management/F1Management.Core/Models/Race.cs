@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core
 {
-    public class Race
+    public class Race : BaseEntity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public string CircuitName { get; set; }
         public List<Session> Sessions { get; set; }
