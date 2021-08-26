@@ -11,7 +11,6 @@ namespace F1Management.Core.Models.Abstractions.Repositories.PartRepositories
     {
         public List<Engine> GetAll();
         public List<Engine> GetByCar(RaceCar raceCar);
-        public Engine GetCurrentEngineOnCar(RaceCar raceCar);
         public void Add(Engine engine);
         public void Delete(Engine engine);
     }

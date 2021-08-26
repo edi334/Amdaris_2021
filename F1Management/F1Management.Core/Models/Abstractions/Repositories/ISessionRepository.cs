@@ -15,6 +15,6 @@ namespace F1Management.Core.Models.Abstractions.Repositories
         public List<Session> GetByCarAndRace(RaceCar raceCar, Race race);
         public Session GetById(Guid id);
         public void Add(Session session);
-        public void Remove(Session session);
+        public void Delete(Session session);
     }
 }

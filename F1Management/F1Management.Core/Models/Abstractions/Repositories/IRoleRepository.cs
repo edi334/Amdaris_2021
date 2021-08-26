@@ -11,7 +11,7 @@ namespace F1Management.Core.Models.Abstractions
     {
         public List<Role> GetAll();
         public Role GetByName(string name);
-        public Role GeById(Guid id);
+        public Role GetById(Guid id);
         public void Add(Role role);
         public void Delete(Role role);
     }
