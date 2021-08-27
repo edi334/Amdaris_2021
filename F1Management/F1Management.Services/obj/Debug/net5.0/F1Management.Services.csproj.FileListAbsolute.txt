@@ -1,0 +1,17 @@
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.csprojAssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.AssemblyInfoInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.AssemblyInfo.cs
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.csproj.CoreCompileInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\F1Management.Services.deps.json
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\F1Management.Services.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\ref\F1Management.Services.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\F1Management.Services.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\F1Management.Core.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\F1Management.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\F1Management.Core.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\bin\Debug\net5.0\F1Management.Infrastructure.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.csproj.CopyComplete
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\ref\F1Management.Services.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Services\obj\Debug\net5.0\F1Management.Services.pdb

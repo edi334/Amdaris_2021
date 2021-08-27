@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Roles
 {
-    public class Driver : Role
+    public class Driver : TeamMember
     {
         public int Number { get; set; }
         public int Points { get; set; }
         public RaceCar RaceCar { get; set; }
-        public Guid CarId { get; set; }
+        public Guid RaceCarId { get; set; }
     }
 }

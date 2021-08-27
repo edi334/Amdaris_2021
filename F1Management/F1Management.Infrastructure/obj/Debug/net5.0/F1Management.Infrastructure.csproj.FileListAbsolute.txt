@@ -3,3 +3,16 @@ C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\o
 C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.AssemblyInfo.cs
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\F1Management.Infrastructure.deps.json
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\F1Management.Infrastructure.runtimeconfig.json
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\F1Management.Infrastructure.runtimeconfig.dev.json
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\F1Management.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\ref\F1Management.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\F1Management.Infrastructure.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\bin\Debug\net5.0\F1Management.Core.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.csproj.CopyComplete
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\ref\F1Management.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Infrastructure\obj\Debug\net5.0\F1Management.Infrastructure.genruntimeconfig.cache

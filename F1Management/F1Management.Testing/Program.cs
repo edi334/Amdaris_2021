@@ -11,11 +11,7 @@ namespace F1Management.Testing
     {
         static void Main(string[] args)
         {
-            var connString = @"Server=.;Database=F1Db;Trusted_Connection=True;";
-            using (var dbContext = new AppDbContext(connString))
-            {
-
-            }
+           
         }
     }
 }

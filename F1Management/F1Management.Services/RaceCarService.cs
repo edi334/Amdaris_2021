@@ -12,12 +12,6 @@ namespace F1Management.Services
 {
     class RaceCarService : IRaceCarService
     {
-        private List<TeamMember> _teamMembers;
-        private InMemoryTeamMemberRepository _teamMemberRepository;
-        public RaceCarService(List<TeamMember> teamMembers)
-        {
-            _teamMembers = teamMembers;
-        }
         public void Fix(RaceCar car)
         {
         }

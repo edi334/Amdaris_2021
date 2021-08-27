@@ -49,7 +49,7 @@ namespace F1Management.Infrastructure.Repositories
         public List<RaceCar> GetByTeam(Team team)
         {
             return _dbContext.RaceCars
-                .Where(r => r.Driver.TeamMember.Team == team)
+                .Where(r => r.Driver.Team == team)
                 .ToList();
         }
     }

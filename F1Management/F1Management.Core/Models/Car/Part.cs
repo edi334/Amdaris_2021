@@ -8,7 +8,7 @@ namespace F1Management.Core.Models.Car
 {
     public class Part : BaseEntity
     {
-        public Guid CarId { get; set; }
+        public Guid RaceCarId { get; set; }
         public RaceCar RaceCar { get; set; }
         public double Wear { get; set; }
     }

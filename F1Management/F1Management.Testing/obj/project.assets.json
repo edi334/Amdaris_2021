@@ -1536,7 +1536,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.AspNetCore.SpaServices.Extensions": "5.0.4"
+          "F1Management.Infrastructure": "1.0.0",
+          "Microsoft.AspNetCore.SpaServices.Extensions": "5.0.4",
+          "Microsoft.EntityFrameworkCore": "5.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9"
         },
         "compile": {
           "bin/placeholder/F1Management.App.dll": {}

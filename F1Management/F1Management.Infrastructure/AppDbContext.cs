@@ -13,15 +13,15 @@ namespace F1Management.Infrastructure
 {
     public class AppDbContext : DbContext
     {
-        private readonly string _connString;
-
-        public AppDbContext(string connString)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            _connString = connString;
+            
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            optionsBuilder.UseSqlServer(_connString);
+            modelBuilder.Entity<TeamMember>().ToTable("TeamMembers");
+            modelBuilder.Entity<Driver>().ToTable("Drivers");
         }
 
         public DbSet<Chassis> Chassis { get; set; }
