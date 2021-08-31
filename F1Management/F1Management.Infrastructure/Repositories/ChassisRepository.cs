@@ -1,4 +1,5 @@
-﻿using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
+﻿using F1Management.Core.Models.Abstractions.Repositories;
+using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
 using F1Management.Core.Models.Car;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure
 {
-    public class ChassisRepository : IChassisRepository
+    public class ChassisRepository : IGenericRepository<Chassis>, IPartRepository<Chassis>
     {
         private readonly AppDbContext _dbContext;
 
@@ -38,6 +39,17 @@ namespace F1Management.Infrastructure
             return _dbContext.Chassis
                 .Where(c => c.RaceCar == raceCar)
                 .ToList();
+        }
+
+        public Chassis GetById(Guid id)
+        {
+            return _dbContext.Chassis.FirstOrDefault(c => c.Id == id);
+        }
+
+        public void Update(Chassis chassis)
+        {
+            _dbContext.Chassis.Update(chassis);
+            _dbContext.SaveChanges();
         }
     }
 }

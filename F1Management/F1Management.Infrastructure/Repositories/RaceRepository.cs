@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class RaceRepository : IRaceRepository
+    public class RaceRepository : IGenericRepository<Race>
     {
         private readonly AppDbContext _dbContext;
 
@@ -37,6 +37,12 @@ namespace F1Management.Infrastructure.Repositories
         public Race GetById(Guid id)
         {
             return _dbContext.Races.FirstOrDefault(r => r.Id == id);
+        }
+
+        public void Update(Race race)
+        {
+            _dbContext.Races.Update(race);
+            _dbContext.SaveChanges();
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class DriverRepository : IDriverRepository
+    public class DriverRepository : IGenericRepository<Driver>
     {
         private readonly AppDbContext _dbContext;
 
@@ -37,6 +37,12 @@ namespace F1Management.Infrastructure.Repositories
         public Driver GetById(Guid id)
         {
             return _dbContext.Drivers.FirstOrDefault(d => d.Id == id);
+        }
+
+        public void Update(Driver driver)
+        {
+            _dbContext.Drivers.Update(driver);
+            _dbContext.SaveChanges();
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class RaceCarRepository : IRaceCarRepository
+    public class RaceCarRepository : IGenericRepository<RaceCar>, IRaceCarRepository
     {
         private readonly AppDbContext _dbContext;
 
@@ -51,6 +51,12 @@ namespace F1Management.Infrastructure.Repositories
             return _dbContext.RaceCars
                 .Where(r => r.Driver.Team == team)
                 .ToList();
+        }
+
+        public void Update(RaceCar raceCar)
+        {
+            _dbContext.RaceCars.Update(raceCar);
+            _dbContext.SaveChanges();
         }
     }
 }

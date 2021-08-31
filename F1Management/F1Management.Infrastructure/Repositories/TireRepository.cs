@@ -1,4 +1,5 @@
-﻿using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
+﻿using F1Management.Core.Models.Abstractions.Repositories;
+using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
 using F1Management.Core.Models.Car;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class TireRepository : ITireRepository
+    public class TireRepository : IGenericRepository<Tire>, IPartRepository<Tire>, ITireRepository
     {
         private readonly AppDbContext _dbContext;
 
@@ -17,15 +18,15 @@ namespace F1Management.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public void Add(List<Tire> tires)
+        public void Add(Tire tire)
         {
-            tires.ForEach(t => _dbContext.Tires.Add(t));
+            _dbContext.Tires.Add(tire);
             _dbContext.SaveChanges();
         }
 
-        public void Delete(List<Tire> tires)
+        public void Delete(Tire tire)
         {
-            tires.ForEach(t => _dbContext.Tires.Remove(t));
+            _dbContext.Tires.Remove(tire);
             _dbContext.SaveChanges();
         }
 
@@ -48,11 +49,22 @@ namespace F1Management.Infrastructure.Repositories
                 .ToList();
         }
 
+        public Tire GetById(Guid id)
+        {
+            return _dbContext.Tires.FirstOrDefault(t => t.Id == id);
+        }
+
         public List<Tire> GetByType(TireType tireType)
         {
             return _dbContext.Tires
                 .Where(t => t.Type == tireType)
                 .ToList();
+        }
+
+        public void Update(Tire tire)
+        {
+            _dbContext.Tires.Update(tire);
+            _dbContext.SaveChanges();
         }
     }
 }

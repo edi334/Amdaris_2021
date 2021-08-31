@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Abstractions.Repositories.PartRepositories
 {
-    public interface IGearboxRepository
+    public interface IPartRepository<T> where T : Part
     {
-        public List<Gearbox> GetAll();
-        public List<Gearbox> GetByCar(RaceCar raceCar);
-        public void Add(Gearbox gearbox);
-        public void Delete(Gearbox gearbox);
+        public List<T> GetByCar(RaceCar raceCar);
     }
 }

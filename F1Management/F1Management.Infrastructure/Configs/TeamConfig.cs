@@ -16,7 +16,7 @@ namespace F1Management.Infrastructure.Configs
             builder.HasMany(x => x.TeamMembers)
                 .WithOne(x => x.Team)
                 .HasForeignKey(x => x.TeamId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

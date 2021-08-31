@@ -1,5 +1,6 @@
 ﻿using F1Management.Core;
 using F1Management.Core.Models.Abstractions;
+using F1Management.Core.Models.Abstractions.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class TeamMemberRepository : ITeamMemberRepository
+    public class TeamMemberRepository : IGenericRepository<TeamMember>, ITeamMemberRepository
     {
         private readonly AppDbContext _dbContext;
 
@@ -49,6 +50,12 @@ namespace F1Management.Infrastructure.Repositories
         public TeamMember GetFirstByRole(string roleName)
         {
             return _dbContext.TeamMembers.FirstOrDefault(t => t.Role.Name == roleName);
+        }
+
+        public void Update(TeamMember teamMember)
+        {
+            _dbContext.TeamMembers.Update(teamMember);
+            _dbContext.SaveChanges();
         }
     }
 }

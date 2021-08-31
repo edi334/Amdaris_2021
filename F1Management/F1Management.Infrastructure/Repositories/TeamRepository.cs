@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class TeamRepository : ITeamRepository
+    public class TeamRepository : IGenericRepository<Team>
     {
         private readonly AppDbContext _dbContext;
 
@@ -37,6 +37,12 @@ namespace F1Management.Infrastructure.Repositories
         public Team GetById(Guid id)
         {
             return _dbContext.Teams.FirstOrDefault(t => t.Id == id);
+        }
+
+        public void Update(Team team)
+        {
+            _dbContext.Teams.Update(team);
+            _dbContext.SaveChanges();
         }
     }
 }

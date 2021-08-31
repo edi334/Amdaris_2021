@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class SessionRepository : ISessionRepository
+    public class SessionRepository : IGenericRepository<Session>, ISessionRepository
     {
         private readonly AppDbContext _dbContext;
         public void Add(Session session)
@@ -54,6 +54,12 @@ namespace F1Management.Infrastructure.Repositories
             return _dbContext.Sessions
                 .Where(s => s.Race == race)
                 .ToList();
+        }
+
+        public void Update(Session session)
+        {
+            _dbContext.Sessions.Update(session);
+            _dbContext.SaveChanges();
         }
     }
 }

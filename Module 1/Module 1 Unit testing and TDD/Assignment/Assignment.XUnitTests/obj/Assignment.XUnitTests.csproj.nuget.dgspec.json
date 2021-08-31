@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.XUnitTests/Assignment.XUnitTests.csproj": {}
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.XUnitTests\\Assignment.XUnitTests.csproj": {}
   },
   "projects": {
-    "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/Assignment.Classes.csproj": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.Classes\\Assignment.Classes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/Assignment.Classes.csproj",
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.Classes\\Assignment.Classes.csproj",
         "projectName": "Assignment.Classes",
-        "projectPath": "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/Assignment.Classes.csproj",
-        "packagesPath": "/home/dan/.nuget/packages/",
-        "outputPath": "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/obj/",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.Classes\\Assignment.Classes.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.Classes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,34 +54,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.XUnitTests/Assignment.XUnitTests.csproj": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.XUnitTests\\Assignment.XUnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.XUnitTests/Assignment.XUnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.XUnitTests\\Assignment.XUnitTests.csproj",
         "projectName": "Assignment.XUnitTests",
-        "projectPath": "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.XUnitTests/Assignment.XUnitTests.csproj",
-        "packagesPath": "/home/dan/.nuget/packages/",
-        "outputPath": "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.XUnitTests/obj/",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.XUnitTests\\Assignment.XUnitTests.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.XUnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/Assignment.Classes.csproj": {
-                "projectPath": "/home/dan/Documents/EDi/Amdaris_2021/Module 1/Module 1 Unit testing and TDD/Assignment/Assignment.Classes/Assignment.Classes.csproj"
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.Classes\\Assignment.Classes.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 1\\Module 1 Unit testing and TDD\\Assignment\\Assignment.Classes\\Assignment.Classes.csproj"
               }
             }
           }
@@ -148,7 +152,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,11 +10,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface IRaceCarRepository
     {
-        public List<RaceCar> GetAll();
         public List<RaceCar> GetByTeam(Team team);
         public RaceCar GetByDriver(Driver driver);
-        public RaceCar GetById(Guid id);
-        public void Add(RaceCar raceCar);
-        public void Delete(RaceCar raceCar);
     }
 }

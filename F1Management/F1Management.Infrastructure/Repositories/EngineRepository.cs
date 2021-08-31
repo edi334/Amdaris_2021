@@ -1,4 +1,5 @@
-﻿using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
+﻿using F1Management.Core.Models.Abstractions.Repositories;
+using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
 using F1Management.Core.Models.Car;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class EngineRepository : IEngineRepository
+    public class EngineRepository : IGenericRepository<Engine>, IPartRepository<Engine>
     {
         private readonly AppDbContext _dbContext;
 
@@ -39,6 +40,17 @@ namespace F1Management.Infrastructure.Repositories
             return _dbContext.Engines
                 .Where(e => e.RaceCar == raceCar)
                 .ToList();
+        }
+
+        public Engine GetById(Guid id)
+        {
+            return _dbContext.Engines.FirstOrDefault(e => e.Id == id);
+        }
+
+        public void Update(Engine engine)
+        {
+            _dbContext.Engines.Update(engine);
+            _dbContext.SaveChanges();
         }
     }
 }

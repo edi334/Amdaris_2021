@@ -1,4 +1,5 @@
 ﻿using F1Management.Core.Models.Abstractions;
+using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Core.Models.Roles;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class RoleRepository : IRoleRepository
+    public class RoleRepository : IGenericRepository<Role>, IRoleRepository
     {
         private readonly AppDbContext _dbContext;
 
@@ -42,6 +43,12 @@ namespace F1Management.Infrastructure.Repositories
         public Role GetByName(string name)
         {
             return _dbContext.Roles.FirstOrDefault(r => r.Name == name);
+        }
+
+        public void Update(Role role)
+        {
+            _dbContext.Roles.Update(role);
+            _dbContext.SaveChanges();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
+﻿using F1Management.Core.Models.Abstractions.Repositories;
+using F1Management.Core.Models.Abstractions.Repositories.PartRepositories;
 using F1Management.Core.Models.Car;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class GearboxRepository : IGearboxRepository
+    public class GearboxRepository : IGenericRepository<Gearbox>, IPartRepository<Gearbox>
     {
         private readonly AppDbContext _dbContext;
 
@@ -39,6 +40,17 @@ namespace F1Management.Infrastructure.Repositories
             return _dbContext.Gearboxes
                 .Where(g => g.RaceCar == raceCar)
                 .ToList();
+        }
+
+        public Gearbox GetById(Guid id)
+        {
+            return _dbContext.Gearboxes.FirstOrDefault(g => g.Id == id);
+        }
+
+        public void Update(Gearbox gearbox)
+        {
+            _dbContext.Gearboxes.Update(gearbox);
+            _dbContext.SaveChanges();
         }
     }
 }
