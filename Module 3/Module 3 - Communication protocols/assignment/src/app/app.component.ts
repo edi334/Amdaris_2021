@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {DataService} from './data.service';
 import {IPost} from './post';
-import {IComment} from "./comment";
+import {IComment} from './comment';
 
 @Component({
   selector: 'app-root',

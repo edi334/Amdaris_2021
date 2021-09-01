@@ -3,13 +3,13 @@
     <button (click)="setPosts()">Get the body of the posts with even id</button>
     <button (click)="setComments()">Get comments from the first 3 posts</button>
   </div>
-  <div class="content-container" *ngIf="firstClicked">
-    <div class="content" *ngFor="let post of posts">
+  <div *ngIf="firstClicked" class="content-container">
+    <div *ngFor="let post of posts" class="content">
       <p>{{post.body}}</p>
     </div>
   </div>
-  <div class="content-container" *ngIf="secondClicked">
-    <div class="content" *ngFor="let comment of comments">
+  <div *ngIf="secondClicked" class="content-container">
+    <div *ngFor="let comment of comments" class="content">
       <p>Name: {{comment.name}}</p>
       <p>Email: {{comment.email}}</p>
       <p>Body: {{comment.body}}</p>
