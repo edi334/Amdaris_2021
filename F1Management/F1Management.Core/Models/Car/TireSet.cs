@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Car
 {
-    public class Engine
+    public class TireSet : BaseEntity
     {
-        public double Wear { get; set; }
+        public TireType Type { get; set; }
         public string Brand { get; set; }
-        public int HorsePower { get; set; }
+        public int FrontLeftWear { get; set; }
+        public int FrontRightWear { get; set; }
+        public int RearLeftWear { get; set; }
+        public int RearRightWear { get; set; }
         public Guid RaceCarId { get; set; }
         public RaceCar RaceCar { get; set; }
     }

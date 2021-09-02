@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F1Management.Core.Models.Roles
+namespace F1Management.Core.Models.TeamMembers
 {
-    public class Driver : TeamMember
+    public class Driver : BaseEntity
     {
+        public Guid UserId { get; set; }
         public int Number { get; set; }
         public int Points { get; set; }
         public RaceCar RaceCar { get; set; }

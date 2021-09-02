@@ -11,7 +11,6 @@ namespace F1Management.Core
     {
         public string Name { get; set; }
         public int Points { get; set; }
-        public int Ranking { get; set; }
         public List<TeamMember> TeamMembers { get; set; }
     }
 }

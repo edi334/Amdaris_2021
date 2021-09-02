@@ -1,14 +1,15 @@
-﻿using System;
+﻿using F1Management.Core.Models.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F1Management.Core.Models.Roles
+namespace F1Management.Core.Models.Identity
 {
     public class Role : BaseEntity
     {
         public string Name { get; set; }
-        public TeamMember TeamMember { get; set; }
+        public ICollection<UserRole> UserRoles { get; set; }
     }
 }
