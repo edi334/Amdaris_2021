@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Configs
 {
-    public class RaceConfig : IEntityTypeConfiguration<Race>
+    public class RaceConfig : IEntityTypeConfiguration<GrandPrix>
     {
-        public void Configure(EntityTypeBuilder<Race> builder)
+        public void Configure(EntityTypeBuilder<GrandPrix> builder)
         {
             builder.HasMany(x => x.Sessions)
                 .WithOne(x => x.Race)

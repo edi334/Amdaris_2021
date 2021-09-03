@@ -2,5 +2,7 @@
 {
     Soft,
     Medium,
-    Hard
+    Hard,
+    Intermediate,
+    Wet
 }

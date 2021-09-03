@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class RaceRepository : IGenericRepository<Race>
+    public class RaceRepository : IGenericRepository<GrandPrix>
     {
         private readonly AppDbContext _dbContext;
 
@@ -17,29 +17,29 @@ namespace F1Management.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public void Add(Race race)
+        public void Add(GrandPrix race)
         {
             _dbContext.Races.Add(race);
             _dbContext.SaveChanges();
         }
 
-        public void Delete(Race race)
+        public void Delete(GrandPrix race)
         {
             _dbContext.Races.Remove(race);
             _dbContext.SaveChanges();
         }
 
-        public List<Race> GetAll()
+        public List<GrandPrix> GetAll()
         {
             return _dbContext.Races.ToList();
         }
 
-        public Race GetById(Guid id)
+        public GrandPrix GetById(Guid id)
         {
             return _dbContext.Races.FirstOrDefault(r => r.Id == id);
         }
 
-        public void Update(Race race)
+        public void Update(GrandPrix race)
         {
             _dbContext.Races.Update(race);
             _dbContext.SaveChanges();

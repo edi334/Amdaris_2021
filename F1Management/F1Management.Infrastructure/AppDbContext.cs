@@ -30,7 +30,7 @@ namespace F1Management.Infrastructure
         public DbSet<Tire> Tires { get; set; }
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<RaceCar> RaceCars { get; set; }
-        public DbSet<Race> Races { get; set; }
+        public DbSet<GrandPrix> Races { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Session> Sessions { get; set; }
         public DbSet<TeamMember> TeamMembers { get; set; }

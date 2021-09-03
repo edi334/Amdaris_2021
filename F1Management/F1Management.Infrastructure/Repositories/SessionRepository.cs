@@ -37,7 +37,7 @@ namespace F1Management.Infrastructure.Repositories
                 .ToList();
         }
 
-        public List<Session> GetByCarAndRace(RaceCar raceCar, Race race)
+        public List<Session> GetByCarAndRace(RaceCar raceCar, GrandPrix race)
         {
             return _dbContext.Sessions
                 .Where(s => s.RaceCar == raceCar && s.Race == race)
@@ -49,7 +49,7 @@ namespace F1Management.Infrastructure.Repositories
             return _dbContext.Sessions.FirstOrDefault(s => s.Id == id);
         }
 
-        public List<Session> GetByRace(Race race)
+        public List<Session> GetByRace(GrandPrix race)
         {
             return _dbContext.Sessions
                 .Where(s => s.Race == race)

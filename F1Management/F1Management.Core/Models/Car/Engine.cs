@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Car
 {
-    public class Engine
+    public class Engine : BaseEntity
     {
         public double Wear { get; set; }
         public string Brand { get; set; }

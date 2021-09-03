@@ -9,8 +9,8 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface ISessionRepository
     {
-        public List<Session> GetByRace(Race race);
+        public List<Session> GetByRace(GrandPrix race);
         public List<Session> GetByCar(RaceCar raceCar);
-        public List<Session> GetByCarAndRace(RaceCar raceCar, Race race);
+        public List<Session> GetByCarAndRace(RaceCar raceCar, GrandPrix race);
     }
 }

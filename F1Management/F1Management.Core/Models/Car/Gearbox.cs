@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.Car
 {
-    public class Gearbox
+    public class Gearbox : BaseEntity
     {
         public double Wear { get; set; }
         public int GearCount { get; set; } = 8;

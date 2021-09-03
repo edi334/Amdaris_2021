@@ -1,4 +1,4 @@
-﻿using F1Management.Core.Models.Roles;
+﻿using F1Management.Core.Models.TeamMembers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace F1Management.Core.Models.Car
         public Gearbox Gearbox { get; set; }
         public TireSet TireSet { get; set; }
         public Driver Driver { get; set; }
-        public List<Session> Sessions { get; set; }
+        public ICollection<Session> Sessions { get; set; }
         public double TotalWear => (Chassis.Wear + Engine.Wear + Gearbox.Wear) / 3;
     }
 }
