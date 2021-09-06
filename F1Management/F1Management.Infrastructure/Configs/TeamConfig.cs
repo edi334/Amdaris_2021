@@ -13,10 +13,9 @@ namespace F1Management.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<Team> builder)
         {
-            builder.HasMany(x => x.TeamMembers)
+            builder.HasMany(x => x.RaceEngineers)
                 .WithOne(x => x.Team)
-                .HasForeignKey(x => x.TeamId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

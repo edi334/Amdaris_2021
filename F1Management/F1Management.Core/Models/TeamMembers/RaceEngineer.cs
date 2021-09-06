@@ -13,7 +13,7 @@ namespace F1Management.Core.Models.TeamMembers
         public User User { get; set; }
         public Guid DriverId { get; set; }
         public Driver Driver { get; set; }
-        public void SetStrategy(string strategy) { }
-        public void TalkToDriver() { }
+        public Guid TeamId { get; set; }
+        public Team Team { get; set; }
     }
 }

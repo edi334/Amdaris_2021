@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Configs
 {
-    public class RaceConfig : IEntityTypeConfiguration<GrandPrix>
+    public class GrandPrixConfig : IEntityTypeConfiguration<GrandPrix>
     {
         public void Configure(EntityTypeBuilder<GrandPrix> builder)
         {
-            builder.HasMany(x => x.Sessions)
-                .WithOne(x => x.Race)
-                .HasForeignKey(x => x.RaceId)
+            builder.HasMany(x => x.CarSessions)
+                .WithOne(x => x.GrandPrix)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

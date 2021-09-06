@@ -12,23 +12,25 @@ namespace F1Management.Core.Models.TeamMembers
     {
         public Guid UserId { get; set; }
         public User User { get; set; }
-        public void FixCar(RaceCar car)
+        public Guid TeamId { get; set; }
+        public Team Team { get; set; }
+        public void FixCar(RaceCar raceCar)
         {
-            car.Chassis.Wear = 0;
-            car.Engine.Wear = 0;
-            car.Gearbox.Wear = 0;
+            raceCar.Chassis.Wear = 0;
+            raceCar.Engine.Wear = 0;
+            raceCar.Gearbox.Wear = 0;
         }
-        public void FixChassis(RaceCar car)
+        public void FixChassis(RaceCar raceCar)
         {
-            car.Chassis.Wear = 0;
+            raceCar.Chassis.Wear = 0;
         }
-        public void FixEngine(RaceCar car)
+        public void FixEngine(RaceCar raceCar)
         {
-            car.Engine.Wear = 0;
+            raceCar.Engine.Wear = 0;
         }
-        public void FixGearBox(RaceCar car)
+        public void FixGearBox(RaceCar raceCar)
         {
-            car.Gearbox.Wear = 0;
+            raceCar.Gearbox.Wear = 0;
         }
     }
 }

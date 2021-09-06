@@ -1,5 +1,6 @@
 ﻿using F1Management.Core;
 using F1Management.Core.Models.Abstractions.Repositories;
+using F1Management.Core.Models.TeamMembers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,38 +9,21 @@ using System.Threading.Tasks;
 
 namespace F1Management.Infrastructure.Repositories
 {
-    public class TeamRepository : IGenericRepository<Team>
+    public class TeamRepository : ITeamRepository
     {
         private readonly AppDbContext _dbContext;
-
         public TeamRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public void Add(Team team)
+        public void UpdateDriver(Driver driver)
         {
-            _dbContext.Teams.Add(team);
+            _dbContext.Drivers.Update(driver);
             _dbContext.SaveChanges();
         }
 
-        public void Delete(Team team)
-        {
-            _dbContext.Teams.Remove(team);
-            _dbContext.SaveChanges();
-        }
-
-        public List<Team> GetAll()
-        {
-            return _dbContext.Teams.ToList();
-        }
-
-        public Team GetById(Guid id)
-        {
-            return _dbContext.Teams.FirstOrDefault(t => t.Id == id);
-        }
-
-        public void Update(Team team)
+        public void UpdateTeam(Team team)
         {
             _dbContext.Teams.Update(team);
             _dbContext.SaveChanges();

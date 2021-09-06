@@ -13,6 +13,6 @@ namespace F1Management.Core
         public string Name { get; set; }
         public string CircuitName { get; set; }
         [MaxLength(5)]
-        public ICollection<Session> Sessions { get; set; }
+        public ICollection<CarSession> CarSessions { get; set; }
     }
 }
