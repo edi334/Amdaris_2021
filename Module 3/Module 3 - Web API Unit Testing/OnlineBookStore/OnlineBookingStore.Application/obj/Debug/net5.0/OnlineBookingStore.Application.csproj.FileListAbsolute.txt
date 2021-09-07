@@ -1,0 +1,15 @@
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\bin\Debug\net5.0\OnlineBookingStore.Application.deps.json
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\bin\Debug\net5.0\OnlineBookingStore.Application.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\bin\Debug\net5.0\ref\OnlineBookingStore.Application.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\bin\Debug\net5.0\OnlineBookingStore.Application.pdb
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\bin\Debug\net5.0\OnlineBookingStore.Domain.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\bin\Debug\net5.0\OnlineBookingStore.Domain.pdb
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.csproj.AssemblyReference.cache
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.AssemblyInfoInputs.cache
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.AssemblyInfo.cs
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.csproj.CoreCompileInputs.cache
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.csproj.CopyComplete
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\ref\OnlineBookingStore.Application.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Application\obj\Debug\net5.0\OnlineBookingStore.Application.pdb

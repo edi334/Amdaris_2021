@@ -1,0 +1,12 @@
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\OnlineBookingStore.Domain.deps.json
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\OnlineBookingStore.Domain.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\ref\OnlineBookingStore.Domain.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\OnlineBookingStore.Domain.pdb
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.AssemblyInfoInputs.cache
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.AssemblyInfo.cs
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\ref\OnlineBookingStore.Domain.dll
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.pdb
+C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.csproj.AssemblyReference.cache
