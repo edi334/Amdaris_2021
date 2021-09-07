@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Home page</title>
+    </head>
+    <body>
+        <p>TO DO List: </p>
+        <input type="text" id="todo">
+        <button id="addBtn">Add</button>
+        <button id="removeBtn">Remove</button>
+        <br>
+        <a href="./page.html">
+            <button>Go to next page!</button>
+        </a>
+    </body>
+    <script>
+        function handleClick() {
+            const input = document.getElementById("todo");
+            let value = input.value;
+            const newP = document.createElement("p");
+            const newContent = document.createTextNode(value);
+            newP.appendChild(newContent);
+            document.body.insertBefore(newP, input);
+            input.value = null;
+        }
+
+        function handleRemove() {
+            const input = document.getElementById("todo");
+            let pTags = document.getElementsByTagName("p");
+            let searchText = input.value;
+            let found;
+            for (let i = 0; i < pTags.length; ++i)
+            {
+                if (pTags[i].textContent === searchText) {
+                    found = pTags[i];
+                    break;
+                }
+            }
+            found.remove();
+            input.value = null;
+        }
+
+        document.getElementById("addBtn").addEventListener("click", handleClick);
+        document.getElementById("removeBtn").addEventListener("click", handleRemove);
+    </script>
+</html>

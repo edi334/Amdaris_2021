@@ -5,6 +5,11 @@ import { Grid, Paper, TableCell, TableContainer, TableHead, TableRow, Table, Tab
 import DCandidateForm from "./DCandidateForm";
 
 const styles = theme => ({
+    root: {
+        "& .MuiTableCell-head": {
+            fontSize:
+        }
+    }
     paper: {
         margin: theme.spacing(2),
         padding: theme.spacing(2)
