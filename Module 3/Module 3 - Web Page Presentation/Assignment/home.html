@@ -4,16 +4,21 @@
         <title>Home page</title>
     </head>
     <body>
-        <p>TO DO List: </p>
+        <p>TODO List: </p>
         <input type="text" id="todo">
         <button id="addBtn">Add</button>
         <button id="removeBtn">Remove</button>
+        <br>
+        <button id="countBtn">Count TODOs</button>
+        <p id="counter">TODOs Count: </p>
         <br>
         <a href="./page.html">
             <button>Go to next page!</button>
         </a>
     </body>
     <script>
+        var count = 0;
+
         function handleClick() {
             const input = document.getElementById("todo");
             let value = input.value;
@@ -21,7 +26,10 @@
             const newContent = document.createTextNode(value);
             newP.appendChild(newContent);
             document.body.insertBefore(newP, input);
-            input.value = null;
+            if (value !== "") {
+                count++;
+            }
+            input.value = "";
         }
 
         function handleRemove() {
@@ -37,10 +45,21 @@
                 }
             }
             found.remove();
-            input.value = null;
+            if (searchText !== "") {
+                count--;
+            }
+            input.value = "";
+        }
+
+        function handleCount() {
+            let paragraph = document.getElementById("counter");
+            paragraph.innerHTML = "TODOS Count: ";
+            let text = document.createTextNode(count.toString());
+            paragraph.appendChild(text);
         }
 
         document.getElementById("addBtn").addEventListener("click", handleClick);
         document.getElementById("removeBtn").addEventListener("click", handleRemove);
+        document.getElementById("countBtn").addEventListener("click", handleCount);
     </script>
 </html>
