@@ -10,3 +10,15 @@ C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\
 C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\ref\OnlineBookingStore.Domain.dll
 C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.pdb
 C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.csproj.AssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\OnlineBookingStore.Domain.deps.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\OnlineBookingStore.Domain.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\ref\OnlineBookingStore.Domain.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\bin\Debug\net5.0\OnlineBookingStore.Domain.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.csprojAssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.AssemblyInfoInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.AssemblyInfo.cs
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\ref\OnlineBookingStore.Domain.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookingStore.Domain\obj\Debug\net5.0\OnlineBookingStore.Domain.pdb

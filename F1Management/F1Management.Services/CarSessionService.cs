@@ -24,7 +24,7 @@ namespace F1Management.Services
             _teamRepository = teamRepository;
             _carSessionRepository = carSessionRepository;
         }
-        public void StartSession(CarSession carSession, Chassis chassis, Engine engine,
+        public async Task StartSessionAsync(CarSession carSession, Chassis chassis, Engine engine,
             Gearbox gearbox, CarMechanic carMechanic, RaceEngineer engineer, string strategy)
         {
             if (carMechanic != null)
@@ -41,9 +41,9 @@ namespace F1Management.Services
 
             carSession.StartDate = DateTime.Now;
 
-            _carSessionRepository.UpdateSession(carSession);
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
-        public void PitStop(CarSession carSession, DateTime start, DateTime end, TireSet tireSet, PitStopCrew pitStopCrew)
+        public async Task PitStopAsync(CarSession carSession, DateTime start, DateTime end, TireSet tireSet, PitStopCrew pitStopCrew)
         {
             var pitStop = new PitStop
             {
@@ -59,36 +59,36 @@ namespace F1Management.Services
                 pitStopCrew.ChangeTires(carSession.RaceCar, tireSet);
             }
 
-            _carSessionRepository.AddPitStop(pitStop);
+            await _carSessionRepository.AddPitStopAsync(pitStop);
         }
-        public void ChangeStrategy(RaceCar raceCar, RaceEngineer engineer, string strategy)
+        public async Task ChangeStrategyAsync(RaceCar raceCar, RaceEngineer engineer, string strategy)
         {
             if (engineer != null)
             {
                 raceCar.Strategy = strategy;
             }
 
-            _raceCarRepository.UpdateRaceCar(raceCar);
+            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
         }
-        public void ChangePosition(CarSession carSession, Admin admin, int position)
+        public async Task ChangePositionAsync(CarSession carSession, Admin admin, int position)
         {
             if (admin != null)
             {
                 carSession.Position = position;
             }
 
-            _carSessionRepository.UpdateSession(carSession);
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
-        public void SetFastestLap(CarSession carSession, Admin admin, TimeSpan fastestLap)
+        public async Task SetFastestLapAsync(CarSession carSession, Admin admin, TimeSpan fastestLap)
         {
             if (admin != null)
             {
                 carSession.FastestLap = fastestLap;
             }
 
-            _carSessionRepository.UpdateSession(carSession);
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
-        public void EndSession(CarSession carSession)
+        public async Task EndSessionAsync(CarSession carSession)
         {
             if (carSession.SessionType == SessionType.Race)
             {
@@ -96,7 +96,7 @@ namespace F1Management.Services
                 var driver = carSession.RaceCar.Driver;
                 var team = driver.Team;
 
-                if (_carSessionRepository.GetFastestLapFromAllCarsInSession(carSession) == carSession.FastestLap
+                if (await _carSessionRepository.GetFastestLapFromAllCarsInSessionAsync(carSession) == carSession.FastestLap
                     && carSession.Position >= 10)
                 {
                     points += 1;
@@ -120,8 +120,8 @@ namespace F1Management.Services
                 driver.Points += points;
                 team.Points += points;
 
-                _teamRepository.UpdateDriver(driver);
-                _teamRepository.UpdateTeam(team);
+                await _teamRepository.UpdateDriverAsync(driver);
+                await _teamRepository.UpdateTeamAsync(team);
             }
         }
     }

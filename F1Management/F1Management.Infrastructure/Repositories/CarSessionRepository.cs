@@ -1,5 +1,6 @@
 ﻿using F1Management.Core.Models;
 using F1Management.Core.Models.Abstractions.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,26 +16,26 @@ namespace F1Management.Infrastructure.Repositories
         {
             _dbContext = dbContext;
         }
-        public void AddPitStop(PitStop pitStop)
+        public async Task AddPitStopAsync(PitStop pitStop)
         {
             _dbContext.PitStops.Add(pitStop);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
-        public TimeSpan GetFastestLapFromAllCarsInSession(CarSession carSession)
+        public async Task<TimeSpan> GetFastestLapFromAllCarsInSessionAsync(CarSession carSession)
         {
-            TimeSpan fastestLap = _dbContext.Sessions
+            TimeSpan fastestLap = await  _dbContext.Sessions
                 .Where(s => s.GrandPrix == carSession.GrandPrix && s.SessionType == carSession.SessionType)
                 .Select(s => s.FastestLap)
-                .Max();
+                .MaxAsync();
 
             return fastestLap;
         }
 
-        public void UpdateSession(CarSession carSession)
+        public async Task UpdateSessionAsync(CarSession carSession)
         {
             _dbContext.Sessions.Update(carSession);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

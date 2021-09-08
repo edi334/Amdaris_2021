@@ -187,8 +187,7 @@ namespace F1Management.Infrastructure.Migrations
                         name: "FK_TireSets_RaceCars_RaceCarId",
                         column: x => x.RaceCarId,
                         principalTable: "RaceCars",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -205,67 +204,7 @@ namespace F1Management.Infrastructure.Migrations
                         name: "FK_PitStopCrews_Teams_TeamId",
                         column: x => x.TeamId,
                         principalTable: "Teams",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CarMechanics",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CarMechanics", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CarMechanics_Teams_TeamId",
-                        column: x => x.TeamId,
-                        principalTable: "Teams",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CarMechanics_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Drivers",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Number = table.Column<int>(type: "int", nullable: false),
-                    Points = table.Column<int>(type: "int", nullable: false),
-                    RaceCarId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Drivers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Drivers_RaceCars_RaceCarId",
-                        column: x => x.RaceCarId,
-                        principalTable: "RaceCars",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Drivers_Teams_TeamId",
-                        column: x => x.TeamId,
-                        principalTable: "Teams",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Drivers_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -283,14 +222,12 @@ namespace F1Management.Infrastructure.Migrations
                         name: "FK_UserRoles_Roles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "Roles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_UserRoles_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -310,8 +247,7 @@ namespace F1Management.Infrastructure.Migrations
                         name: "FK_PitStops_Sessions_CarSessionId",
                         column: x => x.CarSessionId,
                         principalTable: "Sessions",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_PitStops_TireSets_NewTiresId",
                         column: x => x.NewTiresId,
@@ -327,93 +263,68 @@ namespace F1Management.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PitStopMechanics",
+                name: "Member",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PitStopCrewId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CarMechanic_TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    Number = table.Column<int>(type: "int", nullable: true),
+                    Points = table.Column<int>(type: "int", nullable: true),
+                    RaceCarId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    PitStopCrewId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DriverId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    RaceEngineer_TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PitStopMechanics", x => x.Id);
+                    table.PrimaryKey("PK_Member", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PitStopMechanics_PitStopCrews_PitStopCrewId",
+                        name: "FK_Member_Member_DriverId",
+                        column: x => x.DriverId,
+                        principalTable: "Member",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Member_PitStopCrews_PitStopCrewId",
                         column: x => x.PitStopCrewId,
                         principalTable: "PitStopCrews",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PitStopMechanics_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RaceEngineers",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DriverId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RaceEngineers", x => x.Id);
+                        name: "FK_Member_RaceCars_RaceCarId",
+                        column: x => x.RaceCarId,
+                        principalTable: "RaceCars",
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_RaceEngineers_Drivers_DriverId",
-                        column: x => x.DriverId,
-                        principalTable: "Drivers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        name: "FK_Member_Teams_CarMechanic_TeamId",
+                        column: x => x.CarMechanic_TeamId,
+                        principalTable: "Teams",
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_RaceEngineers_Teams_TeamId",
+                        name: "FK_Member_Teams_RaceEngineer_TeamId",
+                        column: x => x.RaceEngineer_TeamId,
+                        principalTable: "Teams",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Member_Teams_TeamId",
                         column: x => x.TeamId,
                         principalTable: "Teams",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_RaceEngineers_Users_UserId",
+                        name: "FK_Member_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CarMechanics_TeamId",
-                table: "CarMechanics",
-                column: "TeamId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CarMechanics_UserId",
-                table: "CarMechanics",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Chassis_RaceCarId",
                 table: "Chassis",
                 column: "RaceCarId",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Drivers_RaceCarId",
-                table: "Drivers",
-                column: "RaceCarId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Drivers_TeamId",
-                table: "Drivers",
-                column: "TeamId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Drivers_UserId",
-                table: "Drivers",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Engines_RaceCarId",
@@ -428,20 +339,50 @@ namespace F1Management.Infrastructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Member_CarMechanic_TeamId",
+                table: "Member",
+                column: "CarMechanic_TeamId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Member_DriverId",
+                table: "Member",
+                column: "DriverId",
+                unique: true,
+                filter: "[DriverId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Member_PitStopCrewId",
+                table: "Member",
+                column: "PitStopCrewId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Member_RaceCarId",
+                table: "Member",
+                column: "RaceCarId",
+                unique: true,
+                filter: "[RaceCarId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Member_RaceEngineer_TeamId",
+                table: "Member",
+                column: "RaceEngineer_TeamId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Member_TeamId",
+                table: "Member",
+                column: "TeamId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Member_UserId",
+                table: "Member",
+                column: "UserId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PitStopCrews_TeamId",
                 table: "PitStopCrews",
                 column: "TeamId",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PitStopMechanics_PitStopCrewId",
-                table: "PitStopMechanics",
-                column: "PitStopCrewId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PitStopMechanics_UserId",
-                table: "PitStopMechanics",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PitStops_CarSessionId",
@@ -457,22 +398,6 @@ namespace F1Management.Infrastructure.Migrations
                 name: "IX_PitStops_OldTiresId",
                 table: "PitStops",
                 column: "OldTiresId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RaceEngineers_DriverId",
-                table: "RaceEngineers",
-                column: "DriverId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RaceEngineers_TeamId",
-                table: "RaceEngineers",
-                column: "TeamId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RaceEngineers_UserId",
-                table: "RaceEngineers",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Sessions_GrandPrixId",
@@ -504,9 +429,6 @@ namespace F1Management.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CarMechanics");
-
-            migrationBuilder.DropTable(
                 name: "Chassis");
 
             migrationBuilder.DropTable(
@@ -516,13 +438,10 @@ namespace F1Management.Infrastructure.Migrations
                 name: "Gearboxes");
 
             migrationBuilder.DropTable(
-                name: "PitStopMechanics");
+                name: "Member");
 
             migrationBuilder.DropTable(
                 name: "PitStops");
-
-            migrationBuilder.DropTable(
-                name: "RaceEngineers");
 
             migrationBuilder.DropTable(
                 name: "UserRoles");
@@ -537,22 +456,19 @@ namespace F1Management.Infrastructure.Migrations
                 name: "TireSets");
 
             migrationBuilder.DropTable(
-                name: "Drivers");
+                name: "Roles");
 
             migrationBuilder.DropTable(
-                name: "Roles");
+                name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Teams");
 
             migrationBuilder.DropTable(
                 name: "GrandPrix");
 
             migrationBuilder.DropTable(
                 name: "RaceCars");
-
-            migrationBuilder.DropTable(
-                name: "Teams");
-
-            migrationBuilder.DropTable(
-                name: "Users");
         }
     }
 }

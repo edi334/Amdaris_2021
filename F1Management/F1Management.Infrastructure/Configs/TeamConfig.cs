@@ -16,6 +16,18 @@ namespace F1Management.Infrastructure.Configs
             builder.HasMany(x => x.RaceEngineers)
                 .WithOne(x => x.Team)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasMany(x => x.CarMechanics)
+                .WithOne(x => x.Team)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasMany(x => x.Drivers)
+                .WithOne(x => x.Team)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(x => x.PitStopCrew)
+                .WithOne(x => x.Team)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

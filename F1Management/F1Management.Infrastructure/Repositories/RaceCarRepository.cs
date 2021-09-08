@@ -1,5 +1,6 @@
 ﻿using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Core.Models.Car;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +16,15 @@ namespace F1Management.Infrastructure.Repositories
         {
             _dbContext = dbContext;
         }
-        public RaceCar GetRaceCar(Guid id)
+        public async Task<RaceCar> GetRaceCarAsync(Guid id)
         {
-            return _dbContext.RaceCars
-                .FirstOrDefault(r => r.Id == id);
+            return await _dbContext.RaceCars
+                .FirstOrDefaultAsync(r => r.Id == id);
         }
-        public void UpdateRaceCar(RaceCar raceCar)
+        public async Task UpdateRaceCarAsync(RaceCar raceCar)
         {
             _dbContext.RaceCars.Update(raceCar);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

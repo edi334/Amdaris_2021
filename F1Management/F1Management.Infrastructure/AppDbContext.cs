@@ -3,6 +3,7 @@ using F1Management.Core.Models;
 using F1Management.Core.Models.Car;
 using F1Management.Core.Models.Identity;
 using F1Management.Core.Models.TeamMembers;
+using F1Management.Infrastructure.Configs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,6 @@ namespace F1Management.Infrastructure
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-            
-        }
-        
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
@@ -36,5 +32,36 @@ namespace F1Management.Infrastructure
         public DbSet<CarSession> Sessions { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<PitStop> PitStops { get; set; }
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+            
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CarMechanic>().ToTable("CarMechanics");
+            modelBuilder.Entity<PitStopMechanic>().ToTable("PitStopMechanics");
+            modelBuilder.Entity<RaceEngineer>().ToTable("RaceEngineers");
+            modelBuilder.Entity<Driver>().ToTable("Drivers");
+
+            modelBuilder.ApplyConfiguration(new CarMechanicConfig());
+            modelBuilder.ApplyConfiguration(new CarSessionConfig());
+            modelBuilder.ApplyConfiguration(new ChassisConfig());
+            modelBuilder.ApplyConfiguration(new DriverConfig());
+            modelBuilder.ApplyConfiguration(new EngineConfig());
+            modelBuilder.ApplyConfiguration(new GearboxConfig());
+            modelBuilder.ApplyConfiguration(new GrandPrixConfig());
+            modelBuilder.ApplyConfiguration(new PitStopConfig());
+            modelBuilder.ApplyConfiguration(new PitStopCrewConfig());
+            modelBuilder.ApplyConfiguration(new PitStopMechanicConfig());
+            modelBuilder.ApplyConfiguration(new RaceCarConfig());
+            modelBuilder.ApplyConfiguration(new RaceEngineerConfig());
+            modelBuilder.ApplyConfiguration(new RoleConfig());
+            modelBuilder.ApplyConfiguration(new TeamConfig());
+            modelBuilder.ApplyConfiguration(new TireSetConfig());
+            modelBuilder.ApplyConfiguration(new UserConfig());
+            modelBuilder.ApplyConfiguration(new UserRoleConfig());
+        }
     }
 }

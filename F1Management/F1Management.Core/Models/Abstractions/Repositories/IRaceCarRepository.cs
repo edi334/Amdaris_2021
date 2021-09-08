@@ -9,7 +9,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface IRaceCarRepository
     {
-        public RaceCar GetRaceCar(Guid id);
-        public void UpdateRaceCar(RaceCar raceCar);
+        public Task<RaceCar> GetRaceCarAsync(Guid id);
+        public Task UpdateRaceCarAsync(RaceCar raceCar);
     }
 }

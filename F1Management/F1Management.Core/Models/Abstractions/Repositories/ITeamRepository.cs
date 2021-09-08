@@ -9,7 +9,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface ITeamRepository
     {
-        public void UpdateTeam(Team team);
-        public void UpdateDriver(Driver driver);
+        public Task UpdateTeamAsync(Team team);
+        public Task UpdateDriverAsync(Driver driver);
     }
 }

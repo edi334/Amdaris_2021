@@ -17,16 +17,16 @@ namespace F1Management.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public void UpdateDriver(Driver driver)
+        public async Task UpdateDriverAsync(Driver driver)
         {
             _dbContext.Drivers.Update(driver);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
-        public void UpdateTeam(Team team)
+        public async Task UpdateTeamAsync(Team team)
         {
             _dbContext.Teams.Update(team);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

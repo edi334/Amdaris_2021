@@ -1,37 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj": {}
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj",
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj",
         "projectName": "OnlineBookingStore.Api",
-        "projectPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj",
-        "packagesPath": "C:\\Users\\silviu.anescu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Api\\obj\\",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Api\\OnlineBookingStore.Api.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\silviu.anescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj"
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj"
               }
             }
           }
@@ -87,38 +85,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj",
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj",
         "projectName": "OnlineBookingStore.Application",
-        "projectPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj",
-        "packagesPath": "C:\\Users\\silviu.anescu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Application\\obj\\",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\silviu.anescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj": {
-                "projectPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj"
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj"
               }
             }
           }
@@ -157,30 +153,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj",
         "projectName": "OnlineBookingStore.Domain",
-        "projectPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj",
-        "packagesPath": "C:\\Users\\silviu.anescu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Domain\\obj\\",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Domain\\OnlineBookingStore.Domain.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\silviu.anescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -213,38 +207,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj": {
+    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj",
         "projectName": "OnlineBookStore.Infrastructure",
-        "projectPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\silviu.anescu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookStore.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookStore.Infrastructure\\OnlineBookStore.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookStore.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\silviu.anescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj": {
-                "projectPath": "C:\\Users\\silviu.anescu\\Desktop\\Przentare\\UnitTests WebApi\\T\\OnlineBookStore (1)\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj"
+              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj": {
+                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\Module 3\\Module 3 - Web API Unit Testing\\OnlineBookStore\\OnlineBookingStore.Application\\OnlineBookingStore.Application.csproj"
               }
             }
           }
@@ -289,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

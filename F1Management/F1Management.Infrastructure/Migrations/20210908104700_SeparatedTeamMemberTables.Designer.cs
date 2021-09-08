@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace F1Management.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210906172555_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210908104700_SeparatedTeamMemberTables")]
+    partial class SeparatedTeamMemberTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -294,13 +294,10 @@ namespace F1Management.Infrastructure.Migrations
                     b.ToTable("PitStops");
                 });
 
-            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.CarMechanic", b =>
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Member", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("TeamId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserId")
@@ -308,44 +305,10 @@ namespace F1Management.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TeamId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("CarMechanics");
-                });
-
-            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Driver", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Number")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Points")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("RaceCarId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("TeamId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RaceCarId")
+                    b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.HasIndex("TeamId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Drivers");
+                    b.ToTable("Member");
                 });
 
             modelBuilder.Entity("F1Management.Core.Models.TeamMembers.PitStopCrew", b =>
@@ -365,54 +328,6 @@ namespace F1Management.Infrastructure.Migrations
                     b.ToTable("PitStopCrews");
                 });
 
-            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.PitStopMechanic", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("PitStopCrewId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PitStopCrewId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("PitStopMechanics");
-                });
-
-            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.RaceEngineer", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("DriverId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("TeamId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DriverId")
-                        .IsUnique();
-
-                    b.HasIndex("TeamId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("RaceEngineers");
-                });
-
             modelBuilder.Entity("F1Management.Core.Team", b =>
                 {
                     b.Property<Guid>("Id")
@@ -428,6 +343,74 @@ namespace F1Management.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.CarMechanic", b =>
+                {
+                    b.HasBaseType("F1Management.Core.Models.TeamMembers.Member");
+
+                    b.Property<Guid>("TeamId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("TeamId");
+
+                    b.ToTable("CarMechanics");
+                });
+
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Driver", b =>
+                {
+                    b.HasBaseType("F1Management.Core.Models.TeamMembers.Member");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("RaceCarId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TeamId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("RaceCarId")
+                        .IsUnique()
+                        .HasFilter("[RaceCarId] IS NOT NULL");
+
+                    b.HasIndex("TeamId");
+
+                    b.ToTable("Drivers");
+                });
+
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.PitStopMechanic", b =>
+                {
+                    b.HasBaseType("F1Management.Core.Models.TeamMembers.Member");
+
+                    b.Property<Guid>("PitStopCrewId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("PitStopCrewId");
+
+                    b.ToTable("PitStopMechanics");
+                });
+
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.RaceEngineer", b =>
+                {
+                    b.HasBaseType("F1Management.Core.Models.TeamMembers.Member");
+
+                    b.Property<Guid>("DriverId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TeamId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("DriverId")
+                        .IsUnique()
+                        .HasFilter("[DriverId] IS NOT NULL");
+
+                    b.HasIndex("TeamId");
+
+                    b.ToTable("RaceEngineers");
                 });
 
             modelBuilder.Entity("F1Management.Core.Models.Car.Chassis", b =>
@@ -468,7 +451,7 @@ namespace F1Management.Infrastructure.Migrations
                     b.HasOne("F1Management.Core.Models.Car.RaceCar", "RaceCar")
                         .WithOne("TireSet")
                         .HasForeignKey("F1Management.Core.Models.Car.TireSet", "RaceCarId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("RaceCar");
@@ -498,13 +481,13 @@ namespace F1Management.Infrastructure.Migrations
                     b.HasOne("F1Management.Core.Models.Identity.Role", "Role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("F1Management.Core.Models.Identity.User", "User")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Role");
@@ -517,7 +500,7 @@ namespace F1Management.Infrastructure.Migrations
                     b.HasOne("F1Management.Core.Models.CarSession", "Session")
                         .WithMany("PitStops")
                         .HasForeignKey("CarSessionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("F1Management.Core.Models.Car.TireSet", "NewTires")
@@ -535,48 +518,13 @@ namespace F1Management.Infrastructure.Migrations
                     b.Navigation("Session");
                 });
 
-            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.CarMechanic", b =>
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Member", b =>
                 {
-                    b.HasOne("F1Management.Core.Team", "Team")
-                        .WithMany("CarMechanics")
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("F1Management.Core.Models.Identity.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                        .WithOne("Member")
+                        .HasForeignKey("F1Management.Core.Models.TeamMembers.Member", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Team");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Driver", b =>
-                {
-                    b.HasOne("F1Management.Core.Models.Car.RaceCar", "RaceCar")
-                        .WithOne("Driver")
-                        .HasForeignKey("F1Management.Core.Models.TeamMembers.Driver", "RaceCarId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("F1Management.Core.Team", "Team")
-                        .WithMany("Drivers")
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("F1Management.Core.Models.Identity.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("RaceCar");
-
-                    b.Navigation("Team");
 
                     b.Navigation("User");
                 });
@@ -586,29 +534,69 @@ namespace F1Management.Infrastructure.Migrations
                     b.HasOne("F1Management.Core.Team", "Team")
                         .WithOne("PitStopCrew")
                         .HasForeignKey("F1Management.Core.Models.TeamMembers.PitStopCrew", "TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("Team");
+                });
+
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.CarMechanic", b =>
+                {
+                    b.HasOne("F1Management.Core.Models.TeamMembers.Member", null)
+                        .WithOne()
+                        .HasForeignKey("F1Management.Core.Models.TeamMembers.CarMechanic", "Id")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
+                    b.HasOne("F1Management.Core.Team", "Team")
+                        .WithMany("CarMechanics")
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Team");
+                });
+
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Driver", b =>
+                {
+                    b.HasOne("F1Management.Core.Models.TeamMembers.Member", null)
+                        .WithOne()
+                        .HasForeignKey("F1Management.Core.Models.TeamMembers.Driver", "Id")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
+                    b.HasOne("F1Management.Core.Models.Car.RaceCar", "RaceCar")
+                        .WithOne("Driver")
+                        .HasForeignKey("F1Management.Core.Models.TeamMembers.Driver", "RaceCarId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("F1Management.Core.Team", "Team")
+                        .WithMany("Drivers")
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("RaceCar");
 
                     b.Navigation("Team");
                 });
 
             modelBuilder.Entity("F1Management.Core.Models.TeamMembers.PitStopMechanic", b =>
                 {
+                    b.HasOne("F1Management.Core.Models.TeamMembers.Member", null)
+                        .WithOne()
+                        .HasForeignKey("F1Management.Core.Models.TeamMembers.PitStopMechanic", "Id")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
                     b.HasOne("F1Management.Core.Models.TeamMembers.PitStopCrew", "PitStopCrew")
                         .WithMany("PitStopMechanics")
                         .HasForeignKey("PitStopCrewId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("F1Management.Core.Models.Identity.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("PitStopCrew");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("F1Management.Core.Models.TeamMembers.RaceEngineer", b =>
@@ -616,26 +604,24 @@ namespace F1Management.Infrastructure.Migrations
                     b.HasOne("F1Management.Core.Models.TeamMembers.Driver", "Driver")
                         .WithOne("RaceEngineer")
                         .HasForeignKey("F1Management.Core.Models.TeamMembers.RaceEngineer", "DriverId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("F1Management.Core.Models.TeamMembers.Member", null)
+                        .WithOne()
+                        .HasForeignKey("F1Management.Core.Models.TeamMembers.RaceEngineer", "Id")
+                        .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
 
                     b.HasOne("F1Management.Core.Team", "Team")
                         .WithMany("RaceEngineers")
                         .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("F1Management.Core.Models.Identity.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Driver");
 
                     b.Navigation("Team");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("F1Management.Core.GrandPrix", b =>
@@ -670,12 +656,9 @@ namespace F1Management.Infrastructure.Migrations
 
             modelBuilder.Entity("F1Management.Core.Models.Identity.User", b =>
                 {
-                    b.Navigation("UserRoles");
-                });
+                    b.Navigation("Member");
 
-            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Driver", b =>
-                {
-                    b.Navigation("RaceEngineer");
+                    b.Navigation("UserRoles");
                 });
 
             modelBuilder.Entity("F1Management.Core.Models.TeamMembers.PitStopCrew", b =>
@@ -692,6 +675,11 @@ namespace F1Management.Infrastructure.Migrations
                     b.Navigation("PitStopCrew");
 
                     b.Navigation("RaceEngineers");
+                });
+
+            modelBuilder.Entity("F1Management.Core.Models.TeamMembers.Driver", b =>
+                {
+                    b.Navigation("RaceEngineer");
                 });
 #pragma warning restore 612, 618
         }

@@ -18,3 +18,23 @@ C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\
 C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\ref\OnlineBookStore.Infrastructure.dll
 C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.pdb
 C:\Users\silviu.anescu\Desktop\Przentare\UnitTests WebApi\T\OnlineBookStore (1)\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.genruntimeconfig.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookStore.Infrastructure.deps.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookStore.Infrastructure.runtimeconfig.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookStore.Infrastructure.runtimeconfig.dev.json
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookStore.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\ref\OnlineBookStore.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookStore.Infrastructure.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookingStore.Application.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookingStore.Domain.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookingStore.Application.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\bin\Debug\net5.0\OnlineBookingStore.Domain.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.csprojAssemblyReference.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.AssemblyInfo.cs
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.csproj.CopyComplete
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\ref\OnlineBookStore.Infrastructure.dll
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.pdb
+C:\Users\eduard.cziszter\Amdaris_2021\Module 3\Module 3 - Web API Unit Testing\OnlineBookStore\OnlineBookStore.Infrastructure\obj\Debug\net5.0\OnlineBookStore.Infrastructure.genruntimeconfig.cache
