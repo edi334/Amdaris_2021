@@ -1,5 +1,5 @@
 import React from "react";
-import './cards.css';
+import styles from  './cards.module.css';
 import axios from "axios";
 import {IPerson} from './IPerson';
 import Card from './card'
@@ -33,14 +33,10 @@ class Cards extends React.Component<ICardsProps, ICardsState> {
         })
     }
 
-    logPeople = () => {
-        console.log(this.state.people);
-    }
-
     render() {
         const people = this.state.people;
         return (
-            <div>
+            <div className={styles.cardsContainer}>
                 {
                     people.map(person => (
                         <Card person={person}></Card>

@@ -1,0 +1,19 @@
+.cardsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1050px) {
+    .cardsContainer {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .cardsContainer {
+        flex-direction: column;
+    }
+}
