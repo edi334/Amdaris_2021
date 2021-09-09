@@ -40,11 +40,6 @@ namespace F1Management.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CarMechanic>().ToTable("CarMechanics");
-            modelBuilder.Entity<PitStopMechanic>().ToTable("PitStopMechanics");
-            modelBuilder.Entity<RaceEngineer>().ToTable("RaceEngineers");
-            modelBuilder.Entity<Driver>().ToTable("Drivers");
-
             modelBuilder.ApplyConfiguration(new CarMechanicConfig());
             modelBuilder.ApplyConfiguration(new CarSessionConfig());
             modelBuilder.ApplyConfiguration(new ChassisConfig());

@@ -16,10 +16,6 @@ namespace F1Management.Infrastructure.Configs
             builder.HasMany(x => x.UserRoles)
                 .WithOne(x => x.User)
                 .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasOne(x => x.Member)
-                .WithOne(x => x.User)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

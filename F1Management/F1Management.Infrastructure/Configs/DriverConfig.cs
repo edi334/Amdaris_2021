@@ -13,12 +13,12 @@ namespace F1Management.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<Driver> builder)
         {
-            builder.HasOne(x => x.Team)
-                .WithMany(x => x.Drivers)
+            builder.HasOne(x => x.User)
+                .WithOne()
                 .OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne(x => x.User)
-                .WithOne(x => x.Member as Driver)
+            builder.HasOne(x => x.Team)
+                .WithMany(x => x.Drivers)
                 .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasOne(x => x.RaceCar)

@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace F1Management.Core.Models.TeamMembers
 {
-    public class CarMechanic : Member
+    public class CarMechanic : BaseEntity
     {
+        public Guid UserId { get; set; }
+        public User User { get; set; }
         public Guid TeamId { get; set; }
         public Team Team { get; set; }
         public void FixCar(RaceCar raceCar)

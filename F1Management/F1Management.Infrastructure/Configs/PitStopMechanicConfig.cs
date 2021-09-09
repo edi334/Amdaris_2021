@@ -14,7 +14,7 @@ namespace F1Management.Infrastructure.Configs
         public void Configure(EntityTypeBuilder<PitStopMechanic> builder)
         {
             builder.HasOne(x => x.User)
-                .WithOne(x => x.Member as PitStopMechanic)
+                .WithOne()
                 .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasOne(x => x.PitStopCrew)

@@ -14,7 +14,6 @@ namespace F1Management.Core.Models.Identity
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public bool IsEmailVerified { get; set; }
-        public Member Member { get; set; }
         public ICollection<UserRole> UserRoles { get; set; }
     }
 }
