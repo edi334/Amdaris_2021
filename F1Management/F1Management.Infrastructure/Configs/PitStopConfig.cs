@@ -16,6 +16,14 @@ namespace F1Management.Infrastructure.Configs
             builder.HasOne(x => x.Session)
                 .WithMany(x => x.PitStops)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(x => x.OldTires)
+                .WithOne()
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(x => x.NewTires)
+                .WithOne()
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

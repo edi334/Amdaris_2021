@@ -4,5 +4,6 @@
     FP2,
     FP3,
     Qualifying,
-    Race
+    Race,
+    SprintRace
 }
