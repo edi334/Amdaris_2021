@@ -2,7 +2,6 @@
 using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Core.Models.Car;
 using F1Management.Core.Models.TeamMembers;
-using F1Management.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,7 @@ namespace F1Management.Services
     {
         private readonly IRaceCarRepository _raceCarRepository;
 
-        public CarMaintenanceService(RaceCarRepository raceCarRepository)
+        public CarMaintenanceService(IRaceCarRepository raceCarRepository)
         {
             _raceCarRepository = raceCarRepository;
         }

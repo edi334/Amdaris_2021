@@ -19,24 +19,26 @@ namespace F1Management.App.Mapper
     {
         public MappingProfile()
         {
-            CreateMap<Chassis, ChassisDto>();
-            CreateMap<Engine, EngineDto>();
-            CreateMap<Gearbox, GearboxDto>();
+            CreateMap<Chassis, ChassisDto>().ReverseMap();
+            CreateMap<Engine, EngineDto>().ReverseMap();
+            CreateMap<Gearbox, GearboxDto>().ReverseMap();
             CreateMap<TireSet, TireSetDto>()
-                .ForMember(t => t.Type, opt => opt.MapFrom(src => Mapper.tireTypeDict[src.Type]));
-            CreateMap<RaceCar, RaceCarDto>();
-            CreateMap<Role, RoleDto>();
-            CreateMap<User, UserDto>();
-            CreateMap<CarMechanic, CarMechanicDto>();
-            CreateMap<Driver, DriverDto>();
-            CreateMap<PitStopCrew, PitStopCrewDto>();
-            CreateMap<PitStopMechanic, PitStopMechanicDto>();
-            CreateMap<RaceEngineer, RaceEngineerDto>();
+                .ForMember(t => t.Type, opt => opt.MapFrom(src => Mapper.tireTypeDict[src.Type]))
+                .ReverseMap();
+            CreateMap<RaceCar, RaceCarDto>().ReverseMap();
+            CreateMap<Role, RoleDto>().ReverseMap();
+            CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<CarMechanic, CarMechanicDto>().ReverseMap();
+            CreateMap<Driver, DriverDto>().ReverseMap();
+            CreateMap<PitStopCrew, PitStopCrewDto>().ReverseMap();
+            CreateMap<PitStopMechanic, PitStopMechanicDto>().ReverseMap();
+            CreateMap<RaceEngineer, RaceEngineerDto>().ReverseMap();
             CreateMap<CarSession, CarSessionDto>()
-                .ForMember(s => s.SessionType, opt => opt.MapFrom(src => Mapper.sessionTypeDict[src.SessionType]));
-            CreateMap<GrandPrix, GrandPrixDto>();
-            CreateMap<PitStop, PitStopDto>();
-            CreateMap<Team, TeamDto>();
+                .ForMember(s => s.SessionType, opt => opt.MapFrom(src => Mapper.sessionTypeDict[src.SessionType]))
+                .ReverseMap();
+            CreateMap<GrandPrix, GrandPrixDto>().ReverseMap();
+            CreateMap<PitStop, PitStopDto>().ReverseMap();
+            CreateMap<Team, TeamDto>().ReverseMap();
         }
     }
 }

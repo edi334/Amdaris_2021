@@ -13,7 +13,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
     {
         public Task StartSessionAsync(CarSession carSession, Chassis chassis, Engine engine,
             Gearbox gearbox, CarMechanic carMechanic, RaceEngineer engineer, string strategy);
-        public Task PitStopAsync(CarSession carSession, DateTime start, DateTime end, TireSet tireSet, PitStopCrew pitStopCrew);
+        public Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet, PitStopCrew pitStopCrew);
         public Task ChangeStrategyAsync(RaceCar raceCar, RaceEngineer engineer, string strategy);
         public Task ChangePositionAsync(CarSession carSession, Admin admin, int position);
         public Task SetFastestLapAsync(CarSession carSession, Admin admin, TimeSpan fastestLap);

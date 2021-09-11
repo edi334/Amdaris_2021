@@ -22,6 +22,18 @@ namespace F1Management.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task<List<CarSession>> GetByGrandPrixAndRaceCarAsync(Guid grandPrixId, Guid raceCarId)
+        {
+            return await _dbContext.Sessions
+                .Where(s => s.GrandPrixId == grandPrixId && s.RaceCarId == raceCarId)
+                .ToListAsync();
+        }
+
+        public async Task<CarSession> GetByIdAsync(Guid id)
+        {
+            return await _dbContext.Sessions.FirstOrDefaultAsync(s => s.Id == id);
+        }
+
         public async Task<TimeSpan> GetFastestLapFromAllCarsInSessionAsync(CarSession carSession)
         {
             TimeSpan fastestLap = await  _dbContext.Sessions

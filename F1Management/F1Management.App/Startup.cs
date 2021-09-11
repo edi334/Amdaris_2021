@@ -1,4 +1,9 @@
+using F1Management.App.Mapper;
+using F1Management.Core.Models.Abstractions;
+using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Infrastructure;
+using F1Management.Infrastructure.Repositories;
+using F1Management.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,7 +28,7 @@ namespace F1Management.App
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllersWithViews();
+            services.AddControllers();
 
             services.AddDbContext<AppDbContext>(options =>
             {
@@ -35,6 +40,15 @@ namespace F1Management.App
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddAutoMapper(typeof(MappingProfile));
+
+            services.AddScoped(typeof(ICarSessionRepository), typeof(CarSessionRepository));
+            services.AddScoped(typeof(IRaceCarRepository), typeof(RaceCarRepository));
+            services.AddScoped(typeof(ITeamRepository), typeof(TeamRepository));
+
+            services.AddTransient(typeof(ICarSessionService), typeof(CarSessionService));
+            services.AddTransient(typeof(ICarMaintenanceService), typeof(CarMaintenanceService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

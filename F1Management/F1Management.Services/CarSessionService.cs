@@ -3,7 +3,6 @@ using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Core.Models.Car;
 using F1Management.Core.Models.Identity;
 using F1Management.Core.Models.TeamMembers;
-using F1Management.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +16,8 @@ namespace F1Management.Services
         private readonly IRaceCarRepository _raceCarRepository;
         private readonly ITeamRepository _teamRepository;
         private readonly ICarSessionRepository _carSessionRepository;
-        public CarSessionService(RaceCarRepository raceCarRepository, 
-            TeamRepository teamRepository, CarSessionRepository carSessionRepository)
+        public CarSessionService(IRaceCarRepository raceCarRepository, 
+            ITeamRepository teamRepository, ICarSessionRepository carSessionRepository)
         {
             _raceCarRepository = raceCarRepository;
             _teamRepository = teamRepository;
@@ -43,13 +42,13 @@ namespace F1Management.Services
 
             await _carSessionRepository.UpdateSessionAsync(carSession);
         }
-        public async Task PitStopAsync(CarSession carSession, DateTime start, DateTime end, TireSet tireSet, PitStopCrew pitStopCrew)
+        public async Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet, PitStopCrew pitStopCrew)
         {
             var pitStop = new PitStop
             {
                 Session = carSession,
                 CarSessionId = carSession.Id,
-                StationaryTime = end - start,
+                StationaryTime = stationaryTime,
                 OldTires = carSession.RaceCar.TireSet,
                 NewTires = tireSet
             };
@@ -102,20 +101,7 @@ namespace F1Management.Services
                     points += 1;
                 }
 
-                switch (carSession.Position)
-                {
-                    case 1: points += 25; break;
-                    case 2: points += 18; break;
-                    case 3: points += 15; break;
-                    case 4: points += 12; break;
-                    case 5: points += 10; break;
-                    case 6: points += 8; break;
-                    case 7: points += 6; break;
-                    case 8: points += 4; break;
-                    case 9: points += 2; break;
-                    case 10: points += 1; break;
-                    default: break;
-                }
+                points += PointsMapper.positionPointsDict[carSession.Position];
 
                 driver.Points += points;
                 team.Points += points;
