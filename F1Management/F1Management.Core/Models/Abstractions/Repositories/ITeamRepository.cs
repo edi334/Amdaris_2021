@@ -1,4 +1,5 @@
-﻿using F1Management.Core.Models.TeamMembers;
+﻿using F1Management.Core.Models.Car;
+using F1Management.Core.Models.TeamMembers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
     {
         public Task UpdateTeamAsync(Team team);
         public Task UpdateDriverAsync(Driver driver);
+        public Task<CarMechanic> GetFirstCarMechanicAsync();
+        public Task<RaceEngineer> GetRaceEngineerAsync(RaceCar raceCar);
     }
 }

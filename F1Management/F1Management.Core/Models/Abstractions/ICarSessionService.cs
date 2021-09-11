@@ -11,8 +11,8 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface ICarSessionService
     {
-        public Task StartSessionAsync(CarSession carSession, Chassis chassis, Engine engine,
-            Gearbox gearbox, CarMechanic carMechanic, RaceEngineer engineer, string strategy);
+        public Task StartSessionAsync(CarSessionStartSpec carSessionStartSpec,
+            CarMechanic carMechanic, RaceEngineer engineer, string strategy);
         public Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet, PitStopCrew pitStopCrew);
         public Task ChangeStrategyAsync(RaceCar raceCar, RaceEngineer engineer, string strategy);
         public Task ChangePositionAsync(CarSession carSession, Admin admin, int position);

@@ -23,24 +23,24 @@ namespace F1Management.Services
             _teamRepository = teamRepository;
             _carSessionRepository = carSessionRepository;
         }
-        public async Task StartSessionAsync(CarSession carSession, Chassis chassis, Engine engine,
-            Gearbox gearbox, CarMechanic carMechanic, RaceEngineer engineer, string strategy)
+        public async Task StartSessionAsync(CarSessionStartSpec carSessionStartSpec,
+            CarMechanic carMechanic, RaceEngineer engineer, string strategy)
         {
             if (carMechanic != null)
             {
-                carSession.RaceCar.Chassis = chassis;
-                carSession.RaceCar.Engine = engine;
-                carSession.RaceCar.Gearbox = gearbox;
+                carSessionStartSpec.CarSession.RaceCar.Chassis = carSessionStartSpec.Chassis;
+                carSessionStartSpec.CarSession.RaceCar.Engine = carSessionStartSpec.Engine;
+                carSessionStartSpec.CarSession.RaceCar.Gearbox = carSessionStartSpec.Gearbox;
             }
 
-            if (engineer != null && carSession.SessionType == SessionType.Race)
+            if (engineer != null && carSessionStartSpec.CarSession.SessionType == SessionType.Race)
             {
-                carSession.RaceCar.Strategy = strategy;
+                carSessionStartSpec.CarSession.RaceCar.Strategy = strategy;
             }
 
-            carSession.StartDate = DateTime.Now;
+            carSessionStartSpec.CarSession.StartDate = DateTime.Now;
 
-            await _carSessionRepository.UpdateSessionAsync(carSession);
+            await _carSessionRepository.UpdateSessionAsync(carSessionStartSpec.CarSession);
         }
         public async Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet, PitStopCrew pitStopCrew)
         {

@@ -3,6 +3,7 @@ using F1Management.App.DtoModels;
 using F1Management.App.DtoModels.CarDtos;
 using F1Management.Core.Models;
 using F1Management.Core.Models.Abstractions.Repositories;
+using F1Management.Core.Models.Car;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,16 @@ namespace F1Management.App.Controllers
     {
         private readonly IMapper _mapper;
         private readonly ICarSessionRepository _carSessionRepository;
+        private readonly ITeamRepository _teamRepository;
         private readonly ICarSessionService _carSessionService;
 
         public CarSessionController(IMapper mapper, ICarSessionService carSessionService,
-            ICarSessionRepository carSessionRepository)
+            ICarSessionRepository carSessionRepository, ITeamRepository teamRepository)
         {
             _mapper = mapper;
             _carSessionService = carSessionService;
             _carSessionRepository = carSessionRepository;
+            _teamRepository = teamRepository;
         }
 
         [HttpGet]
@@ -45,11 +48,27 @@ namespace F1Management.App.Controllers
             return Ok(response);
         }
 
-        [HttpPatch]
-        public async Task<ActionResult<CarSession>> StartSession(CarSessionDto carSession, ChassisDto chassis, 
-            EngineDto engine, GearboxDto gearbox, string strategy)
+        [HttpPatch("start-session")]
+        public async Task<ActionResult<CarSession>> StartSession(CarSessionStartSpecDto carSessionStartSpecDto,
+            string strategy)
         {
+            var carSessionStartSpec = _mapper.Map<CarSessionStartSpec>(carSessionStartSpecDto);
+            var carMechanic = await _teamRepository.GetFirstCarMechanicAsync();
+            var raceEngineer = await _teamRepository.GetRaceEngineerAsync(carSessionStartSpec.CarSession.RaceCar);
 
+            await _carSessionService.StartSessionAsync(carSessionStartSpec, carMechanic, raceEngineer, strategy);
+
+            return Ok(carSessionStartSpec.CarSession);
+        }
+
+        [HttpPatch("end-session")]
+        public async Task<ActionResult<CarSession>> EndSession(CarSessionDto carSessionDto)
+        {
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+
+            await _carSessionService.EndSessionAsync(carSession);
+
+            return Ok(carSession);
         }
     }
 }
