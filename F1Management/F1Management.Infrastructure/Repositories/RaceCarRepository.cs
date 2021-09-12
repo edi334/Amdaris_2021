@@ -16,6 +16,14 @@ namespace F1Management.Infrastructure.Repositories
         {
             _dbContext = dbContext;
         }
+
+        public async Task<List<RaceCar>> GetByTeamAsync(Guid teamId)
+        {
+            return await _dbContext.RaceCars
+                .Where(r => r.Driver.TeamId == teamId)
+                .ToListAsync();
+        }
+
         public async Task<RaceCar> GetRaceCarAsync(Guid id)
         {
             return await _dbContext.RaceCars

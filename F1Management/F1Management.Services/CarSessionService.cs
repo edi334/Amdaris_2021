@@ -26,21 +26,23 @@ namespace F1Management.Services
         public async Task StartSessionAsync(CarSessionStartSpec carSessionStartSpec,
             CarMechanic carMechanic, RaceEngineer engineer, string strategy)
         {
+            var carSession = carSessionStartSpec.CarSession;
+
             if (carMechanic != null)
             {
-                carSessionStartSpec.CarSession.RaceCar.Chassis = carSessionStartSpec.Chassis;
-                carSessionStartSpec.CarSession.RaceCar.Engine = carSessionStartSpec.Engine;
-                carSessionStartSpec.CarSession.RaceCar.Gearbox = carSessionStartSpec.Gearbox;
+                carSession.RaceCar.Chassis = carSessionStartSpec.Chassis;
+                carSession.RaceCar.Engine = carSessionStartSpec.Engine;
+                carSession.RaceCar.Gearbox = carSessionStartSpec.Gearbox;
             }
 
-            if (engineer != null && carSessionStartSpec.CarSession.SessionType == SessionType.Race)
+            if (engineer != null && carSession.SessionType == SessionType.Race)
             {
-                carSessionStartSpec.CarSession.RaceCar.Strategy = strategy;
+                carSession.RaceCar.Strategy = strategy;
             }
 
-            carSessionStartSpec.CarSession.StartDate = DateTime.Now;
+            carSession.StartDate = DateTime.Now;
 
-            await _carSessionRepository.UpdateSessionAsync(carSessionStartSpec.CarSession);
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
         public async Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet, PitStopCrew pitStopCrew)
         {

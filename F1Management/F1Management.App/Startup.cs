@@ -48,6 +48,7 @@ namespace F1Management.App
             services.AddScoped(typeof(ICarSessionRepository), typeof(CarSessionRepository));
             services.AddScoped(typeof(IRaceCarRepository), typeof(RaceCarRepository));
             services.AddScoped(typeof(ITeamRepository), typeof(TeamRepository));
+            services.AddScoped(typeof(IGrandPrixRepository), typeof(GrandPrixRepository));
 
             services.AddTransient(typeof(ICarSessionService), typeof(CarSessionService));
             services.AddTransient(typeof(ICarMaintenanceService), typeof(CarMaintenanceService));
