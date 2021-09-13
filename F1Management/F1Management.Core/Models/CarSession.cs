@@ -15,6 +15,7 @@ namespace F1Management.Core.Models
         public Guid RaceCarId { get; set; }
         public RaceCar RaceCar { get; set; }
         public int Position { get; set; }
+        public string Strategy { get; set; }
         public SessionType SessionType { get; set; }
         public ICollection<PitStop> PitStops { get; set; }
         public DateTime StartDate { get; set; }

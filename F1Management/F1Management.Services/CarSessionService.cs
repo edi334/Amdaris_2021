@@ -13,13 +13,10 @@ namespace F1Management.Services
 {
     public class CarSessionService : ICarSessionService
     {
-        private readonly IRaceCarRepository _raceCarRepository;
         private readonly ITeamRepository _teamRepository;
         private readonly ICarSessionRepository _carSessionRepository;
-        public CarSessionService(IRaceCarRepository raceCarRepository, 
-            ITeamRepository teamRepository, ICarSessionRepository carSessionRepository)
+        public CarSessionService(ITeamRepository teamRepository, ICarSessionRepository carSessionRepository)
         {
-            _raceCarRepository = raceCarRepository;
             _teamRepository = teamRepository;
             _carSessionRepository = carSessionRepository;
         }
@@ -37,7 +34,7 @@ namespace F1Management.Services
 
             if (engineer != null && carSession.SessionType == SessionType.Race)
             {
-                carSession.RaceCar.Strategy = strategy;
+                carSession.Strategy = strategy;
             }
 
             carSession.StartDate = DateTime.Now;
@@ -62,14 +59,14 @@ namespace F1Management.Services
 
             await _carSessionRepository.AddPitStopAsync(pitStop);
         }
-        public async Task ChangeStrategyAsync(RaceCar raceCar, RaceEngineer engineer, string strategy)
+        public async Task ChangeStrategyAsync(CarSession carSession, RaceEngineer engineer, string strategy)
         {
             if (engineer != null)
             {
-                raceCar.Strategy = strategy;
+                carSession.Strategy = strategy;
             }
 
-            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
         public async Task ChangePositionAsync(CarSession carSession, Admin admin, int position)
         {

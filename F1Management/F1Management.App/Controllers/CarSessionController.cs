@@ -4,6 +4,7 @@ using F1Management.App.DtoModels.CarDtos;
 using F1Management.Core.Models;
 using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Core.Models.Car;
+using F1Management.Core.Models.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -59,6 +60,40 @@ namespace F1Management.App.Controllers
             await _carSessionService.StartSessionAsync(carSessionStartSpec, carMechanic, raceEngineer, strategy);
 
             return Ok(carSessionStartSpec.CarSession);
+        }
+
+        [HttpPatch("strategy")]
+        public async Task<ActionResult<CarSession>> ChangeStrategy(CarSessionDto carSessionDto, string strategy)
+        {
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+            var raceEngineer = await _teamRepository.GetRaceEngineerAsync(carSession.RaceCar);
+
+            await _carSessionService.ChangeStrategyAsync(carSession, raceEngineer, strategy);
+
+            return Ok(carSession);
+        }
+
+
+        [HttpPatch("position")]
+        public async Task<ActionResult<CarSession>> ChangePosition(CarSessionDto carSessionDto, int position)
+        {
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+            //TODO: change
+            var admin = new Admin();
+            await _carSessionService.ChangePositionAsync(carSession, admin, position);
+
+            return Ok(carSession);
+        }
+
+        [HttpPatch("fastest-lap")]
+        public async Task<ActionResult<CarSession>> SetFastestLap(CarSessionDto carSessionDto, TimeSpan fastestLap)
+        {
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+            //TODO: change
+            var admin = new Admin();
+            await _carSessionService.SetFastestLapAsync(carSession, admin, fastestLap);
+
+            return Ok(carSession);
         }
 
         [HttpPatch("end-session")]

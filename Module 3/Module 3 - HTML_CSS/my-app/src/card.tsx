@@ -1,6 +1,7 @@
 import React from "react";
 import {IPerson} from './IPerson';
 import styles from './card.module.css';
+import {Link} from "react-router-dom";
 
 interface ICardProps {
     person: IPerson
@@ -8,7 +9,6 @@ interface ICardProps {
 
 const Card = (props: ICardProps) => {
     const card = props.person;
-
     return (
         <div className={styles.cardContainer}>
             <div className={styles.name}>Name: {card.name}</div>
@@ -17,6 +17,15 @@ const Card = (props: ICardProps) => {
             <div className={styles.skinColor}>Hair Color: {card.hair_color}</div>
             <div className={styles.skinColor}>Skin Color: {card.skin_color}</div>
             <div className={styles.eyeColor}>Eye Color: {card.eye_color}</div>
+          
+            <Link to={{
+                pathname: `/films/${card.name}`,
+                state: card.films
+            }}> 
+                <button>Go to films</button>
+            </Link> 
+            
+        
         </div>
     );
 }

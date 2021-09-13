@@ -1,3 +1,5 @@
+import {IFilm} from './IFilm';
+
 export interface IPerson {
     name: string;
     height: string;
@@ -5,4 +7,5 @@ export interface IPerson {
     hair_color: string;
     skin_color: string;
     eye_color: string;
+    films: IFilm[];
 }

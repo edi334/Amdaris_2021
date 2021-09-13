@@ -17,7 +17,7 @@ namespace F1Management.App.Controllers
         private readonly IGrandPrixRepository _grandPrixRepository;
         private readonly IMapper _mapper;
 
-        public GrandPrixController(IGrandPrixRepository grandPrixRepository, IMapper mapper)
+        public GrandPrixController(IMapper mapper, IGrandPrixRepository grandPrixRepository)
         {
             _grandPrixRepository = grandPrixRepository;
             _mapper = mapper;
