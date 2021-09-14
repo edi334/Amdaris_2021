@@ -13,52 +13,178 @@ namespace F1Management.Services
     public class CarMaintenanceService : ICarMaintenanceService
     {
         private readonly IRaceCarRepository _raceCarRepository;
+        private readonly ITeamRepository _teamRepository;
 
         public CarMaintenanceService(IRaceCarRepository raceCarRepository)
         {
             _raceCarRepository = raceCarRepository;
         }
 
-        public async Task FixCar(RaceCar raceCar, CarMechanic carMechanic)
+        public async Task FixCar(RaceCar raceCar)
         {
-            if (carMechanic != null)
+            var carMechanic = await _teamRepository
+                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+            if (carMechanic == null)
             {
-                raceCar.Chassis.Wear = 0;
-                raceCar.Engine.Wear = 0;
-                raceCar.Gearbox.Wear = 0;
+                throw new Exception("Car Mechanic Not Found");
             }
 
-            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            carMechanic.isAvailable = false;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+
+            raceCar.Chassis.Wear = 0;
+            raceCar.Engine.Wear = 0;
+            raceCar.Gearbox.Wear = 0;
+
+            carMechanic.isAvailable = true;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            try
+            {
+                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            }
+            catch 
+            {
+                throw;
+            }
         }
 
-        public async Task FixChassis(RaceCar raceCar, CarMechanic carMechanic)
+        public async Task FixChassis(RaceCar raceCar)
         {
-            if (carMechanic != null)
+            var carMechanic = await _teamRepository
+                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+            if (carMechanic == null)
             {
-                raceCar.Chassis.Wear = 0;
+                throw new Exception("Car Mechanic Not Found");
             }
 
-            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            carMechanic.isAvailable = false;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            raceCar.Chassis.Wear = 0;
+
+            carMechanic.isAvailable = true;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            try
+            {
+                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
-        public async Task FixEngine(RaceCar raceCar, CarMechanic carMechanic)
+        public async Task FixEngine(RaceCar raceCar)
         {
-            if (carMechanic != null)
+            var carMechanic = await _teamRepository
+                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+            if (carMechanic == null)
             {
-                raceCar.Engine.Wear = 0;
+                throw new Exception("Car Mechanic Not Found");
             }
 
-            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            carMechanic.isAvailable = false;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            raceCar.Engine.Wear = 0;
+
+            carMechanic.isAvailable = true;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            try
+            {
+                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
-        public async Task FixGearbox(RaceCar raceCar, CarMechanic carMechanic)
+        public async Task FixGearbox(RaceCar raceCar)
         {
-            if (carMechanic != null)
+            var carMechanic = await _teamRepository
+                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+            if (carMechanic == null)
             {
-                raceCar.Gearbox.Wear = 0;
+                throw new Exception("Car Mechanic Not Found");
             }
 
-            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            carMechanic.isAvailable = false;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            raceCar.Gearbox.Wear = 0;
+
+            carMechanic.isAvailable = true;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            try
+            {
+                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

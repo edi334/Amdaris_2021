@@ -18,6 +18,11 @@ namespace F1Management.Infrastructure.Repositories
         }
         public async Task AddPitStopAsync(PitStop pitStop)
         {
+            if (pitStop == null)
+            {
+                throw new Exception("PitStop is null");
+            }
+
             _dbContext.PitStops.Add(pitStop);
             await _dbContext.SaveChangesAsync();
         }
@@ -46,6 +51,11 @@ namespace F1Management.Infrastructure.Repositories
 
         public async Task UpdateSessionAsync(CarSession carSession)
         {
+            if (carSession == null)
+            {
+                throw new Exception("Car Session is null");
+            }
+
             _dbContext.Sessions.Update(carSession);
             await _dbContext.SaveChangesAsync();
         }

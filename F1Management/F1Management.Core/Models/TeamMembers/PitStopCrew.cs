@@ -18,5 +18,6 @@ namespace F1Management.Core.Models.TeamMembers
         {
             car.TireSet = tireSet;
         }
+        public bool isAvailable { get; set; } = true;
     }
 }

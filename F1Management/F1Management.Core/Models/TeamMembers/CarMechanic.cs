@@ -14,5 +14,6 @@ namespace F1Management.Core.Models.TeamMembers
         public User User { get; set; }
         public Guid TeamId { get; set; }
         public Team Team { get; set; }
+        public bool isAvailable { get; set; } = true;
     }
 }

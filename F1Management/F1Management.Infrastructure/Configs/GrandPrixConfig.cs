@@ -13,6 +13,9 @@ namespace F1Management.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<GrandPrix> builder)
         {
+            builder.Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
             builder.HasMany(x => x.CarSessions)
                 .WithOne(x => x.GrandPrix)
                 .OnDelete(DeleteBehavior.Cascade);

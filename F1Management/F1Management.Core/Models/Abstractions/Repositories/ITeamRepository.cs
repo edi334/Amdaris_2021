@@ -12,7 +12,11 @@ namespace F1Management.Core.Models.Abstractions.Repositories
     {
         public Task UpdateTeamAsync(Team team);
         public Task UpdateDriverAsync(Driver driver);
-        public Task<CarMechanic> GetFirstCarMechanicAsync();
+        public Task UpdateCarMechanicAsync(CarMechanic carMechanic);
+        public Task UpdateRaceEngineerAsync(RaceEngineer raceEngineer);
+        public Task UpdatePitStopCrew(PitStopCrew pitStopCrew);
+        public Task<CarMechanic> GetFirstAvailableCarMechanicAsync(Guid teamId);
         public Task<RaceEngineer> GetRaceEngineerAsync(RaceCar raceCar);
+        public Task<PitStopCrew> GetPitStopCrew(Guid teamId);
     }
 }

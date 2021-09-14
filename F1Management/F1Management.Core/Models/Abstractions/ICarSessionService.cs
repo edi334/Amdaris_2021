@@ -11,12 +11,11 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface ICarSessionService
     {
-        public Task StartSessionAsync(CarSessionStartSpec carSessionStartSpec,
-            CarMechanic carMechanic, RaceEngineer engineer, string strategy);
-        public Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet, PitStopCrew pitStopCrew);
-        public Task ChangeStrategyAsync(CarSession carSession, RaceEngineer engineer, string strategy);
-        public Task ChangePositionAsync(CarSession carSession, Admin admin, int position);
-        public Task SetFastestLapAsync(CarSession carSession, Admin admin, TimeSpan fastestLap);
+        public Task StartSessionAsync(CarSessionStartSpec carSessionStartSpec, string strategy);
+        public Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet);
+        public Task ChangeStrategyAsync(CarSession carSession, string strategy);
+        public Task ChangePositionAsync(CarSession carSession, Guid userId, int position);
+        public Task SetFastestLapAsync(CarSession carSession, Guid userId, TimeSpan fastestLap);
         public Task EndSessionAsync(CarSession carSession);
     }
 }

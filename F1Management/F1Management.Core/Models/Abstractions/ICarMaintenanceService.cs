@@ -10,9 +10,9 @@ namespace F1Management.Core.Models.Abstractions
 {
     public interface ICarMaintenanceService
     {
-        public Task FixCar(RaceCar raceCar, CarMechanic carMechanic);
-        public Task FixChassis(RaceCar raceCar, CarMechanic carMechanic);
-        public Task FixEngine(RaceCar raceCar, CarMechanic carMechanic);
-        public Task FixGearbox(RaceCar raceCar, CarMechanic carMechanic);
+        public Task FixCar(RaceCar raceCar);
+        public Task FixChassis(RaceCar raceCar);
+        public Task FixEngine(RaceCar raceCar);
+        public Task FixGearbox(RaceCar raceCar);
     }
 }

@@ -13,6 +13,9 @@ namespace F1Management.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            builder.Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
             builder.HasMany(x => x.UserRoles)
                 .WithOne(x => x.User)
                 .OnDelete(DeleteBehavior.Cascade);

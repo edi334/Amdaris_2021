@@ -1,13 +1,14 @@
-import React from "react";
-import {Switch, Route, useRouteMatch, useLocation} from "react-router-dom"
+import React, { useEffect } from "react";
+import {Switch, Route, useRouteMatch, useLocation, useParams} from "react-router-dom"
 
 const Films = () => {
-    const {state} = useLocation();
+    const films = useParams();
     let match = useRouteMatch();
 
+   //https://css-tricks.com/the-hooks-of-react-router/
 
     const logFilms = () => {
-        console.log(state);
+        console.log(films);
     }
 
 

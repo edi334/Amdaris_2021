@@ -13,6 +13,9 @@ namespace F1Management.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<RaceCar> builder)
         {
+            builder.Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
             builder.HasOne(x => x.Chassis)
                 .WithOne(x => x.RaceCar)
                 .OnDelete(DeleteBehavior.Cascade);

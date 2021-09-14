@@ -21,8 +21,8 @@ const Cards = () => {
     return (
         <div className={styles.cardsContainer}>
             {
-                people.map(person => (
-                    <Card person={person}></Card>
+                people.map((person, index) => (
+                    <Card key={index} person={person}></Card>
                 ))
             }
             </div>

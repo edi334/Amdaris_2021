@@ -12,5 +12,10 @@ namespace F1Management.Core.Models.Abstractions.Repositories
         public Task<RaceCar> GetRaceCarAsync(Guid id);
         public Task<List<RaceCar>> GetByTeamAsync(Guid teamId);
         public Task UpdateRaceCarAsync(RaceCar raceCar);
+        public Task AddRaceCarAsync(string name);
+        public Task AddChassisAsync(Chassis chassis);
+        public Task AddEngineAsync(Engine engine);
+        public Task AddGearboxAsync(Gearbox gearbox);
+        public Task AddTireSetAsync(TireSet tireSet);
     }
 }

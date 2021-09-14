@@ -15,34 +15,95 @@ namespace F1Management.Services
     {
         private readonly ITeamRepository _teamRepository;
         private readonly ICarSessionRepository _carSessionRepository;
-        public CarSessionService(ITeamRepository teamRepository, ICarSessionRepository carSessionRepository)
+        private readonly IUserRepository _userRepository;
+        public CarSessionService(ITeamRepository teamRepository, ICarSessionRepository carSessionRepository,
+            IUserRepository userRepository)
         {
             _teamRepository = teamRepository;
             _carSessionRepository = carSessionRepository;
+            _userRepository = userRepository;
         }
-        public async Task StartSessionAsync(CarSessionStartSpec carSessionStartSpec,
-            CarMechanic carMechanic, RaceEngineer engineer, string strategy)
+        public async Task StartSessionAsync(CarSessionStartSpec carSessionStartSpec, string strategy)
         {
             var carSession = carSessionStartSpec.CarSession;
+            var carMechanic = await _teamRepository
+                .GetFirstAvailableCarMechanicAsync(carSession.RaceCar.Driver.TeamId);
 
-            if (carMechanic != null)
+            if (carMechanic == null)
             {
-                carSession.RaceCar.Chassis = carSessionStartSpec.Chassis;
-                carSession.RaceCar.Engine = carSessionStartSpec.Engine;
-                carSession.RaceCar.Gearbox = carSessionStartSpec.Gearbox;
+                throw new Exception("Car Mechanic Not Found");
             }
 
-            if (engineer != null && carSession.SessionType == SessionType.Race)
+            carMechanic.isAvailable = false;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            carSession.RaceCar.Chassis = carSessionStartSpec.Chassis;
+            carSession.RaceCar.Engine = carSessionStartSpec.Engine;
+            carSession.RaceCar.Gearbox = carSessionStartSpec.Gearbox;
+            
+            carMechanic.isAvailable = true;
+            try
+            {
+                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            }
+            catch
+            {
+                throw;
+            }
+
+            var engineer = await _teamRepository.GetRaceEngineerAsync(carSession.RaceCar);
+            if (engineer == null)
+            {
+                throw new Exception("Engineer Not Found");
+            }
+
+            if (carSession.SessionType == SessionType.Race)
             {
                 carSession.Strategy = strategy;
             }
 
             carSession.StartDate = DateTime.Now;
 
-            await _carSessionRepository.UpdateSessionAsync(carSession);
+            try
+            {
+                await _carSessionRepository.UpdateSessionAsync(carSession);
+            }
+            catch
+            {
+                throw;
+            }
         }
-        public async Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet, PitStopCrew pitStopCrew)
+        public async Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet)
         {
+            var pitStopCrew = await _teamRepository
+                .GetPitStopCrew(carSession.RaceCar.Driver.TeamId);
+            if (pitStopCrew == null)
+            {
+                throw new Exception("PitStop Crew Not Found");
+            }
+
+            if (!pitStopCrew.isAvailable)
+            {
+                throw new Exception("PitStop Crew Not Avaiable");
+            }
+            pitStopCrew.isAvailable = false;
+
+            try
+            {
+                await _teamRepository.UpdatePitStopCrew(pitStopCrew);
+            }
+            catch
+            {
+                throw;
+            }
+            
             var pitStop = new PitStop
             {
                 Session = carSession,
@@ -52,39 +113,109 @@ namespace F1Management.Services
                 NewTires = tireSet
             };
 
-            if (pitStopCrew != null)
+            pitStopCrew.ChangeTires(carSession.RaceCar, tireSet);
+            pitStopCrew.isAvailable = true;
+            try
             {
-                pitStopCrew.ChangeTires(carSession.RaceCar, tireSet);
+                await _teamRepository.UpdatePitStopCrew(pitStopCrew);
+            }
+            catch
+            {
+                throw;
             }
 
-            await _carSessionRepository.AddPitStopAsync(pitStop);
+            try
+            {
+                await _carSessionRepository.AddPitStopAsync(pitStop);
+            }
+            catch
+            {
+                throw;
+            }
         }
-        public async Task ChangeStrategyAsync(CarSession carSession, RaceEngineer engineer, string strategy)
+        public async Task ChangeStrategyAsync(CarSession carSession, string strategy)
         {
-            if (engineer != null)
+            var engineer = await _teamRepository.GetRaceEngineerAsync(carSession.RaceCar);
+
+            if (engineer == null)
             {
-                carSession.Strategy = strategy;
+                throw new Exception("Engineer Not Found");
             }
 
-            await _carSessionRepository.UpdateSessionAsync(carSession);
+            carSession.Strategy = strategy;
+
+            try
+            {
+                await _carSessionRepository.UpdateSessionAsync(carSession);
+            }
+            catch
+            {
+                throw;
+            }
         }
-        public async Task ChangePositionAsync(CarSession carSession, Admin admin, int position)
+        public async Task ChangePositionAsync(CarSession carSession, Guid userId, int position)
         {
-            if (admin != null)
+            var user = await _userRepository.GetById(userId);
+
+            if (user == null)
             {
-                carSession.Position = position;
+                throw new Exception("User Not Found");
             }
 
-            await _carSessionRepository.UpdateSessionAsync(carSession);
+            if (!isAdmin(user))
+            {
+                throw new Exception("Not Admin");
+            }
+
+            carSession.Position = position;
+
+            try
+            {
+                await _carSessionRepository.UpdateSessionAsync(carSession);
+            }
+            catch
+            {
+                throw;
+            }
         }
-        public async Task SetFastestLapAsync(CarSession carSession, Admin admin, TimeSpan fastestLap)
+        public async Task SetFastestLapAsync(CarSession carSession, Guid userId, TimeSpan fastestLap)
         {
-            if (admin != null)
+            var user = await _userRepository.GetById(userId);
+
+            if (user == null)
             {
-                carSession.FastestLap = fastestLap;
+                throw new Exception("User Not Found");
             }
 
-            await _carSessionRepository.UpdateSessionAsync(carSession);
+            if (!isAdmin(user))
+            {
+                throw new Exception("Not Admin");
+            }
+
+            carSession.FastestLap = fastestLap;
+
+            try
+            {
+                await _carSessionRepository.UpdateSessionAsync(carSession);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        private bool isAdmin(User user)
+        {
+            bool isAdmin = false;
+
+            user.UserRoles.ToList().ForEach(u =>
+            {
+                if (u.Role.Name == "admin")
+                {
+                    isAdmin = true;
+                }
+            });
+
+            return isAdmin;
         }
         public async Task EndSessionAsync(CarSession carSession)
         {
@@ -105,8 +236,15 @@ namespace F1Management.Services
                 driver.Points += points;
                 team.Points += points;
 
-                await _teamRepository.UpdateDriverAsync(driver);
-                await _teamRepository.UpdateTeamAsync(team);
+                try
+                {
+                    await _teamRepository.UpdateDriverAsync(driver);
+                    await _teamRepository.UpdateTeamAsync(team);
+                }
+                catch
+                {
+                    throw;
+                }
             }
         }
     }

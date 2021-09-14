@@ -13,6 +13,9 @@ namespace F1Management.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<UserRole> builder)
         {
+            builder.Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
             builder.HasOne(x => x.Role)
                 .WithMany(x => x.UserRoles)
                 .OnDelete(DeleteBehavior.NoAction);

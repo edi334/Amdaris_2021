@@ -13,6 +13,9 @@ namespace F1Management.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<PitStop> builder)
         {
+            builder.Property(x => x.Id)
+                .ValueGeneratedOnAdd();
+
             builder.HasOne(x => x.Session)
                 .WithMany(x => x.PitStops)
                 .OnDelete(DeleteBehavior.NoAction);

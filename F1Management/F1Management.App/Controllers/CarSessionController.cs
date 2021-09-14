@@ -19,16 +19,14 @@ namespace F1Management.App.Controllers
     {
         private readonly IMapper _mapper;
         private readonly ICarSessionRepository _carSessionRepository;
-        private readonly ITeamRepository _teamRepository;
         private readonly ICarSessionService _carSessionService;
 
         public CarSessionController(IMapper mapper, ICarSessionService carSessionService,
-            ICarSessionRepository carSessionRepository, ITeamRepository teamRepository)
+            ICarSessionRepository carSessionRepository)
         {
             _mapper = mapper;
             _carSessionService = carSessionService;
             _carSessionRepository = carSessionRepository;
-            _teamRepository = teamRepository;
         }
 
         [HttpGet]
@@ -50,58 +48,87 @@ namespace F1Management.App.Controllers
         }
 
         [HttpPatch("start-session")]
-        public async Task<ActionResult<CarSession>> StartSession(CarSessionStartSpecDto carSessionStartSpecDto,
+        public async Task<ActionResult<bool>> StartSession(CarSessionStartSpecDto carSessionStartSpecDto,
             string strategy)
         {
             var carSessionStartSpec = _mapper.Map<CarSessionStartSpec>(carSessionStartSpecDto);
-            var carMechanic = await _teamRepository.GetFirstCarMechanicAsync();
-            var raceEngineer = await _teamRepository.GetRaceEngineerAsync(carSessionStartSpec.CarSession.RaceCar);
 
-            await _carSessionService.StartSessionAsync(carSessionStartSpec, carMechanic, raceEngineer, strategy);
+            try
+            {
+                await _carSessionService.StartSessionAsync(carSessionStartSpec, strategy);
+            }
+            catch
+            {
+                return BadRequest();
+            }
 
-            return Ok(carSessionStartSpec.CarSession);
+            return Ok(true);
         }
 
         [HttpPatch("strategy")]
-        public async Task<ActionResult<CarSession>> ChangeStrategy(CarSessionDto carSessionDto, string strategy)
+        public async Task<ActionResult<bool>> ChangeStrategy(CarSessionDto carSessionDto, string strategy)
         {
             var carSession = _mapper.Map<CarSession>(carSessionDto);
-            var raceEngineer = await _teamRepository.GetRaceEngineerAsync(carSession.RaceCar);
 
-            await _carSessionService.ChangeStrategyAsync(carSession, raceEngineer, strategy);
+            try
+            {
+                await _carSessionService.ChangeStrategyAsync(carSession, strategy);
+            }
+            catch
+            {
+                return BadRequest();
+            }
 
-            return Ok(carSession);
+            return Ok(true);
         }
 
-
         [HttpPatch("position")]
-        public async Task<ActionResult<CarSession>> ChangePosition(CarSessionDto carSessionDto, int position)
+        public async Task<ActionResult<bool>> ChangePosition(CarSessionDto carSessionDto, Guid userId, int position)
         {
             var carSession = _mapper.Map<CarSession>(carSessionDto);
-            //TODO: change
-            var admin = new Admin();
-            await _carSessionService.ChangePositionAsync(carSession, admin, position);
+           
+            try
+            {
+                await _carSessionService.ChangePositionAsync(carSession, userId, position);
+            }
+            catch
+            {
+                return BadRequest();
+            }
 
-            return Ok(carSession);
+            return Ok(true);
         }
 
         [HttpPatch("fastest-lap")]
-        public async Task<ActionResult<CarSession>> SetFastestLap(CarSessionDto carSessionDto, TimeSpan fastestLap)
+        public async Task<ActionResult<bool>> SetFastestLap(CarSessionDto carSessionDto, Guid userId, TimeSpan fastestLap)
         {
             var carSession = _mapper.Map<CarSession>(carSessionDto);
-            //TODO: change
-            var admin = new Admin();
-            await _carSessionService.SetFastestLapAsync(carSession, admin, fastestLap);
+          
+            try
+            {
+                await _carSessionService.SetFastestLapAsync(carSession, userId, fastestLap);
+            }
+            catch
+            {
+                return BadRequest();
+            }
 
-            return Ok(carSession);
+            return Ok(true);
         }
 
         [HttpPatch("end-session")]
-        public async Task<ActionResult<CarSession>> EndSession(CarSessionDto carSessionDto)
+        public async Task<ActionResult<bool>> EndSession(CarSessionDto carSessionDto)
         {
             var carSession = _mapper.Map<CarSession>(carSessionDto);
 
-            await _carSessionService.EndSessionAsync(carSession);
+            try
+            {
+                await _carSessionService.EndSessionAsync(carSession);
+            }
+            catch
+            {
+                return BadRequest();
+            }
 
             return Ok(carSession);
         }
