@@ -1,6 +1,6 @@
 import React from "react";
-import {IPerson} from './IPerson';
-import styles from './card.module.css';
+import {IPerson} from '../../interfaces/IPerson';
+import styles from  '../../styles/card.module.css';
 import {Link} from "react-router-dom";
 
 interface ICardProps {
@@ -20,7 +20,7 @@ const Card = (props: ICardProps) => {
           
             <Link to={{
                 pathname: `/films/${card.name}`,
-                state: card.films
+                state: {films: card.films}
             }}> 
                 <button>Go to films</button>
             </Link> 

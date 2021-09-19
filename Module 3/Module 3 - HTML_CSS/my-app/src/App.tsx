@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Cards from './cards';
-import Films from './films';
+import Cards from './pages/cards';
+import Films from './pages/films';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +17,7 @@ function App() {
           <h1>STAR WARS PEOPLE CARDS</h1>
           <Cards/>
         </Route>
-        <Route path="/films" exact>
+        <Route path="/films/:name" exact>
           <Films/>
         </Route>
       </Switch>
