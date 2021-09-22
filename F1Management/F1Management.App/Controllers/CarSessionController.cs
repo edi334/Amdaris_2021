@@ -51,16 +51,16 @@ namespace F1Management.App.Controllers
         public async Task<ActionResult<bool>> StartSession(CarSessionStartSpecDto carSessionStartSpecDto,
             string strategy)
         {
-            var carSessionStartSpec = _mapper.Map<CarSessionStartSpec>(carSessionStartSpecDto);
-
-            try
-            {
-                await _carSessionService.StartSessionAsync(carSessionStartSpec, strategy);
-            }
-            catch
+            if (carSessionStartSpecDto == null || carSessionStartSpecDto.CarSessionDto == null ||
+                carSessionStartSpecDto.ChassisDto == null || carSessionStartSpecDto.EngineDto == null ||
+                carSessionStartSpecDto.GearboxDto == null)
             {
                 return BadRequest();
             }
+
+            var carSessionStartSpec = _mapper.Map<CarSessionStartSpec>(carSessionStartSpecDto);
+
+            await _carSessionService.StartSessionAsync(carSessionStartSpec, strategy);
 
             return Ok(true);
         }
@@ -68,16 +68,14 @@ namespace F1Management.App.Controllers
         [HttpPatch("strategy")]
         public async Task<ActionResult<bool>> ChangeStrategy(CarSessionDto carSessionDto, string strategy)
         {
-            var carSession = _mapper.Map<CarSession>(carSessionDto);
-
-            try
-            {
-                await _carSessionService.ChangeStrategyAsync(carSession, strategy);
-            }
-            catch
+            if (carSessionDto == null)
             {
                 return BadRequest();
             }
+
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+
+            await _carSessionService.ChangeStrategyAsync(carSession, strategy);
 
             return Ok(true);
         }
@@ -85,33 +83,29 @@ namespace F1Management.App.Controllers
         [HttpPatch("position")]
         public async Task<ActionResult<bool>> ChangePosition(CarSessionDto carSessionDto, Guid userId, int position)
         {
-            var carSession = _mapper.Map<CarSession>(carSessionDto);
-           
-            try
-            {
-                await _carSessionService.ChangePositionAsync(carSession, userId, position);
-            }
-            catch
+            if (carSessionDto == null)
             {
                 return BadRequest();
             }
 
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+           
+            await _carSessionService.ChangePositionAsync(carSession, userId, position);
+          
             return Ok(true);
         }
 
         [HttpPatch("fastest-lap")]
         public async Task<ActionResult<bool>> SetFastestLap(CarSessionDto carSessionDto, Guid userId, TimeSpan fastestLap)
         {
-            var carSession = _mapper.Map<CarSession>(carSessionDto);
-          
-            try
-            {
-                await _carSessionService.SetFastestLapAsync(carSession, userId, fastestLap);
-            }
-            catch
+            if (carSessionDto == null)
             {
                 return BadRequest();
             }
+
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+          
+            await _carSessionService.SetFastestLapAsync(carSession, userId, fastestLap);
 
             return Ok(true);
         }
@@ -119,16 +113,14 @@ namespace F1Management.App.Controllers
         [HttpPatch("end-session")]
         public async Task<ActionResult<bool>> EndSession(CarSessionDto carSessionDto)
         {
-            var carSession = _mapper.Map<CarSession>(carSessionDto);
-
-            try
-            {
-                await _carSessionService.EndSessionAsync(carSession);
-            }
-            catch
+            if (carSessionDto == null)
             {
                 return BadRequest();
             }
+
+            var carSession = _mapper.Map<CarSession>(carSessionDto);
+
+            await _carSessionService.EndSessionAsync(carSession);
 
             return Ok(carSession);
         }

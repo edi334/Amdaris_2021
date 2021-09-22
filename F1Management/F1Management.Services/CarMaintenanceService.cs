@@ -30,38 +30,18 @@ namespace F1Management.Services
             }
 
             carMechanic.isAvailable = false;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
-
+           
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+          
             raceCar.Chassis.Wear = 0;
             raceCar.Engine.Wear = 0;
             raceCar.Gearbox.Wear = 0;
 
             carMechanic.isAvailable = true;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
-            try
-            {
-                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
-            }
-            catch 
-            {
-                throw;
-            }
+           
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+           
+            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
         }
 
         public async Task FixChassis(RaceCar raceCar)
@@ -74,35 +54,16 @@ namespace F1Management.Services
             }
 
             carMechanic.isAvailable = false;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
+            
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            
             raceCar.Chassis.Wear = 0;
 
             carMechanic.isAvailable = true;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
-            try
-            {
-                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
-            }
-            catch
-            {
-                throw;
-            }
+           
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+           
+            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
         }
 
         public async Task FixEngine(RaceCar raceCar)
@@ -115,35 +76,16 @@ namespace F1Management.Services
             }
 
             carMechanic.isAvailable = false;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
+          
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            
             raceCar.Engine.Wear = 0;
 
             carMechanic.isAvailable = true;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
+           
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
 
-            try
-            {
-                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
-            }
-            catch
-            {
-                throw;
-            }
+            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
         }
 
         public async Task FixGearbox(RaceCar raceCar)
@@ -156,35 +98,16 @@ namespace F1Management.Services
             }
 
             carMechanic.isAvailable = false;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
+           
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+           
             raceCar.Gearbox.Wear = 0;
 
             carMechanic.isAvailable = true;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
-            try
-            {
-                await _raceCarRepository.UpdateRaceCarAsync(raceCar);
-            }
-            catch
-            {
-                throw;
-            }
+            
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+           
+            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
         }
     }
 }

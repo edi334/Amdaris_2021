@@ -35,29 +35,17 @@ namespace F1Management.Services
             }
 
             carMechanic.isAvailable = false;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
+           
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            
             carSession.RaceCar.Chassis = carSessionStartSpec.Chassis;
             carSession.RaceCar.Engine = carSessionStartSpec.Engine;
             carSession.RaceCar.Gearbox = carSessionStartSpec.Gearbox;
             
             carMechanic.isAvailable = true;
-            try
-            {
-                await _teamRepository.UpdateCarMechanicAsync(carMechanic);
-            }
-            catch
-            {
-                throw;
-            }
-
+            
+            await _teamRepository.UpdateCarMechanicAsync(carMechanic);
+            
             var engineer = await _teamRepository.GetRaceEngineerAsync(carSession.RaceCar);
             if (engineer == null)
             {
@@ -71,14 +59,7 @@ namespace F1Management.Services
 
             carSession.StartDate = DateTime.Now;
 
-            try
-            {
-                await _carSessionRepository.UpdateSessionAsync(carSession);
-            }
-            catch
-            {
-                throw;
-            }
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
         public async Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet)
         {
@@ -95,14 +76,7 @@ namespace F1Management.Services
             }
             pitStopCrew.isAvailable = false;
 
-            try
-            {
-                await _teamRepository.UpdatePitStopCrew(pitStopCrew);
-            }
-            catch
-            {
-                throw;
-            }
+            await _teamRepository.UpdatePitStopCrew(pitStopCrew);
             
             var pitStop = new PitStop
             {
@@ -115,23 +89,10 @@ namespace F1Management.Services
 
             pitStopCrew.ChangeTires(carSession.RaceCar, tireSet);
             pitStopCrew.isAvailable = true;
-            try
-            {
-                await _teamRepository.UpdatePitStopCrew(pitStopCrew);
-            }
-            catch
-            {
-                throw;
-            }
-
-            try
-            {
-                await _carSessionRepository.AddPitStopAsync(pitStop);
-            }
-            catch
-            {
-                throw;
-            }
+            
+            await _teamRepository.UpdatePitStopCrew(pitStopCrew);
+            
+            await _carSessionRepository.AddPitStopAsync(pitStop);
         }
         public async Task ChangeStrategyAsync(CarSession carSession, string strategy)
         {
@@ -144,14 +105,7 @@ namespace F1Management.Services
 
             carSession.Strategy = strategy;
 
-            try
-            {
-                await _carSessionRepository.UpdateSessionAsync(carSession);
-            }
-            catch
-            {
-                throw;
-            }
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
         public async Task ChangePositionAsync(CarSession carSession, Guid userId, int position)
         {
@@ -169,14 +123,7 @@ namespace F1Management.Services
 
             carSession.Position = position;
 
-            try
-            {
-                await _carSessionRepository.UpdateSessionAsync(carSession);
-            }
-            catch
-            {
-                throw;
-            }
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
         public async Task SetFastestLapAsync(CarSession carSession, Guid userId, TimeSpan fastestLap)
         {
@@ -194,14 +141,7 @@ namespace F1Management.Services
 
             carSession.FastestLap = fastestLap;
 
-            try
-            {
-                await _carSessionRepository.UpdateSessionAsync(carSession);
-            }
-            catch
-            {
-                throw;
-            }
+            await _carSessionRepository.UpdateSessionAsync(carSession);
         }
         private bool isAdmin(User user)
         {
@@ -236,15 +176,8 @@ namespace F1Management.Services
                 driver.Points += points;
                 team.Points += points;
 
-                try
-                {
-                    await _teamRepository.UpdateDriverAsync(driver);
-                    await _teamRepository.UpdateTeamAsync(team);
-                }
-                catch
-                {
-                    throw;
-                }
+                await _teamRepository.UpdateDriverAsync(driver);
+                await _teamRepository.UpdateTeamAsync(team);
             }
         }
     }

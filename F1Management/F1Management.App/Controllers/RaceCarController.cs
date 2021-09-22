@@ -39,68 +39,59 @@ namespace F1Management.App.Controllers
         [HttpPost]
         public async Task<ActionResult<bool>> AddRaceCar([FromBody] string name)
         {
-            try
-            {
-                await _raceCarRepository.AddRaceCarAsync(name);
-            }
-            catch
+            if (name == null)
             {
                 return BadRequest();
             }
 
+            await _raceCarRepository.AddRaceCarAsync(name);
             return Ok(true);
         }
 
         [HttpPost("{carId}/chassis")]
         public async Task<ActionResult<bool>> AddChassis([FromRoute] Guid carId, ChassisDto chassisDto)
         {
-            var chassis = _mapper.Map<Chassis>(chassisDto);
-            chassis.RaceCarId = carId;
-
-            try
-            {
-                await _raceCarRepository.AddChassisAsync(chassis);
-            }
-            catch
+            if (chassisDto == null)
             {
                 return BadRequest();
             }
 
+            var chassis = _mapper.Map<Chassis>(chassisDto);
+            chassis.RaceCarId = carId;
+
+            await _raceCarRepository.AddChassisAsync(chassis);
+           
             return Ok(true);
         }
 
         [HttpPost("{carId}/engine")]
         public async Task<ActionResult<bool>> AddEngine([FromRoute] Guid carId, EngineDto engineDto)
         {
-            var engine = _mapper.Map<Engine>(engineDto);
-            engine.RaceCarId = carId;
-
-            try
-            {
-                await _raceCarRepository.AddEngineAsync(engine);
-            }
-            catch
+            if (engineDto == null)
             {
                 return BadRequest();
             }
 
+            var engine = _mapper.Map<Engine>(engineDto);
+            engine.RaceCarId = carId;
+
+            await _raceCarRepository.AddEngineAsync(engine);
+           
             return Ok(true);
         }
 
         [HttpPost("{carId}/gearbox")]
         public async Task<ActionResult<bool>> AddGearbox([FromRoute] Guid carId, GearboxDto gearboxDto)
         {
-            var gearbox = _mapper.Map<Gearbox>(gearboxDto);
-            gearbox.RaceCarId = carId;
-
-            try
-            {
-                await _raceCarRepository.AddGearboxAsync(gearbox);
-            }
-            catch
+            if (gearboxDto == null)
             {
                 return BadRequest();
             }
+
+            var gearbox = _mapper.Map<Gearbox>(gearboxDto);
+            gearbox.RaceCarId = carId;
+
+            await _raceCarRepository.AddGearboxAsync(gearbox);
 
             return Ok(true);
         }
@@ -108,17 +99,15 @@ namespace F1Management.App.Controllers
         [HttpPost("{carId}/tire-set")]
         public async Task<ActionResult<bool>> AddTireSet([FromRoute] Guid carId, TireSetDto tireSetDto)
         {
-            var tireSet = _mapper.Map<TireSet>(tireSetDto);
-            tireSet.RaceCarId = carId;
-
-            try
-            {
-                await _raceCarRepository.AddTireSetAsync(tireSet);
-            }
-            catch
+            if (tireSetDto == null)
             {
                 return BadRequest();
             }
+
+            var tireSet = _mapper.Map<TireSet>(tireSetDto);
+            tireSet.RaceCarId = carId;
+
+            await _raceCarRepository.AddTireSetAsync(tireSet);
 
             return Ok(true);
         }
@@ -126,16 +115,14 @@ namespace F1Management.App.Controllers
         [HttpPatch("fix")]
         public async Task<ActionResult<bool>> FixRaceCar(RaceCarDto raceCarDto)
         {
-            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
-
-            try
-            {
-                await _carMaintenanceService.FixCar(raceCar);
-            }
-            catch
+            if (raceCarDto == null)
             {
                 return BadRequest();
             }
+
+            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
+
+            await _carMaintenanceService.FixCar(raceCar);
 
             return Ok(true);
         }
@@ -143,16 +130,14 @@ namespace F1Management.App.Controllers
         [HttpPatch("fix-chassis")]
         public async Task<ActionResult<bool>> FixRaceCarChassis(RaceCarDto raceCarDto)
         {
-            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
-
-            try
-            {
-                await _carMaintenanceService.FixChassis(raceCar);
-            }
-            catch
+            if (raceCarDto == null)
             {
                 return BadRequest();
             }
+
+            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
+
+            await _carMaintenanceService.FixChassis(raceCar);
 
             return Ok(true);
         }
@@ -160,33 +145,29 @@ namespace F1Management.App.Controllers
         [HttpPatch("fix-engine")]
         public async Task<ActionResult<bool>> FixRaceCarEngine(RaceCarDto raceCarDto)
         {
-            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
-
-            try
-            {
-                await _carMaintenanceService.FixEngine(raceCar);
-            }
-            catch
+            if (raceCarDto == null)
             {
                 return BadRequest();
             }
 
+            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
+
+            await _carMaintenanceService.FixEngine(raceCar);
+            
             return Ok(true);
         }
 
         [HttpPatch("fix-gearbox")]
         public async Task<ActionResult<bool>> FixRaceCarGearbox(RaceCarDto raceCarDto)
         {
-            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
-
-            try
-            {
-                await _carMaintenanceService.FixGearbox(raceCar);
-            }
-            catch
+            if (raceCarDto == null)
             {
                 return BadRequest();
             }
+
+            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
+
+            await _carMaintenanceService.FixGearbox(raceCar);
 
             return Ok(true);
         }
