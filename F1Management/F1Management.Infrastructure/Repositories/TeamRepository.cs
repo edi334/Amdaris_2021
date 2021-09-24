@@ -19,21 +19,73 @@ namespace F1Management.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task<ICollection<Team>> GetAllAsync()
+        {
+            return await _dbContext.Teams
+                .OrderBy(t => t.Points)
+                .ToListAsync();
+        }
+
+        public async Task<ICollection<Driver>> GetAllDriversAsync()
+        {
+            return await _dbContext.Drivers
+                .OrderBy(d => d.Points)
+                .Include(d => d.User)
+                .ToListAsync();
+        }
+
+        public async Task<Team> GetByIdAsync(Guid teamId)
+        {
+            return await _dbContext.Teams.FirstOrDefaultAsync(t => t.Id == teamId);
+        }
+
+        public async Task<ICollection<CarMechanic>> GetCarMechanicsAsync(Guid teamId)
+        {
+            return await _dbContext.CarMechanics
+                .Where(c => c.TeamId == teamId)
+                .Include(c => c.User)
+                .ToListAsync();
+        }
+
+        public async Task<ICollection<Driver>> GetDriversAsync(Guid teamId)
+        {
+            return await _dbContext.Drivers
+                .Where(d => d.TeamId == teamId)
+                .Include(d => d.User)
+                .ToListAsync();
+        }
+
         public async Task<CarMechanic> GetFirstAvailableCarMechanicAsync(Guid teamId)
         {
             return await _dbContext.CarMechanics
                 .FirstOrDefaultAsync(c => c.isAvailable == true && c.TeamId == teamId);
         }
 
-        public async Task<PitStopCrew> GetPitStopCrew(Guid teamId)
+        public async Task<PitStopCrew> GetPitStopCrewAsync(Guid teamId)
         {
             return await _dbContext.PitStopCrews
                 .FirstOrDefaultAsync(c => c.TeamId == teamId);
         }
 
+        public async Task<ICollection<PitStopMechanic>> GetPitStopMechanicsAsync(Guid teamId)
+        {
+            return await _dbContext.PitStopMechanics
+                 .Where(p => p.PitStopCrew.TeamId == teamId)
+                 .Include(p => p.User)
+                 .ToListAsync();
+        }
+
         public async Task<RaceEngineer> GetRaceEngineerAsync(RaceCar raceCar)
         {
             return await _dbContext.RaceEngineers.FirstOrDefaultAsync(r => r.Driver == raceCar.Driver);
+        }
+
+        public async Task<ICollection<RaceEngineer>> GetRaceEngineersAsync(Guid teamId)
+        {
+            return await _dbContext.RaceEngineers
+                .Where(r => r.TeamId == teamId)
+                .Include(r => r.User)
+                .ToListAsync();
         }
 
         public async Task UpdateCarMechanicAsync(CarMechanic carMechanic)
@@ -58,7 +110,7 @@ namespace F1Management.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task UpdatePitStopCrew(PitStopCrew pitStopCrew)
+        public async Task UpdatePitStopCrewAsync(PitStopCrew pitStopCrew)
         {
             if (pitStopCrew == null)
             {

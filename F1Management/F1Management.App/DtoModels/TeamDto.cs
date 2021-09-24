@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.App.DtoModels
 {
-    public class TeamDto
+    public class TeamDto : BaseDto
     {
         public string Name { get; set; }
         public int Points { get; set; }

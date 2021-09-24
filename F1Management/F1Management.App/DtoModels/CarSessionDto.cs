@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.App.DtoModels
 {
-    public class CarSessionDto
+    public class CarSessionDto : BaseDto
     {
         public string Name { get; set; }
         public Guid GrandPrixId { get; set; }

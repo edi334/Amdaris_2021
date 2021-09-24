@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.App.DtoModels.CarDtos
 {
-    public class ChassisDto
+    public class ChassisDto : BaseDto
     {
         public double Wear { get; set; }
         public string FrontWing { get; set; }

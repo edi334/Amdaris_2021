@@ -10,13 +10,21 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface ITeamRepository
     {
+        public Task<ICollection<Team>> GetAllAsync();
+        public Task<Team> GetByIdAsync(Guid teamId);
         public Task UpdateTeamAsync(Team team);
         public Task UpdateDriverAsync(Driver driver);
         public Task UpdateCarMechanicAsync(CarMechanic carMechanic);
         public Task UpdateRaceEngineerAsync(RaceEngineer raceEngineer);
-        public Task UpdatePitStopCrew(PitStopCrew pitStopCrew);
+        public Task UpdatePitStopCrewAsync(PitStopCrew pitStopCrew);
         public Task<CarMechanic> GetFirstAvailableCarMechanicAsync(Guid teamId);
         public Task<RaceEngineer> GetRaceEngineerAsync(RaceCar raceCar);
-        public Task<PitStopCrew> GetPitStopCrew(Guid teamId);
+        public Task<ICollection<Driver>> GetDriversAsync(Guid teamId);
+        public Task<ICollection<Driver>> GetAllDriversAsync();
+        public Task<ICollection<RaceEngineer>> GetRaceEngineersAsync(Guid teamId);
+        public Task<ICollection<CarMechanic>> GetCarMechanicsAsync(Guid teamId);
+        public Task<PitStopCrew> GetPitStopCrewAsync(Guid teamId);
+        public Task<ICollection<PitStopMechanic>> GetPitStopMechanicsAsync(Guid teamId);
+
     }
 }

@@ -16,6 +16,9 @@ namespace F1Management.Infrastructure.Configs
             builder.Property(x => x.Id)
                 .ValueGeneratedOnAdd();
 
+            builder.Property(x => x.Points)
+                .HasDefaultValue(0);
+
             builder.HasMany(x => x.RaceEngineers)
                 .WithOne(x => x.Team)
                 .OnDelete(DeleteBehavior.NoAction);

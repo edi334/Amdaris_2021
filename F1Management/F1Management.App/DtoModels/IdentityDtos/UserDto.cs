@@ -1,11 +1,12 @@
-﻿using System;
+﻿using F1Management.App.DtoModels.CarDtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace F1Management.App.DtoModels.IdentityDtos
 {
-    public class UserDto
+    public class UserDto : BaseDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

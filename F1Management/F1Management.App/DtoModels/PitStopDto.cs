@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.App.DtoModels
 {
-    public class PitStopDto
+    public class PitStopDto : BaseDto
     {
         public TireSetDto OldTires { get; set; }
         public TireSetDto NewTires { get; set; }

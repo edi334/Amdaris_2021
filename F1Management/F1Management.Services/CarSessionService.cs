@@ -64,7 +64,7 @@ namespace F1Management.Services
         public async Task PitStopAsync(CarSession carSession, TimeSpan stationaryTime, TireSet tireSet)
         {
             var pitStopCrew = await _teamRepository
-                .GetPitStopCrew(carSession.RaceCar.Driver.TeamId);
+                .GetPitStopCrewAsync(carSession.RaceCar.Driver.TeamId);
             if (pitStopCrew == null)
             {
                 throw new Exception("PitStop Crew Not Found");
@@ -76,7 +76,7 @@ namespace F1Management.Services
             }
             pitStopCrew.isAvailable = false;
 
-            await _teamRepository.UpdatePitStopCrew(pitStopCrew);
+            await _teamRepository.UpdatePitStopCrewAsync(pitStopCrew);
             
             var pitStop = new PitStop
             {
@@ -90,7 +90,7 @@ namespace F1Management.Services
             pitStopCrew.ChangeTires(carSession.RaceCar, tireSet);
             pitStopCrew.isAvailable = true;
             
-            await _teamRepository.UpdatePitStopCrew(pitStopCrew);
+            await _teamRepository.UpdatePitStopCrewAsync(pitStopCrew);
             
             await _carSessionRepository.AddPitStopAsync(pitStop);
         }

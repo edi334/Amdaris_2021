@@ -15,9 +15,10 @@ namespace F1Management.Services
         private readonly IRaceCarRepository _raceCarRepository;
         private readonly ITeamRepository _teamRepository;
 
-        public CarMaintenanceService(IRaceCarRepository raceCarRepository)
+        public CarMaintenanceService(IRaceCarRepository raceCarRepository, ITeamRepository teamRepository)
         {
             _raceCarRepository = raceCarRepository;
+            _teamRepository = teamRepository;
         }
 
         public async Task FixCar(RaceCar raceCar)

@@ -16,6 +16,9 @@ namespace F1Management.Infrastructure.Configs
             builder.Property(x => x.Id)
                 .ValueGeneratedOnAdd();
 
+            builder.Property(x => x.Points)
+                .HasDefaultValue(0);
+
             builder.HasOne(x => x.User)
                 .WithOne()
                 .OnDelete(DeleteBehavior.NoAction);

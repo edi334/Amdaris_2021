@@ -16,6 +16,18 @@ namespace F1Management.Infrastructure.Configs
             builder.Property(x => x.Id)
                 .ValueGeneratedOnAdd();
 
+            builder.Property(x => x.FrontLeftWear)
+                .HasDefaultValue(0);
+
+            builder.Property(x => x.FrontRightWear)
+                .HasDefaultValue(0);
+
+            builder.Property(x => x.RearLeftWear)
+                .HasDefaultValue(0);
+
+            builder.Property(x => x.RearRightWear)
+                .HasDefaultValue(0);
+
             builder.HasOne(x => x.RaceCar)
                 .WithOne(x => x.TireSet)
                 .OnDelete(DeleteBehavior.NoAction);

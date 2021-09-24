@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace F1Management.App.DtoModels
 {
-    public class CarSessionStartSpecDto
+    public class CarSessionStartSpecDto : BaseDto
     {
         public CarSessionDto CarSessionDto { get; set; }
         public ChassisDto ChassisDto { get; set; }

@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace F1Management.App.DtoModels
 {
-    public class GrandPrixDto : BaseDto
+    public class BaseDto
     {
-        public string Name { get; set; }
-        public string CircuitName { get; set; }
+        public Guid id { get; set; }
     }
 }
