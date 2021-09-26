@@ -4,7 +4,7 @@
   align-items: center;
   width: 450px;
   height: 300px;
-  background: url("../../../../assets/images/flag.jpg") no-repeat center;
+  background: url("../../../../../assets/images/flag.jpg") no-repeat center;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -28,5 +28,25 @@
 }
 
 p {
+  text-align: center;
   margin: 10px 0;
+}
+
+@media screen and (max-width: 900px) {
+  .card-container {
+    width: 360px;
+    height: 240px;
+  }
+  p {
+    margin: 8px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-container {
+    width: 260px;
+    height: 175px;
+  }
+  p {
+    margin: 5.8px 0;
+  }
 }

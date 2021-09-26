@@ -43,6 +43,18 @@ namespace F1Management.App
                 configuration.RootPath = "ClientApp/build";
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy
+                (name: "AllowSpecificOrigins", builder =>
+                {
+                    builder
+                        .WithOrigins("http://localhost:4200")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+
             services.AddAutoMapper(typeof(MappingProfile));
 
             services.AddScoped(typeof(ICarSessionRepository), typeof(CarSessionRepository));
@@ -83,6 +95,8 @@ namespace F1Management.App
             });
 
             app.UseRouting();
+
+            app.UseCors("AllowSpecificOrigins");
 
             app.UseEndpoints(endpoints => endpoints.MapControllers());
 

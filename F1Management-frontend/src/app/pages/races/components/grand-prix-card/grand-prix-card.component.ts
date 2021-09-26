@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {IGrandPrix} from '../../../models/grand-prix';
+import {IGrandPrix} from '../../../../models/grand-prix';
 
 @Component({
   selector: 'app-grand-prix-card',

@@ -1,1 +1,8 @@
-<app-grand-prix-card *ngFor="let grandPrix of grandPrix" [grandPrix]="grandPrix"></app-grand-prix-card>
+<div class="page-container">
+  <p class="page-heading">Select Grand Prix</p>
+  <div class="cards-container">
+    <div class="card-container" *ngFor="let grandPrix of grandPrix" >
+      <app-grand-prix-card [grandPrix]="grandPrix"></app-grand-prix-card>
+    </div>
+  </div>
+</div>

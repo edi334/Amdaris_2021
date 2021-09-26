@@ -10,3 +10,15 @@ C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\n
 C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.dll
 C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\ref\F1Management.Core.dll
 C:\Users\eduard.cziszter\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.pdb
+E:\Amdaris_2021\F1Management\F1Management.Core\bin\Debug\net5.0\F1Management.Core.deps.json
+E:\Amdaris_2021\F1Management\F1Management.Core\bin\Debug\net5.0\F1Management.Core.dll
+E:\Amdaris_2021\F1Management\F1Management.Core\bin\Debug\net5.0\ref\F1Management.Core.dll
+E:\Amdaris_2021\F1Management\F1Management.Core\bin\Debug\net5.0\F1Management.Core.pdb
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.csproj.AssemblyReference.cache
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.AssemblyInfoInputs.cache
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.AssemblyInfo.cs
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.csproj.CoreCompileInputs.cache
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.dll
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\ref\F1Management.Core.dll
+E:\Amdaris_2021\F1Management\F1Management.Core\obj\Debug\net5.0\F1Management.Core.pdb
