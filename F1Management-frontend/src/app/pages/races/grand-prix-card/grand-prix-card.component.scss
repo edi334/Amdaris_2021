@@ -1,0 +1,32 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 300px;
+  background: url("../../../../assets/images/flag.jpg") no-repeat center;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  border-radius: 8px;
+}
+
+.inner {
+  width: 70%;
+  height: 70%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p:first-child {
+    font-weight: bold;
+  }
+  p:nth-child(2) {
+    font-style: italic;
+  }
+}
+
+p {
+  margin: 10px 0;
+}
