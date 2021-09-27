@@ -16,6 +16,11 @@ const routes: Routes = [
     path: 'standings',
     loadChildren: () =>
       import('./pages/standings/standings-page.module').then(m => m.StandingsPageModule)
+  },
+  {
+    path: 'race-car',
+    loadChildren: () =>
+      import('./pages/race-car/race-car-page.module').then(m => m.RaceCarPageModule)
   }
 ];
 
