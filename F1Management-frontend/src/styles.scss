@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: local('Orbitron'), url("./assets/fonts/orbitron/Orbitron-Regular.ttf") format("truetype");
+}
+
+p, span {
+  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+}
+
 .page-heading {
   font-weight: bold;
   font-size: 48px;
