@@ -6,7 +6,6 @@ using F1Management.Infrastructure.Repositories;
 using F1Management.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -57,14 +56,14 @@ namespace F1Management.App
 
             services.AddAutoMapper(typeof(MappingProfile));
 
-            services.AddScoped(typeof(ICarSessionRepository), typeof(CarSessionRepository));
-            services.AddScoped(typeof(IRaceCarRepository), typeof(RaceCarRepository));
-            services.AddScoped(typeof(ITeamRepository), typeof(TeamRepository));
-            services.AddScoped(typeof(IGrandPrixRepository), typeof(GrandPrixRepository));
-            services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            services.AddScoped<ICarSessionRepository, CarSessionRepository>();
+            services.AddScoped<IRaceCarRepository, RaceCarRepository>();
+            services.AddScoped<ITeamRepository, TeamRepository>();
+            services.AddScoped<IGrandPrixRepository, GrandPrixRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
-            services.AddTransient(typeof(ICarSessionService), typeof(CarSessionService));
-            services.AddTransient(typeof(ICarMaintenanceService), typeof(CarMaintenanceService));
+            services.AddTransient<ICarSessionRepository, CarSessionRepository>();
+            services.AddTransient<ICarMaintenanceService, CarMaintenanceService>();
 
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
