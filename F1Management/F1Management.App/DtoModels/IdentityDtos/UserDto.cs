@@ -12,6 +12,6 @@ namespace F1Management.App.DtoModels.IdentityDtos
         public string LastName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public bool IsEmailVerified { get; set; }
+        public string Password { get; set; }
     }
 }

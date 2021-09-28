@@ -9,6 +9,8 @@ namespace F1Management.Core.Models.Abstractions.Repositories
 {
     public interface IUserRepository
     {
-        public Task<User> GetById(Guid id);
+        public Task<User> GetByIdAsync(Guid id);
+        public Task AddUserAsync(User user);
+        public Task<Role> GetRoleByNameAsync(string name);
     }
 }

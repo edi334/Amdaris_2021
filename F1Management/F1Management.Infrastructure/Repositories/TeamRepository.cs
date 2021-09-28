@@ -19,6 +19,56 @@ namespace F1Management.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task AddCarMechanicAsync(CarMechanic carMechanic)
+        {
+            if (carMechanic == null)
+            {
+                throw new Exception("Car Mechanic is null");
+            }
+
+            await _dbContext.CarMechanics.AddAsync(carMechanic);
+        }
+
+        public async Task AddDriverAsync(Driver driver)
+        {
+            if (driver == null)
+            {
+                throw new Exception("Driver is null");
+            }
+
+            await _dbContext.Drivers.AddAsync(driver);
+        }
+
+        public async Task AddPitStopCrewAsync(PitStopCrew pitStopCrew)
+        {
+            if (pitStopCrew == null)
+            {
+                throw new Exception("PitStop Crew is null");
+            }
+
+            await _dbContext.PitStopCrews.AddAsync(pitStopCrew);
+        }
+
+        public async Task AddPitStopMechanicAsync(PitStopMechanic pitStopMechanic)
+        {
+            if (pitStopMechanic == null)
+            {
+                throw new Exception("PitStop Mechanic is null");
+            }
+
+            await _dbContext.PitStopMechanics.AddAsync(pitStopMechanic);
+        }
+
+        public async Task AddRaceEngineerAsync(RaceEngineer raceEngineer)
+        {
+            if (raceEngineer == null)
+            {
+                throw new Exception("Race Engineer is null");
+            }
+
+            await _dbContext.RaceEngineers.AddAsync(raceEngineer);
+        }
+
         public async Task<ICollection<Team>> GetAllAsync()
         {
             return await _dbContext.Teams

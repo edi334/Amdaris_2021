@@ -18,10 +18,26 @@ namespace F1Management.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<User> GetById(Guid id)
+        public async Task AddUserAsync(User user)
+        {
+            if (user == null)
+            {
+                throw new Exception("User is null!");
+            }
+
+            await _dbContext.Users.AddAsync(user);
+        }
+
+        public async Task<User> GetByIdAsync(Guid id)
         {
             return await _dbContext.Users
                 .FirstOrDefaultAsync(u => u.Id == id);
+        }
+
+        public async Task<Role> GetRoleByNameAsync(string name)
+        {
+            return await _dbContext.Roles
+                .FirstOrDefaultAsync(r => r.Name == name);
         }
     }
 }

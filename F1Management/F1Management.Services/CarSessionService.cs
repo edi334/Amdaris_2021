@@ -109,7 +109,7 @@ namespace F1Management.Services
         }
         public async Task ChangePositionAsync(CarSession carSession, Guid userId, int position)
         {
-            var user = await _userRepository.GetById(userId);
+            var user = await _userRepository.GetByIdAsync(userId);
 
             if (user == null)
             {
@@ -127,7 +127,7 @@ namespace F1Management.Services
         }
         public async Task SetFastestLapAsync(CarSession carSession, Guid userId, TimeSpan fastestLap)
         {
-            var user = await _userRepository.GetById(userId);
+            var user = await _userRepository.GetByIdAsync(userId);
 
             if (user == null)
             {

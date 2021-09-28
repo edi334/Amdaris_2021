@@ -25,6 +25,11 @@ namespace F1Management.Core.Models.Abstractions.Repositories
         public Task<ICollection<CarMechanic>> GetCarMechanicsAsync(Guid teamId);
         public Task<PitStopCrew> GetPitStopCrewAsync(Guid teamId);
         public Task<ICollection<PitStopMechanic>> GetPitStopMechanicsAsync(Guid teamId);
+        public Task AddCarMechanicAsync(CarMechanic carMechanic);
+        public Task AddDriverAsync(Driver driver);
+        public Task AddPitStopMechanicAsync(PitStopMechanic pitStopMechanic);
+        public Task AddRaceEngineerAsync(RaceEngineer raceEngineer);
+        public Task AddPitStopCrewAsync(PitStopCrew pitStopCrew);
 
     }
 }
