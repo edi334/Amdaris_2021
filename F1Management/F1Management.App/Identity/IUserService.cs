@@ -1,4 +1,5 @@
 ﻿using F1Management.App.DtoModels;
+using F1Management.Core.Models.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,6 @@ namespace F1Management.App.Identity
         public Task RegisterCarMechanicAsync(RegisterDto registerDto);
         public Task RegisterPitStopMechanicAsync(RegisterDto registerDto);
         public Task RegisterRaceEngineerAsync(RegisterDto registerDto, Guid driverId);
-        public Task RegisterTeamAsync(TeamDto team, Guid guid);
+        public Task RegisterTeamAsync(string name, User user);
     }
 }

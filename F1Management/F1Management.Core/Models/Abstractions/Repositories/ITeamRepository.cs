@@ -30,6 +30,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
         public Task AddPitStopMechanicAsync(PitStopMechanic pitStopMechanic);
         public Task AddRaceEngineerAsync(RaceEngineer raceEngineer);
         public Task AddPitStopCrewAsync(PitStopCrew pitStopCrew);
+        public Task AddTeamAsync(Team team);
 
     }
 }

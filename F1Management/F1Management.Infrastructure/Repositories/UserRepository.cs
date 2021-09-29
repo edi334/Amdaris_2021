@@ -28,6 +28,16 @@ namespace F1Management.Infrastructure.Repositories
             await _dbContext.Users.AddAsync(user);
         }
 
+        public async Task AddUserRoleAsync(UserRole userRole)
+        {
+            if (userRole == null)
+            {
+                throw new Exception("UserRole is null");
+            }
+
+            await _dbContext.UserRoles.AddAsync(userRole);
+        }
+
         public async Task<User> GetByIdAsync(Guid id)
         {
             return await _dbContext.Users

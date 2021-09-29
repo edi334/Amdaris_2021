@@ -11,6 +11,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
     {
         public Task<User> GetByIdAsync(Guid id);
         public Task AddUserAsync(User user);
+        public Task AddUserRoleAsync(UserRole userRole);
         public Task<Role> GetRoleByNameAsync(string name);
     }
 }

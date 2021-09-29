@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using F1Management.App.DtoModels;
 using F1Management.App.DtoModels.IdentityDtos;
+using F1Management.Core;
 using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Core.Models.Identity;
 using F1Management.Core.Models.TeamMembers;
@@ -96,9 +97,24 @@ namespace F1Management.App.Identity
             await _teamRepository.AddRaceEngineerAsync(raceEngineer);
         }
 
-        public async Task RegisterTeamAsync(TeamDto team, Guid guid)
+        public async Task RegisterTeamAsync(string name, User user)
         {
-            throw new NotImplementedException();
+            var team = new Team
+            {
+                Name = name
+            };
+
+            var adminRole = await _userRepository.GetRoleByNameAsync("admin");
+
+            var userRole = new UserRole
+            {
+                UserId = user.Id,
+                RoleId = adminRole.Id
+            };
+
+            await _userRepository.AddUserRoleAsync(userRole);
+
+            await _teamRepository.AddTeamAsync(team);
         }
 
         private async Task<User> registerUserAsync(UserDto userDto)

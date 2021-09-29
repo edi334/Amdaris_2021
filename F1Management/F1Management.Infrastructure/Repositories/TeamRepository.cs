@@ -69,6 +69,16 @@ namespace F1Management.Infrastructure.Repositories
             await _dbContext.RaceEngineers.AddAsync(raceEngineer);
         }
 
+        public async Task AddTeamAsync(Team team)
+        {
+            if (team == null)
+            {
+                throw new Exception("Team is null");
+            }
+
+            await _dbContext.Teams.AddAsync(team);
+        }
+
         public async Task<ICollection<Team>> GetAllAsync()
         {
             return await _dbContext.Teams
