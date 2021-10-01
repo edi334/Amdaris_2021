@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj": {}
+    "E:\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
+    "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj",
+        "projectUniqueName": "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj",
         "projectName": "F1Management.Core",
-        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj",
-        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\obj\\",
+        "projectPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj",
+        "packagesPath": "C:\\Users\\edicz\\.nuget\\packages\\",
+        "outputPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\edicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,21 +59,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj": {
+    "E:\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj",
         "projectName": "F1Management.Infrastructure",
-        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\obj\\",
+        "projectPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\edicz\\.nuget\\packages\\",
+        "outputPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\edicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +92,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
-                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
+              "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
+                "projectPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
               }
             }
           }
@@ -128,21 +138,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj": {
+    "E:\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj",
+        "projectUniqueName": "E:\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj",
         "projectName": "F1Management.Services",
-        "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj",
-        "packagesPath": "C:\\Users\\eduard.cziszter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Services\\obj\\",
+        "projectPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Services\\F1Management.Services.csproj",
+        "packagesPath": "C:\\Users\\edicz\\.nuget\\packages\\",
+        "outputPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\eduard.cziszter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\edicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,11 +171,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
-                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
+              "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj": {
+                "projectPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Core\\F1Management.Core.csproj"
               },
-              "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\eduard.cziszter\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj"
+              "E:\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj": {
+                "projectPath": "E:\\Amdaris_2021\\F1Management\\F1Management.Infrastructure\\F1Management.Infrastructure.csproj"
               }
             }
           }
@@ -189,7 +204,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

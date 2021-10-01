@@ -59,7 +59,7 @@ namespace F1Management.App.Controllers
             }
         }
 
-        [HttpPost("{id}/register-team")]
+        [HttpPost("register-team")]
         public async Task<ActionResult<string>> RegisterTeam(string name)
         {
             if (name == null)

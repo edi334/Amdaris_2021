@@ -1,9 +1,14 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 @font-face {
   font-family: 'Orbitron';
   src: local('Orbitron'), url("./assets/fonts/orbitron/Orbitron-Regular.ttf") format("truetype");
 }
 
-p, span {
+p, span, label, input {
   font-family: 'Orbitron', Arial, Helvetica, sans-serif;
 }
 

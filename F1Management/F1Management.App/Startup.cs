@@ -1,3 +1,4 @@
+using F1Management.App.Identity;
 using F1Management.App.Mapper;
 using F1Management.Core.Models.Abstractions;
 using F1Management.Core.Models.Abstractions.Repositories;
@@ -64,6 +65,7 @@ namespace F1Management.App
 
             services.AddTransient<ICarSessionRepository, CarSessionRepository>();
             services.AddTransient<ICarMaintenanceService, CarMaintenanceService>();
+            services.AddTransient<IUserService, UserService>();
 
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
