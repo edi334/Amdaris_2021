@@ -38,6 +38,12 @@ namespace F1Management.Infrastructure.Repositories
             await _dbContext.UserRoles.AddAsync(userRole);
         }
 
+        public async Task<User> FindUser(string email, string password)
+        {
+            return await _dbContext.Users
+                .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+        }
+
         public async Task<User> GetByIdAsync(Guid id)
         {
             return await _dbContext.Users

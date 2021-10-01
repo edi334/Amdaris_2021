@@ -1,6 +1,7 @@
 ﻿using F1Management.Core;
 using F1Management.Core.Models.Abstractions.Repositories;
 using F1Management.Core.Models.Car;
+using F1Management.Core.Models.Identity;
 using F1Management.Core.Models.TeamMembers;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -146,6 +147,39 @@ namespace F1Management.Infrastructure.Repositories
                 .Where(r => r.TeamId == teamId)
                 .Include(r => r.User)
                 .ToListAsync();
+        }
+
+        public async Task<Guid> GetTeamIdByUser(User user)
+        {
+            try
+            {
+                switch (user.UserTeamRole)
+                {
+                    case UserTeamRole.Driver:
+                        var driver = await _dbContext.Drivers
+                            .FirstOrDefaultAsync(d => d.UserId == user.Id);
+                        return driver.TeamId;
+                    case UserTeamRole.CarMechanic:
+                        var carMechanic = await _dbContext.CarMechanics
+                            .FirstOrDefaultAsync(d => d.UserId == user.Id);
+                        return carMechanic.TeamId;
+                    case UserTeamRole.PitStopMechanic:
+                        var pitStopMechanic = await _dbContext.PitStopMechanics
+                            .FirstOrDefaultAsync(d => d.UserId == user.Id);
+                        return pitStopMechanic.PitStopCrew.TeamId;
+                    case UserTeamRole.RaceEngineer:
+                        var raceEngineer = await _dbContext.RaceEngineers
+                            .FirstOrDefaultAsync(d => d.UserId == user.Id);
+                        return raceEngineer.TeamId;
+                    default:
+                        throw new Exception("Invalid Role type");
+                }
+            }
+            catch
+            {
+                throw new Exception("User has no role!");
+            }
+            
         }
 
         public async Task UpdateCarMechanicAsync(CarMechanic carMechanic)

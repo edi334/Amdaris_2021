@@ -97,7 +97,7 @@ namespace F1Management.App.Identity
             await _teamRepository.AddRaceEngineerAsync(raceEngineer);
         }
 
-        public async Task RegisterTeamAsync(string name, User user)
+        public async Task RegisterTeamAsync(string name, Guid userId)
         {
             var team = new Team
             {
@@ -108,7 +108,7 @@ namespace F1Management.App.Identity
 
             var userRole = new UserRole
             {
-                UserId = user.Id,
+                UserId = userId,
                 RoleId = adminRole.Id
             };
 

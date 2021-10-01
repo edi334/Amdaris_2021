@@ -25,5 +25,13 @@ namespace F1Management.App.Mapper
             { SessionType.Race, "Race" },
             { SessionType.SprintRace, "SprintRace" }
         };
+
+        public static Dictionary<UserTeamRole, string> userRoleDict = new Dictionary<UserTeamRole, string>
+        {
+            { UserTeamRole.Driver, "Driver" },
+            { UserTeamRole.CarMechanic, "CarMechanic" },
+            { UserTeamRole.PitStopMechanic, "PitStopMechanic" },
+            { UserTeamRole.RaceEngineer, "RaceEngineer" },
+        };
     }
 }

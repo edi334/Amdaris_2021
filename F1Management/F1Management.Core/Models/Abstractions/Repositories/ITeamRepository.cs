@@ -1,4 +1,5 @@
 ﻿using F1Management.Core.Models.Car;
+using F1Management.Core.Models.Identity;
 using F1Management.Core.Models.TeamMembers;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace F1Management.Core.Models.Abstractions.Repositories
     {
         public Task<ICollection<Team>> GetAllAsync();
         public Task<Team> GetByIdAsync(Guid teamId);
+        public Task<Guid> GetTeamIdByUser(User user);
         public Task UpdateTeamAsync(Team team);
         public Task UpdateDriverAsync(Driver driver);
         public Task UpdateCarMechanicAsync(CarMechanic carMechanic);

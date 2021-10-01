@@ -27,7 +27,9 @@ namespace F1Management.App.Mapper
                 .ReverseMap();
             CreateMap<RaceCar, RaceCarDto>().ReverseMap();
             CreateMap<Role, RoleDto>().ReverseMap();
-            CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<User, UserDto>()
+                .ForMember(s => s.UserTeamRole, opt => opt.MapFrom(src => Mapper.userRoleDict[src.UserTeamRole]))
+                .ReverseMap();
             CreateMap<CarMechanic, CarMechanicDto>().ReverseMap();
             CreateMap<Driver, DriverDto>().ReverseMap();
             CreateMap<PitStopCrew, PitStopCrewDto>().ReverseMap();
