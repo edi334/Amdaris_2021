@@ -60,14 +60,14 @@ namespace F1Management.App.Controllers
         }
 
         [HttpPost("{id}/register-team")]
-        public async Task<ActionResult<string>> RegisterTeam([FromRoute] Guid id, string name)
+        public async Task<ActionResult<string>> RegisterTeam(string name)
         {
             if (name == null)
             {
                 return BadRequest();
             }
 
-            await _userService.RegisterTeamAsync(name, id);
+            await _userService.RegisterTeamAsync(name);
 
             return Ok("Team created!");
         }

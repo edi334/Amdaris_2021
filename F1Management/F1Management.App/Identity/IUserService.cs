@@ -15,6 +15,6 @@ namespace F1Management.App.Identity
         public Task RegisterCarMechanicAsync(RegisterDto registerDto);
         public Task RegisterPitStopMechanicAsync(RegisterDto registerDto);
         public Task RegisterRaceEngineerAsync(RegisterDto registerDto, Guid driverId);
-        public Task RegisterTeamAsync(string name, Guid userId);
+        public Task RegisterTeamAsync(string name);
     }
 }

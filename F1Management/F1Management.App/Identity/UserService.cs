@@ -97,22 +97,12 @@ namespace F1Management.App.Identity
             await _teamRepository.AddRaceEngineerAsync(raceEngineer);
         }
 
-        public async Task RegisterTeamAsync(string name, Guid userId)
+        public async Task RegisterTeamAsync(string name)
         {
             var team = new Team
             {
                 Name = name
             };
-
-            var adminRole = await _userRepository.GetRoleByNameAsync("admin");
-
-            var userRole = new UserRole
-            {
-                UserId = userId,
-                RoleId = adminRole.Id
-            };
-
-            await _userRepository.AddUserRoleAsync(userRole);
 
             await _teamRepository.AddTeamAsync(team);
         }
