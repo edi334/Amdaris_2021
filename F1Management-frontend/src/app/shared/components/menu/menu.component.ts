@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
 
   buildMenu(): void {
     this.items = [
-      {label: 'Races', icon: 'pi pi-fw pi-flag', routerLink: ['/races']},
+      {label: 'Races', icon: 'pi pi-fw pi-flag', routerLink: ['races']},
       {label: 'Standings', icon: 'pi pi-fw pi-sort-alt', routerLink: ['standings']},
       {label: 'Race Car', icon: 'pi pi-fw pi-angle-double-down', routerLink: ['race-car']}
     ];

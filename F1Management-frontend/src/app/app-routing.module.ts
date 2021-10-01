@@ -21,6 +21,11 @@ const routes: Routes = [
     path: 'race-car',
     loadChildren: () =>
       import('./pages/race-car/race-car-page.module').then(m => m.RaceCarPageModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./pages/auth/auth-page.module').then(m => m.AuthPageModule)
   }
 ];
 
