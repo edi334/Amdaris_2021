@@ -1,0 +1,16 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+
+  input {
+    width: 100%;
+  }
+}
+
+button {
+  width: 300px;
+  margin-top: 20px;
+}

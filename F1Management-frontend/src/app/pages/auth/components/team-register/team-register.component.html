@@ -1,8 +1,10 @@
+<p-toast position="bottom-center" key="bc"></p-toast>
 <div class="background-container"></div>
 <div class="page-container">
   <div class="form-container">
     <label for="teamName">Team Name</label>
     <input id="teamName" class="p-inputtext-lg" aria-describedby="teamName-help" pInputText [(ngModel)]="teamName">
   </div>
-  <button pButton pRipple type="button" label="Register Team" class="p-button-raised"></button>
+  <button [disabled]="!teamName" (click)="submit()" pButton pRipple type="button" label="Register Team" class="p-button-raised"></button>
+  <button (click)="router.navigate(['auth'])" pButton pRipple type="button" label="Back to Auth Page" class="p-button-raised"></button>
 </div>

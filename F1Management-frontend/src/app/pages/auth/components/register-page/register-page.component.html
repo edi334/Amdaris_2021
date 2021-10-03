@@ -1,1 +1,16 @@
-<p>register-page works!</p>
+<div class="background-container"></div>
+<div class="page-container">
+  <div class="form-container">
+    <label class="p-inputtext-sm" for="firstName">First Name</label>
+    <input class="p-inputtext-sm" id="firstName" pInputText [(ngModel)]="user.firstName">
+    <label class="p-inputtext-sm" for="lastName">Last Name</label>
+    <input class="p-inputtext-sm" id="lastName" pInputText [(ngModel)]="user.lastName">
+    <label class="p-inputtext-sm" for="email">Email</label>
+    <input class="p-inputtext-sm" id="email" pInputText [(ngModel)]="user.email">
+    <label class="p-inputtext-sm" for="password">Password</label>
+    <p-password id="password" [(ngModel)]="user.password" [toggleMask]="true"></p-password>
+    <label class="p-inputtext-sm" for="role">Select Team Role</label>
+    <p-dropdown id="role" [options]="roles" [(ngModel)]="user.userTeamRole"></p-dropdown>
+  </div>
+  <app-register-role [user]="user"></app-register-role>
+</div>

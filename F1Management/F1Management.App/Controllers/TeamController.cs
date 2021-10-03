@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace F1Management.App.Controllers
 {
     [ApiController]
-    [Route("team")]
+    [Route("api/team")]
     public class TeamController : ControllerBase
     {
         private readonly IMapper _mapper;

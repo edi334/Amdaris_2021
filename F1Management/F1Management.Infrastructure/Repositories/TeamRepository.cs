@@ -82,8 +82,6 @@ namespace F1Management.Infrastructure.Repositories
                 throw new Exception("Team is null");
             }
 
-            Console.WriteLine(team.Name);
-
             await _dbContext.Teams.AddAsync(team);
             await _dbContext.SaveChangesAsync();
         }

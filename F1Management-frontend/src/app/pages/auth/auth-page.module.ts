@@ -9,6 +9,12 @@ import {RippleModule} from 'primeng/ripple';
 import { TeamRegisterComponent } from './components/team-register/team-register.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {FormsModule} from '@angular/forms';
+import {MessageModule} from 'primeng/message';
+import {MessagesModule} from 'primeng/messages';
+import {ToastModule} from 'primeng/toast';
+import {DropdownModule} from 'primeng/dropdown';
+import {PasswordModule} from 'primeng/password';
+import { RegisterRoleComponent } from './components/register-page/register-role/register-role.component';
 
 const routes: Routes =
   [
@@ -19,14 +25,19 @@ const routes: Routes =
   ];
 
 @NgModule({
-  declarations: [AuthPageComponent, LoginPageComponent, RegisterPageComponent, TeamRegisterComponent],
+  declarations: [AuthPageComponent, LoginPageComponent, RegisterPageComponent, TeamRegisterComponent, RegisterRoleComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     ButtonModule,
     RippleModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    MessageModule,
+    MessagesModule,
+    ToastModule,
+    DropdownModule,
+    PasswordModule,
   ]
 })
 export class AuthPageModule { }

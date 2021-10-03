@@ -1,1 +1,10 @@
 @use "src/assets/styles/auth";
+@use "src/assets/styles/form";
+
+::ng-deep p-password .p-password input {
+  width: 300px;
+}
+
+::ng-deep p-dropdown .p-dropdown {
+  width: 300px;
+}

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace F1Management.App.Controllers
 {
     [ApiController]
-    [Route("race-car")]
+    [Route("api/race-car")]
     public class RaceCarController : ControllerBase
     {
         private readonly IMapper _mapper;

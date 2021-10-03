@@ -9,7 +9,6 @@ namespace F1Management.App.Identity
     public class RegisterDto
     {
         public UserDto User { get; set; }
-        public UserTeamRole UserTeamRole { get; set; }
         public Guid TeamId { get; set; }
     }
 }

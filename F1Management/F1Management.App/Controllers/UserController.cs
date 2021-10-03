@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace F1Management.App.Controllers
 {
     [ApiController]
-    [Route("auth")]
+    [Route("api/auth")]
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
