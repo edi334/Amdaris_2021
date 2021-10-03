@@ -26,6 +26,7 @@ namespace F1Management.Infrastructure.Repositories
             }
 
             await _dbContext.Users.AddAsync(user);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task AddUserRoleAsync(UserRole userRole)
@@ -36,6 +37,7 @@ namespace F1Management.Infrastructure.Repositories
             }
 
             await _dbContext.UserRoles.AddAsync(userRole);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<User> FindUser(string email, string password)

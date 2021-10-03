@@ -101,7 +101,7 @@ namespace F1Management.App.Identity
         {
             var team = new Team
             {
-                Name = name
+                Name = name,
             };
 
             await _teamRepository.AddTeamAsync(team);

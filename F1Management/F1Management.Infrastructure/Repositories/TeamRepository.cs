@@ -28,6 +28,7 @@ namespace F1Management.Infrastructure.Repositories
             }
 
             await _dbContext.CarMechanics.AddAsync(carMechanic);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task AddDriverAsync(Driver driver)
@@ -38,6 +39,7 @@ namespace F1Management.Infrastructure.Repositories
             }
 
             await _dbContext.Drivers.AddAsync(driver);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task AddPitStopCrewAsync(PitStopCrew pitStopCrew)
@@ -48,6 +50,7 @@ namespace F1Management.Infrastructure.Repositories
             }
 
             await _dbContext.PitStopCrews.AddAsync(pitStopCrew);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task AddPitStopMechanicAsync(PitStopMechanic pitStopMechanic)
@@ -58,6 +61,7 @@ namespace F1Management.Infrastructure.Repositories
             }
 
             await _dbContext.PitStopMechanics.AddAsync(pitStopMechanic);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task AddRaceEngineerAsync(RaceEngineer raceEngineer)
@@ -68,6 +72,7 @@ namespace F1Management.Infrastructure.Repositories
             }
 
             await _dbContext.RaceEngineers.AddAsync(raceEngineer);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task AddTeamAsync(Team team)
@@ -80,6 +85,7 @@ namespace F1Management.Infrastructure.Repositories
             Console.WriteLine(team.Name);
 
             await _dbContext.Teams.AddAsync(team);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<ICollection<Team>> GetAllAsync()
