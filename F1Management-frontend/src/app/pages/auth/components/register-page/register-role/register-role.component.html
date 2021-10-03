@@ -1,1 +1,20 @@
-
+<div class="form-container">
+  <ng-container *ngIf="user.userTeamRole === 'Driver'">
+    <ng-container *ngIf="raceCars !== []">
+      <label class="p-inputtext-sm" for="number">Number</label>
+      <p-inputNumber id="number" [(ngModel)]="number"></p-inputNumber>
+      <label class="p-inputtext-sm" for="raceCar">Select Race Car</label>
+      <p-dropdown id="raceCar" [options]="raceCars" placeholder="Select a RaceCar" optionLabel="name" optionValue="id"
+                  [(ngModel)]="raceCarId"></p-dropdown>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="user.userTeamRole === 'RaceEngineer'">
+    <ng-container *ngIf="drivers !== []">
+      <label class="p-inputtext-sm" for="driver">Select Driver</label>
+      <p-dropdown id="driver" [options]="drivers" placeholder="Select a RaceCar" optionLabel="name" optionValue="id"
+                  [(ngModel)]="driverId"></p-dropdown>
+    </ng-container>
+  </ng-container>
+  <button [disabled]="isDisabled()" (click)="submit()" pButton pRipple type="button" label="Register"
+          class="p-button-raised"></button>
+</div>

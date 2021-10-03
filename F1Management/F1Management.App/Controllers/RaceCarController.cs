@@ -36,7 +36,7 @@ namespace F1Management.App.Controllers
             return Ok(response);
         }
 
-        [HttpGet("{teamId}")]
+        [HttpGet("team/{teamId}")]
         public async Task<ActionResult<List<RaceCarDto>>> GetByTeamId([FromRoute] Guid teamId)
         {
             var raceCars = await _raceCarRepository.GetByTeamAsync(teamId);

@@ -7,10 +7,17 @@
     <input class="p-inputtext-sm" id="lastName" pInputText [(ngModel)]="user.lastName">
     <label class="p-inputtext-sm" for="email">Email</label>
     <input class="p-inputtext-sm" id="email" pInputText [(ngModel)]="user.email">
+    <label class="p-inputtext-sm" for="phoneNumber">Phone Number</label>
+    <input class="p-inputtext-sm" id="phoneNumber" pInputText [(ngModel)]="user.phoneNumber">
     <label class="p-inputtext-sm" for="password">Password</label>
     <p-password id="password" [(ngModel)]="user.password" [toggleMask]="true"></p-password>
     <label class="p-inputtext-sm" for="role">Select Team Role</label>
-    <p-dropdown id="role" [options]="roles" [(ngModel)]="user.userTeamRole"></p-dropdown>
+    <p-dropdown id="role" [options]="roles" [(ngModel)]="user.userTeamRole" placeholder="Select a Team Role"></p-dropdown>
+    <ng-container *ngIf="teams !== []">
+      <label class="p-inputtext-sm" for="team">Select Team</label>
+      <p-dropdown id="team" [options]="teams" placeholder="Select a Team" optionLabel="name" optionValue="id" [(ngModel)]="teamId"></p-dropdown>
+    </ng-container>
   </div>
-  <app-register-role [user]="user"></app-register-role>
+  <app-register-role *ngIf="teamId" [user]="user" [teamId]="teamId"></app-register-role>
+  <button (click)="router.navigate(['auth'])" pButton pRipple type="button" label="Back to Auth Page" class="p-button-raised"></button>
 </div>

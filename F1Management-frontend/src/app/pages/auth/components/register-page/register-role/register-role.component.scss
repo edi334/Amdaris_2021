@@ -1,1 +1,5 @@
 @use "src/assets/styles/form";
+
+::ng-deep p-inputNumber span {
+  width: 300px;
+}

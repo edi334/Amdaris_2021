@@ -15,6 +15,7 @@ import {ToastModule} from 'primeng/toast';
 import {DropdownModule} from 'primeng/dropdown';
 import {PasswordModule} from 'primeng/password';
 import { RegisterRoleComponent } from './components/register-page/register-role/register-role.component';
+import {InputNumberModule} from 'primeng/inputnumber';
 
 const routes: Routes =
   [
@@ -38,6 +39,7 @@ const routes: Routes =
     ToastModule,
     DropdownModule,
     PasswordModule,
+    InputNumberModule,
   ]
 })
 export class AuthPageModule { }

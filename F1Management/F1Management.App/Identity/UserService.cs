@@ -67,9 +67,12 @@ namespace F1Management.App.Identity
                 await _teamRepository.AddPitStopCrewAsync(pitStopCrew);
             }
 
-            if (pitStopCrew.PitStopMechanics.Count > 12)
+            if (pitStopCrew.PitStopMechanics != null)
             {
-                throw new Exception("PitStop Crew is full");
+                if (pitStopCrew.PitStopMechanics.Count > 12)
+                {
+                    throw new Exception("PitStop Crew is full");
+                }
             }
 
             var newUser = await registerUserAsync(registerDto.User);

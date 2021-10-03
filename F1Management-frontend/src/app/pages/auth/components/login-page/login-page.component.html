@@ -1,1 +1,12 @@
-<p>login-page works!</p>
+<div class="background-container"></div>
+<div class="page-container">
+  <div class="form-container">
+    <label class="p-inputtext-sm" for="email">Email</label>
+    <input class="p-inputtext-sm" id="email" pInputText [(ngModel)]="email">
+    <label class="p-inputtext-sm" for="password">Password</label>
+    <p-password id="password" [(ngModel)]="password" [toggleMask]="true" [feedback]="false"></p-password>
+  </div>
+  <button [disabled]="email === '' || password === ''" (click)="login()" pButton pRipple type="button" label="Login"
+          class="p-button-raised"></button>
+  <button (click)="router.navigate(['auth'])" pButton pRipple type="button" label="Back to Auth Page" class="p-button-raised"></button>
+</div>
