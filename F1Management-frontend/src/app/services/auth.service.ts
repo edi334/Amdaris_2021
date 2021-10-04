@@ -5,6 +5,9 @@ import {HttpClient} from '@angular/common/http';
 import {IRegister} from '../models/register';
 import {ILogin} from '../models/login';
 
+const ID = 'user_id';
+const TEAM_ID = 'user_team_id';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -48,5 +51,9 @@ export class AuthService {
     const url = this._baseUrl + 'login';
 
     return this._http.post<{teamId: string, userId: string}>(url, login);
+  }
+
+  isLoggedIn(): boolean {
+    return localStorage.getItem(ID) !== null || localStorage.getItem(TEAM_ID) !== null;
   }
 }

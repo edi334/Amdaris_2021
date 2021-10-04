@@ -1,26 +1,30 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {AuthGuard} from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'races'
+    redirectTo: 'auth'
   },
   {
     path: 'races',
     loadChildren: () =>
-      import('./pages/races/races-page.module').then(m => m.RacesPageModule)
+      import('./pages/races/races-page.module').then(m => m.RacesPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'standings',
     loadChildren: () =>
-      import('./pages/standings/standings-page.module').then(m => m.StandingsPageModule)
+      import('./pages/standings/standings-page.module').then(m => m.StandingsPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'race-car',
     loadChildren: () =>
-      import('./pages/race-car/race-car-page.module').then(m => m.RaceCarPageModule)
+      import('./pages/race-car/race-car-page.module').then(m => m.RaceCarPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'auth',

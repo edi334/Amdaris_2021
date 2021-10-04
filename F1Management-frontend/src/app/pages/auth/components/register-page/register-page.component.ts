@@ -3,6 +3,7 @@ import {IUser} from '../../../../models/user';
 import {TeamService} from '../../../../services/team.service';
 import {ITeam} from '../../../../models/team';
 import {Router} from '@angular/router';
+import {AuthService} from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-register-page',
