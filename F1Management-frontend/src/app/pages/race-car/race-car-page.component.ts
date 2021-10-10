@@ -54,7 +54,7 @@ export class RaceCarPageComponent implements OnInit {
   constructor(
     private readonly _raceCarService: RaceCarService,
     private readonly _authService: AuthService,
-    private readonly _router: Router
+    readonly _router: Router
   ) {
   }
 

@@ -114,6 +114,12 @@ namespace F1Management.Infrastructure.Repositories
                 .ToListAsync();
         }
 
+        public async Task<Driver> GetDriverAsync(RaceCar raceCar)
+        {
+            return await _dbContext.Drivers
+                .FirstOrDefaultAsync(d => d.RaceCar == raceCar);
+        }
+
         public async Task<ICollection<Driver>> GetDriversAsync(Guid teamId)
         {
             return await _dbContext.Drivers

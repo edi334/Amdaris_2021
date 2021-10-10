@@ -23,8 +23,9 @@ namespace F1Management.Services
 
         public async Task FixCar(RaceCar raceCar)
         {
+            var driver = await _teamRepository.GetDriverAsync(raceCar);
             var carMechanic = await _teamRepository
-                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+                .GetFirstAvailableCarMechanicAsync(driver.TeamId);
             if (carMechanic == null)
             {
                 throw new Exception("Car Mechanic Not Found");
@@ -47,8 +48,9 @@ namespace F1Management.Services
 
         public async Task FixChassis(RaceCar raceCar)
         {
+            var driver = await _teamRepository.GetDriverAsync(raceCar);
             var carMechanic = await _teamRepository
-                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+                .GetFirstAvailableCarMechanicAsync(driver.TeamId);
             if (carMechanic == null)
             {
                 throw new Exception("Car Mechanic Not Found");
@@ -69,8 +71,9 @@ namespace F1Management.Services
 
         public async Task FixEngine(RaceCar raceCar)
         {
+            var driver = await _teamRepository.GetDriverAsync(raceCar);
             var carMechanic = await _teamRepository
-                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+                .GetFirstAvailableCarMechanicAsync(driver.TeamId);
             if (carMechanic == null)
             {
                 throw new Exception("Car Mechanic Not Found");
@@ -91,8 +94,9 @@ namespace F1Management.Services
 
         public async Task FixGearbox(RaceCar raceCar)
         {
+            var driver = await _teamRepository.GetDriverAsync(raceCar);
             var carMechanic = await _teamRepository
-                .GetFirstAvailableCarMechanicAsync(raceCar.Driver.TeamId);
+                .GetFirstAvailableCarMechanicAsync(driver.TeamId);
             if (carMechanic == null)
             {
                 throw new Exception("Car Mechanic Not Found");

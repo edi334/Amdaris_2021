@@ -3,6 +3,7 @@
   <div class="splitter-container">
     <p-message *ngIf="raceCars.length === 0" severity="info" text="Please add a new RaceCar"></p-message>
     <p-button (click)="showDialog()" label="Add RaceCar"></p-button>
+    <p-button (click)="_router.navigate(['race-car/maintenance'])" label="Go to Car Maintenance"></p-button>
     <p-dialog header="Add a new RaceCar" [(visible)]="display" [style]="{width: '50vw'}">
       <div *ngIf="!goToRegister" class="modal-container">
         <label class="p-inputtext-sm" for="raceCarName">RaceCar Name</label>

@@ -1,0 +1,14 @@
+<div class="background-container"></div>
+<div class="page-container">
+  <div class="inner-container">
+    <p-dropdown id="team" [options]="raceCars" placeholder="Select a Race Car" optionLabel="name" [(ngModel)]="selectedRaceCar"></p-dropdown>
+    <p *ngIf="selectedRaceCar === undefined" class="large-text">Please choose a car!</p>
+    <ng-container *ngIf="selectedRaceCar !== undefined">
+      <button (click)="fixCar()" pButton pRipple type="button" label="Fix Car" class="p-button-raised"></button>
+      <button (click)="fixChassis()" pButton pRipple type="button" label="Fix Chassis" class="p-button-raised"></button>
+      <button (click)="fixEngine()" pButton pRipple type="button" label="Fix Engine" class="p-button-raised"></button>
+      <button (click)="fixGearBox()" pButton pRipple type="button" label="Fix Gearbox" class="p-button-raised"></button>
+    </ng-container>
+
+  </div>
+</div>

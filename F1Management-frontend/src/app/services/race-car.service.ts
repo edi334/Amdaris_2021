@@ -66,4 +66,28 @@ export class RaceCarService {
 
     return this._http.post<boolean>(url, tireSet);
   }
+
+  fixRaceCar(car: IRaceCar): Observable<boolean> {
+    const url = this._baseUrl + `/fix`;
+
+    return this._http.patch<boolean>(url, car);
+  }
+
+  fixChassis(car: IRaceCar): Observable<boolean> {
+    const url = this._baseUrl + `/fix-chassis`;
+
+    return this._http.patch<boolean>(url, car);
+  }
+
+  fixEngine(car: IRaceCar): Observable<boolean> {
+    const url = this._baseUrl + `/fix-engine`;
+
+    return this._http.patch<boolean>(url, car);
+  }
+
+  fixGearBox(car: IRaceCar): Observable<boolean> {
+    const url = this._baseUrl + `/fix-gearbox`;
+
+    return this._http.patch<boolean>(url, car);
+  }
 }

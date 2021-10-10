@@ -1,0 +1,46 @@
+.page-container {
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+::ng-deep p-dropdown {
+  width: 100%;
+}
+::ng-deep .p-dropdown{
+  width: 100%;
+}
+::ng-deep button {
+  margin-top: 10px !important;
+  width: 100%;
+}
+
+.background-container {
+  height: 100%;
+  content: "";
+  background-image: url("../../../../../assets/images/background2.jpg");
+  opacity: 0.3;
+  filter: blur(4px);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}

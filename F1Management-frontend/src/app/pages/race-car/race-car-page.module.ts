@@ -11,11 +11,16 @@ import {FormsModule} from '@angular/forms';
 import {RippleModule} from 'primeng/ripple';
 import {CardModule} from 'primeng/card';
 import {DropdownModule} from 'primeng/dropdown';
+import { CarMaintenanceComponent } from './components/car-maintenance/car-maintenance.component';
 
-const routes: Routes = [{path: '', component: RaceCarPageComponent}];
+const routes: Routes =
+  [
+    {path: '', component: RaceCarPageComponent},
+    {path: 'maintenance', component: CarMaintenanceComponent}
+  ];
 
 @NgModule({
-  declarations: [RaceCarPageComponent],
+  declarations: [RaceCarPageComponent, CarMaintenanceComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
