@@ -10,7 +10,8 @@ namespace F1Management.Core.Models.Abstractions.Repositories
     public interface IRaceCarRepository
     {
         public Task<RaceCar> GetRaceCarAsync(Guid id);
-        public Task<List<RaceCar>> GetByTeamAsync(Guid teamId);
+        public Task<List<RaceCar>> GetAll();
+        public Task<List<RaceCar>> GetByTeamId(Guid teamId);
         public Task UpdateRaceCarAsync(RaceCar raceCar);
         public Task AddRaceCarAsync(string name);
         public Task AddChassisAsync(Chassis chassis);

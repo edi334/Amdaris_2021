@@ -36,17 +36,26 @@ namespace F1Management.App.Controllers
             return Ok(response);
         }
 
-        [HttpGet("team/{teamId}")]
-        public async Task<ActionResult<List<RaceCarDto>>> GetByTeamId([FromRoute] Guid teamId)
+        [HttpGet]
+        public async Task<ActionResult<List<RaceCarDto>>> GetAll()
         {
-            var raceCars = await _raceCarRepository.GetByTeamAsync(teamId);
+            var raceCars = await _raceCarRepository.GetAll();
             var response = _mapper.Map<List<RaceCarDto>>(raceCars);
 
             return Ok(response);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<bool>> AddRaceCar([FromBody] string name)
+        [HttpGet("team/{teamId}")]
+        public async Task<ActionResult<List<RaceCarDto>>> GetByTeamId([FromRoute] Guid teamId)
+        {
+            var raceCars = await _raceCarRepository.GetByTeamId(teamId);
+            var response = _mapper.Map<List<RaceCarDto>>(raceCars);
+
+            return Ok(response);
+        }
+
+        [HttpPost("{name}")]
+        public async Task<ActionResult<bool>> AddRaceCar([FromRoute] string name)
         {
             if (name == null)
             {

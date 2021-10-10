@@ -72,14 +72,24 @@ namespace F1Management.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<RaceCar>> GetByTeamAsync(Guid teamId)
+        public async Task<List<RaceCar>> GetAll()
         {
             return await _dbContext.RaceCars
                 .Include(c => c.Chassis)
                 .Include(c => c.Engine)
                 .Include(c => c.Gearbox)
                 .Include(c => c.TireSet)
-                .Where(r => r.Driver.TeamId == teamId)
+                .ToListAsync();
+        }
+
+        public async Task<List<RaceCar>> GetByTeamId(Guid teamId)
+        {
+            return await _dbContext.RaceCars
+                .Include(c => c.Chassis)
+                .Include(c => c.Engine)
+                .Include(c => c.Gearbox)
+                .Include(c => c.TireSet)
+                .Where(c => c.Driver.TeamId == teamId)
                 .ToListAsync();
         }
 

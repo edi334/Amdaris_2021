@@ -16,6 +16,5 @@ namespace F1Management.Core.Models.Car
         public TireSet TireSet { get; set; }
         public Driver Driver { get; set; }
         public ICollection<CarSession> CarSessions { get; set; }
-        public double TotalWear => (Chassis.Wear + Engine.Wear + Gearbox.Wear) / 3;
     }
 }

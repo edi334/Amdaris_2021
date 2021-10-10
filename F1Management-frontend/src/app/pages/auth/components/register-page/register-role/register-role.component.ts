@@ -43,7 +43,7 @@ export class RegisterRoleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._raceCarService.getByTeamId(this.teamId).subscribe(res => {
+    this._raceCarService.getAll().subscribe(res => {
       this.raceCars = res;
     });
     this._teamService.getDrivers(this.teamId).subscribe(res => {

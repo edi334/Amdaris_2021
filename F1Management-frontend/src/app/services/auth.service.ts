@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
@@ -16,7 +16,16 @@ export class AuthService {
 
   constructor(
     private readonly _http: HttpClient
-  ) { }
+  ) {
+  }
+
+  getTeamId(): string {
+    return localStorage.getItem(TEAM_ID) as string;
+  }
+
+  getId(): string {
+    return localStorage.getItem(ID) as string;
+  }
 
   registerTeam(teamName: string): Observable<string> {
     const url = this._baseUrl + `register-team?name=${teamName}`;

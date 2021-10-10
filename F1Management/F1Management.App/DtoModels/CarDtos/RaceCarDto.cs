@@ -12,6 +12,5 @@ namespace F1Management.App.DtoModels.CarDtos
         public EngineDto Engine { get; set; }
         public GearboxDto Gearbox { get; set; }
         public TireSetDto TireSet { get; set; }
-        public double TotalWear { get; set; }
     }
 }

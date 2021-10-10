@@ -1,1 +1,131 @@
-<p>race-car-page works!</p>
+<div class="background-container"></div>
+<div class="page-container">
+  <div class="splitter-container">
+    <p-message *ngIf="raceCars.length === 0" severity="info" text="Please add a new RaceCar"></p-message>
+    <p-button (click)="showDialog()" label="Add RaceCar"></p-button>
+    <p-dialog header="Add a new RaceCar" [(visible)]="display" [style]="{width: '50vw'}">
+      <div *ngIf="!goToRegister" class="modal-container">
+        <label class="p-inputtext-sm" for="raceCarName">RaceCar Name</label>
+        <input class="p-inputtext-sm" id="raceCarName" pInputText [(ngModel)]="carName">
+        <button [disabled]="!carName" (click)="submit()" pButton pRipple type="button" label="Add a RaceCar"
+                class="p-button-raised"></button>
+      </div>
+      <div *ngIf="goToRegister" class="modal-container">
+        <p class="big-text">You Must go and Register a Driver and Assign it to the RaceCar</p>
+        <button (click)="navigateToRegister()" pButton pRipple type="button" label="Go to Register Driver"
+                class="p-button-raised"></button>
+      </div>
+      <ng-template pTemplate="footer">
+        <p-button *ngIf="!goToRegister" (click)="display=false" label="Close" styleClass="p-button-text"></p-button>
+      </ng-template>
+    </p-dialog>
+    <div *ngFor="let raceCar of raceCars" class="splitter-inner">
+      <p class="large-text">{{raceCar.name}}</p>
+      <div class="two-cards">
+        <p-card>
+          <p class="big-text"><b>Chassis</b></p>
+          <p class="medium-text" *ngIf="raceCar.chassis === null">No Chassis</p>
+          <ng-container *ngIf="raceCar.chassis">
+            <p>Wear: {{raceCar.chassis.wear}}</p>
+            <p>Front Wing: {{raceCar.chassis.frontWing}}</p>
+            <p>Rear Wing: {{raceCar.chassis.rearWing}}</p>
+            <p>Body Work: {{raceCar.chassis.bodyWork}}</p>
+          </ng-container>
+          <button *ngIf="raceCar.chassis === null" (click)="showChassisDialog()" pButton pRipple type="button"
+                  label="Add New Chassis" class="p-button-raised"></button>
+          <p-dialog header="Add a new Chassis" [(visible)]="displayChassis" [style]="{width: '50vw'}">
+            <div class="modal-container">
+              <label class="p-inputtext-sm" for="fw">Front Wing</label>
+              <input class="p-inputtext-sm" id="fw" pInputText [(ngModel)]="chassis.frontWing">
+              <label class="p-inputtext-sm" for="rw">Rear Wing</label>
+              <input class="p-inputtext-sm" id="rw" pInputText [(ngModel)]="chassis.rearWing">
+              <label class="p-inputtext-sm" for="bw">Body Work</label>
+              <input class="p-inputtext-sm" id="bw" pInputText [(ngModel)]="chassis.bodyWork">
+              <button [disabled]="chassis.frontWing === '' || chassis.rearWing === '' || chassis.bodyWork === ''"
+                      (click)="submitChassis(raceCar.id!)" pButton pRipple type="button" label="Add a Chassis"
+                      class="p-button-raised"></button>
+            </div>
+            <ng-template pTemplate="footer">
+              <p-button (click)="displayChassis=false" label="Close" styleClass="p-button-text"></p-button>
+            </ng-template>
+          </p-dialog>
+        </p-card>
+        <p-card>
+          <p class="big-text"><b>Engine</b></p>
+          <p class="medium-text" *ngIf="raceCar.engine === null">No Engine</p>
+          <ng-container *ngIf="raceCar.engine">
+            <p>Wear: {{raceCar.engine.wear}}</p>
+            <p>Brand: {{raceCar.engine.brand}}</p>
+            <p>HorsePower: {{raceCar.engine.horsePower}}</p>
+          </ng-container>
+          <button *ngIf="raceCar.engine === null" (click)="showEngineDialog()" pButton pRipple type="button"
+                  label="Add New Engine" class="p-button-raised"></button>
+          <p-dialog header="Add a new Engine" [(visible)]="displayEngine" [style]="{width: '50vw'}">
+            <div class="modal-container">
+              <label class="p-inputtext-sm" for="br">Brand</label>
+              <input class="p-inputtext-sm" id="br" pInputText [(ngModel)]="engine.brand">
+              <label class="p-inputtext-sm" for="hp">Horse Power</label>
+              <input class="p-inputtext-sm" id="hp" pInputText [(ngModel)]="engine.horsePower">
+              <button [disabled]="engine.brand === '' || engine.horsePower === 0"
+                      (click)="submitEngine(raceCar.id!)" pButton pRipple type="button" label="Add an Engine"
+                      class="p-button-raised"></button>
+            </div>
+            <ng-template pTemplate="footer">
+              <p-button (click)="displayEngine=false" label="Close" styleClass="p-button-text"></p-button>
+            </ng-template>
+          </p-dialog>
+        </p-card>
+      </div>
+      <div class="two-cards">
+        <p-card>
+          <p class="big-text"><b>Gearbox</b></p>
+          <p class="medium-text" *ngIf="raceCar.gearbox === null">No Gearbox</p>
+          <ng-container *ngIf="raceCar.gearbox">
+            <p>Wear: {{raceCar.gearbox.wear}}</p>
+            <p>Gear Count: {{raceCar.gearbox.gearCount}}</p>
+          </ng-container>
+          <button *ngIf="raceCar.gearbox === null" (click)="showGearboxDialog()" pButton pRipple type="button"
+                  label="Add New Gearbox" class="p-button-raised"></button>
+          <p-dialog header="Add a new Gearbox" [(visible)]="displayGearbox" [style]="{width: '50vw'}">
+            <div class="modal-container">
+              <button (click)="submitGearbox(raceCar.id!)" pButton pRipple type="button" label="Add a Gearbox"
+                      class="p-button-raised"></button>
+            </div>
+            <ng-template pTemplate="footer">
+              <p-button (click)="displayGearbox=false" label="Close" styleClass="p-button-text"></p-button>
+            </ng-template>
+          </p-dialog>
+        </p-card>
+        <p-card>
+          <p class="big-text"><b>Tire Set</b></p>
+          <p class="medium-text" *ngIf="raceCar.tireSet === null">No Tire Set</p>
+          <ng-container *ngIf="raceCar.tireSet">
+            <p>Front Left Rear: {{raceCar.tireSet.frontLeftWear}}</p>
+            <p>Front Right Rear: {{raceCar.tireSet.frontRightWear}}</p>
+            <p>Rear Left Rear: {{raceCar.tireSet.rearLeftWear}}</p>
+            <p>Rear Right Rear: {{raceCar.tireSet.rearRightWear}}</p>
+            <p>Brand: {{raceCar.tireSet.brand}}</p>
+            <p>Type: {{raceCar.tireSet.type}}</p>
+          </ng-container>
+          <button *ngIf="raceCar.tireSet === null" (click)="showTireSetDialog()" pButton pRipple type="button"
+                  label="Add New Tire Set" class="p-button-raised"></button>
+          <p-dialog header="Add a new Tire Set" [(visible)]="displayTireSet" [style]="{width: '50vw'}">
+            <div class="modal-container">
+              <label class="p-inputtext-sm" for="bra">Brand</label>
+              <input class="p-inputtext-sm" id="bra" pInputText [(ngModel)]="tireSet.brand">
+              <label class="p-inputtext-sm" for="ty">Type</label>
+              <p-dropdown id="ty" [options]="types" placeholder="Select a Type"
+                          [(ngModel)]="tireSet.type"></p-dropdown>
+              <button [disabled]="tireSet.brand === '' || tireSet.type === ''"
+                      (click)="submitTireSet(raceCar.id!)" pButton pRipple type="button" label="Add a Tire Set"
+                      class="p-button-raised"></button>
+            </div>
+            <ng-template pTemplate="footer">
+              <p-button (click)="displayTireSet=false" label="Close" styleClass="p-button-text"></p-button>
+            </ng-template>
+          </p-dialog>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>
