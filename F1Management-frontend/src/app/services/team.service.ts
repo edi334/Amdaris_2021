@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
@@ -21,6 +21,12 @@ export class TeamService {
 
   getDrivers(teamId: string): Observable<IDriver[]> {
     const url = this._baseUrl + `/${teamId}/drivers`;
+
+    return this._http.get<IDriver[]>(url);
+  }
+
+  getAllDrivers(): Observable<IDriver[]> {
+    const url = this._baseUrl + '/drivers';
 
     return this._http.get<IDriver[]>(url);
   }

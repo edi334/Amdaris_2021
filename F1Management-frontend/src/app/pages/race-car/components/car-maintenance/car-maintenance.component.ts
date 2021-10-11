@@ -19,7 +19,7 @@ export class CarMaintenanceComponent implements OnInit {
   constructor(
     private readonly _raceCarService: RaceCarService,
     private readonly _authService: AuthService,
-    private readonly _router: Router
+    readonly router: Router
   ) {
   }
 
@@ -31,22 +31,22 @@ export class CarMaintenanceComponent implements OnInit {
 
   async fixCar(): Promise<void> {
     await this._raceCarService.fixRaceCar(this.selectedRaceCar).toPromise();
-    this._router.navigate(['race-car']).then();
+    this.router.navigate(['race-car']).then();
   }
 
   async fixChassis(): Promise<void> {
     await this._raceCarService.fixChassis(this.selectedRaceCar).toPromise();
-    this._router.navigate(['race-car']).then();
+    this.router.navigate(['race-car']).then();
   }
 
   async fixEngine(): Promise<void> {
     await this._raceCarService.fixEngine(this.selectedRaceCar).toPromise();
-    this._router.navigate(['race-car']).then();
+    this.router.navigate(['race-car']).then();
   }
 
   async fixGearBox(): Promise<void> {
     await this._raceCarService.fixGearBox(this.selectedRaceCar).toPromise();
-    this._router.navigate(['race-car']).then();
+    this.router.navigate(['race-car']).then();
   }
 
 }
