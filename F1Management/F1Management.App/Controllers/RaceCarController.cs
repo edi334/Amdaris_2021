@@ -130,6 +130,19 @@ namespace F1Management.App.Controllers
             return Ok(true);
         }
 
+        [HttpPatch()]
+        public async Task<ActionResult<bool>> UpdateCar(RaceCarDto raceCarDto)
+        {
+            if (raceCarDto == null)
+            {
+                return BadRequest();
+            }
+            var raceCar = _mapper.Map<RaceCar>(raceCarDto);
+            await _raceCarRepository.UpdateRaceCarAsync(raceCar);
+
+            return Ok(true);
+        }
+
         [HttpPatch("fix")]
         public async Task<ActionResult<bool>> FixRaceCar(RaceCarDto raceCarDto)
         {

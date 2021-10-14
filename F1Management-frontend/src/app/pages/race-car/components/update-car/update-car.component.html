@@ -1,0 +1,41 @@
+<div class="background-container"></div>
+<div class="page-container">
+  <div class="inner-container">
+    <button style="margin-bottom: 10px" (click)="router.navigate(['race-car'])" pButton pRipple type="button" label="Back" class="p-button-raised"></button>
+    <p-dropdown id="team" [options]="raceCars" placeholder="Select a Race Car" optionLabel="name" [(ngModel)]="selectedRaceCar"></p-dropdown>
+    <p *ngIf="selectedRaceCar === undefined" class="large-text">Please choose a car!</p>
+    <ng-container *ngIf="selectedRaceCar !== undefined">
+      <p class="heading">Race Car</p>
+      <label class="p-inputtext-sm" for="name">Name</label>
+      <input class="p-inputtext-sm" id="name" pInputText [(ngModel)]="selectedRaceCar.name">
+      <ng-container *ngIf="selectedRaceCar.chassis">
+        <p class="large-text">Chassis</p>
+        <label class="p-inputtext-sm" for="cwear">Wear</label>
+        <input class="p-inputtext-sm" id="cwear" pInputText [(ngModel)]="selectedRaceCar.chassis.wear">
+        <label class="p-inputtext-sm" for="fw">Front Wing</label>
+        <input class="p-inputtext-sm" id="fw" pInputText [(ngModel)]="selectedRaceCar.chassis.frontWing">
+        <label class="p-inputtext-sm" for="rw">Rear Wing</label>
+        <input class="p-inputtext-sm" id="rw" pInputText [(ngModel)]="selectedRaceCar.chassis.rearWing">
+        <label class="p-inputtext-sm" for="bw">Body Work</label>
+        <input class="p-inputtext-sm" id="bw" pInputText [(ngModel)]="selectedRaceCar.chassis.bodyWork">
+      </ng-container>
+      <ng-container *ngIf="selectedRaceCar.engine">
+        <p class="large-text">Engine</p>
+        <label class="p-inputtext-sm" for="ewear">Wear</label>
+        <input class="p-inputtext-sm" id="ewear" pInputText [(ngModel)]="selectedRaceCar.engine.wear">
+        <label class="p-inputtext-sm" for="br">Brand</label>
+        <input class="p-inputtext-sm" id="br" pInputText [(ngModel)]="selectedRaceCar.engine.brand">
+        <label class="p-inputtext-sm" for="hp">Horse Power</label>
+        <input class="p-inputtext-sm" id="hp" pInputText [(ngModel)]="selectedRaceCar.engine.horsePower">
+      </ng-container>
+      <ng-container *ngIf="selectedRaceCar.gearbox">
+        <p class="large-text">Gearbox</p>
+        <label class="p-inputtext-sm" for="gwear">Wear</label>
+        <input class="p-inputtext-sm" id="gwear" pInputText [(ngModel)]="selectedRaceCar.gearbox.wear">
+        <label class="p-inputtext-sm" for="gears">Brand</label>
+        <input class="p-inputtext-sm" id="gears" pInputText [(ngModel)]="selectedRaceCar.gearbox.gearCount">
+      </ng-container>
+      <button (click)="update()" pButton pRipple type="button" label="Update" class="p-button-raised"></button>
+    </ng-container>
+  </div>
+</div>

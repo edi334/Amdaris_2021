@@ -10,5 +10,4 @@ export interface IRaceCar extends IBase {
   engine: IEngine;
   gearbox: IGearbox;
   tireSet: ITireSet;
-  totalWear: number;
 }

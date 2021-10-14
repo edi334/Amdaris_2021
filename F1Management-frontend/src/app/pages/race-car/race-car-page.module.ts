@@ -12,15 +12,17 @@ import {RippleModule} from 'primeng/ripple';
 import {CardModule} from 'primeng/card';
 import {DropdownModule} from 'primeng/dropdown';
 import { CarMaintenanceComponent } from './components/car-maintenance/car-maintenance.component';
+import { UpdateCarComponent } from './components/update-car/update-car.component';
 
 const routes: Routes =
   [
     {path: '', component: RaceCarPageComponent},
-    {path: 'maintenance', component: CarMaintenanceComponent}
+    {path: 'maintenance', component: CarMaintenanceComponent},
+    {path: 'update', component: UpdateCarComponent}
   ];
 
 @NgModule({
-  declarations: [RaceCarPageComponent, CarMaintenanceComponent],
+  declarations: [RaceCarPageComponent, CarMaintenanceComponent, UpdateCarComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

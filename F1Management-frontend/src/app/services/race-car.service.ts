@@ -90,4 +90,10 @@ export class RaceCarService {
 
     return this._http.patch<boolean>(url, car);
   }
+
+  update(car: IRaceCar): Observable<boolean> {
+    const url = this._baseUrl;
+
+    return this._http.patch<boolean>(url, car);
+  }
 }
