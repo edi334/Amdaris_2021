@@ -116,11 +116,6 @@ namespace F1Management.Services
                 throw new Exception("User Not Found");
             }
 
-            if (!isAdmin(user))
-            {
-                throw new Exception("Not Admin");
-            }
-
             carSession.Position = position;
 
             await _carSessionRepository.UpdateSessionAsync(carSession);
@@ -134,28 +129,9 @@ namespace F1Management.Services
                 throw new Exception("User Not Found");
             }
 
-            if (!isAdmin(user))
-            {
-                throw new Exception("Not Admin");
-            }
-
             carSession.FastestLap = fastestLap;
 
             await _carSessionRepository.UpdateSessionAsync(carSession);
-        }
-        private bool isAdmin(User user)
-        {
-            bool isAdmin = false;
-
-            user.UserRoles.ToList().ForEach(u =>
-            {
-                if (u.Role.Name == "admin")
-                {
-                    isAdmin = true;
-                }
-            });
-
-            return isAdmin;
         }
         public async Task EndSessionAsync(CarSession carSession)
         {

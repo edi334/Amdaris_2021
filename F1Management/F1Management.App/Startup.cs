@@ -63,7 +63,7 @@ namespace F1Management.App
             services.AddScoped<IGrandPrixRepository, GrandPrixRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
 
-            services.AddTransient<ICarSessionRepository, CarSessionRepository>();
+            services.AddTransient<ICarSessionService, CarSessionService>();
             services.AddTransient<ICarMaintenanceService, CarMaintenanceService>();
             services.AddTransient<IUserService, UserService>();
 

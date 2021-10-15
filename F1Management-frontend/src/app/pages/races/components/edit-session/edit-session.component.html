@@ -1,0 +1,33 @@
+<div class="background-container"></div>
+<div class="page-container">
+  <ng-container *ngIf="carSession">
+    <p class="heading">{{carSession.name}}</p>
+    <div class="inner-container">
+      <p class="large-text">Chassis</p>
+      <label class="p-inputtext-sm" for="cwear">Wear</label>
+      <input class="p-inputtext-sm" id="cwear" pInputText [(ngModel)]="chassis.wear">
+      <label class="p-inputtext-sm" for="fw">Front Wing</label>
+      <input class="p-inputtext-sm" id="fw" pInputText [(ngModel)]="chassis.frontWing">
+      <label class="p-inputtext-sm" for="rw">Rear Wing</label>
+      <input class="p-inputtext-sm" id="rw" pInputText [(ngModel)]="chassis.rearWing">
+      <label class="p-inputtext-sm" for="bw">Body Work</label>
+      <input class="p-inputtext-sm" id="bw" pInputText [(ngModel)]="chassis.bodyWork">
+      <p class="large-text">Engine</p>
+      <label class="p-inputtext-sm" for="ewear">Wear</label>
+      <input class="p-inputtext-sm" id="ewear" pInputText [(ngModel)]="engine.wear">
+      <label class="p-inputtext-sm" for="br">Brand</label>
+      <input class="p-inputtext-sm" id="br" pInputText [(ngModel)]="engine.brand">
+      <label class="p-inputtext-sm" for="hp">Horse Power</label>
+      <input class="p-inputtext-sm" id="hp" pInputText [(ngModel)]="engine.horsePower">
+      <p class="large-text">Gearbox</p>
+      <label class="p-inputtext-sm" for="gwear">Wear</label>
+      <input class="p-inputtext-sm" id="gwear" pInputText [(ngModel)]="gearbox.wear">
+      <label class="p-inputtext-sm" for="gears">Brand</label>
+      <input class="p-inputtext-sm" id="gears" pInputText [(ngModel)]="gearbox.gearCount">
+      <p class="large-text">Strategy</p>
+      <input class="p-inputtext-sm" id="strat" pInputText [(ngModel)]="strategy">
+    </div>
+    <button pButton pRipple type="button" label="Start Session"
+            class="p-button-raised" (click)="start()"></button>
+  </ng-container>
+</div>

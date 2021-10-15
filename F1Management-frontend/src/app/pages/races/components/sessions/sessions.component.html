@@ -1,0 +1,13 @@
+<div class="background-container"></div>
+<div class="page-container">
+  <div class="inner-container">
+    <ng-container *ngIf="raceCars !== []">
+      <p-dropdown (onChange)="getSessions()" id="team" [options]="raceCars" placeholder="Select a Race Car"
+                  optionLabel="name" [(ngModel)]="selectedRaceCar"></p-dropdown>
+    </ng-container>
+    <ng-container *ngIf="sessions !== []">
+      <button *ngFor="let session of sessions" pButton pRipple type="button" [label]="session.name"
+              class="p-button-raised" (click)="goToSession(session)"></button>
+    </ng-container>
+  </div>
+</div>

@@ -38,6 +38,8 @@ namespace F1Management.App.Mapper
             CreateMap<CarSession, CarSessionDto>()
                 .ForMember(s => s.SessionType, opt => opt.MapFrom(src => Mapper.sessionTypeDict[src.SessionType]))
                 .ReverseMap();
+            CreateMap<CarSessionStartSpec, CarSessionStartSpecDto>()
+                .ReverseMap();
             CreateMap<GrandPrix, GrandPrixDto>().ReverseMap();
             CreateMap<PitStop, PitStopDto>().ReverseMap();
             CreateMap<Team, TeamDto>().ReverseMap();
